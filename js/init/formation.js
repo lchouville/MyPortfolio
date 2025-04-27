@@ -47,30 +47,16 @@ const populateEducation = (educationData) => {
 
     // Ajout des compétences avec effet d'animation
     if (formation.competences && formation.competences.length > 0) {
-      const competencesContainer = document.createElement("div");
-      competencesContainer.classList.add("competences-tags");
-
-      formation.competences.forEach((competence, index) => {
-        setTimeout(() => {
-          const competenceTag = document.createElement("span");
-          competenceTag.classList.add("competence-tag");
-          competenceTag.textContent = competence;
-          // Ajout d'une petite animation à l'apparition
-          competenceTag.style.opacity = "0";
-          competenceTag.style.transform = "translateY(5px)";
-          competencesContainer.appendChild(competenceTag);
-
-          // Force le repaint pour déclencher l'animation
-          setTimeout(() => {
-            competenceTag.style.transition =
-              "opacity 0.3s ease, transform 0.3s ease";
-            competenceTag.style.opacity = "1";
-            competenceTag.style.transform = "translateY(0)";
-          }, 10);
-        }, index * 50); // Décalage pour un effet cascade
+      const competencesTags = document.createElement('div');
+      competencesTags.classList.add('competences-tags');
+      formation.competences.sort(); // Trier les compétences alphabétiquement (optionnel)
+      formation.competences.forEach(competence => {
+        const tag = document.createElement('span');
+        tag.classList.add('competence-tag');
+        tag.textContent = competence;
+        competencesTags.appendChild(tag);
       });
-
-      timelineContent.appendChild(competencesContainer);
+      timelineContent.appendChild(competencesTags);
     }
 
     timelineItem.appendChild(timelineContent);

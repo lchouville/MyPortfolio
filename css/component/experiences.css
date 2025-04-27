@@ -1,44 +1,61 @@
+/* Section Parcours Professionnel */
+#professionnel-tab {
+  background-color: var(--bg-secondary);
+}
 
-      /* Section Parcours Professionnel */
-      #professionnel-tab {
-        background-color: var(--bg-secondary);
-      }
+.experience-item {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
 
-      .experience-item {
-        margin-bottom: 2rem;
-        padding-bottom: 2rem;
-        border-bottom: 1px solid var(--border);
-      }
+.experience-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 
-      .experience-item:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
-        padding-bottom: 0;
-      }
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
 
-      .experience-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 1rem;
-        flex-wrap: wrap;
-      }
+.experience-date-duration {
+  display: flex;
+  flex-direction: column; /* Afficher la date et la durée verticalement */
+  align-items: flex-end; /* Aligner à droite */
+}
 
-      .experience-title {
-        color: var(--accent);
-        margin-bottom: 0.5rem;
-      }
+.experience-date {
+  color: var(--text-secondary);
+  font-style: italic;
+  font-size: 0.9em;
+  margin-bottom: 0.2rem; /* Petit espace entre la date et la durée */
+}
 
-      .experience-company {
-        color: var(--text-primary);
-        font-weight: bold;
-      }
+.experience-duration {
+  color: var(--text-secondary);
+  font-size: 0.8em;
+}
 
-      .experience-date {
-        color: var(--text-secondary);
-        font-style: italic;
-      }
+.experience-title {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
 
-      .experience-description {
-        color: var(--text-secondary);
-      }
+.experience-company {
+  color: var(--text-primary);
+  font-weight: bold;
+}
+
+.experience-date {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.experience-description {
+  color: var(--text-secondary);
+}

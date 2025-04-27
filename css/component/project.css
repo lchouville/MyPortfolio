@@ -10,6 +10,7 @@
 }
 
 .project-card {
+  position: relative; /* Important pour positionner les éléments à l'intérieur */
   background-color: var(--bg-primary);
   border-radius: 6px;
   overflow: hidden;
@@ -17,9 +18,38 @@
   border: 1px solid var(--border);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .project-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.6); /* Fond sombre transparent */
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  z-index: 10; /* Pour être au-dessus de l'image */
+}
+.project-links {
+  margin-top: 1rem;
+  text-align: right; /* Aligner les liens à droite par défaut */
+  display: flex;
+  justify-content: space-between;
+}
+.project-links a {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent);
+  color: var(--bg-primary);
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
@@ -52,4 +82,5 @@
   padding: 0.2rem 0.6rem;
   border-radius: 3px;
   font-size: 0.8rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }

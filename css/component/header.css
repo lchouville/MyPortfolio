@@ -101,7 +101,7 @@ nav a:hover::after {
 
 .tabs {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin-bottom: 2rem;
   border-bottom: 1px solid var(--border);
   padding-bottom: 0.5rem;
@@ -110,7 +110,6 @@ nav a:hover::after {
 .tab-button {
   background: none;
   border: none;
-  padding: 1rem 2rem;
   font-size: 1.2rem;
   cursor: pointer;
   color: var(--text-secondary);
@@ -142,4 +141,11 @@ nav a:hover::after {
 
 .tab-button.active::after {
   width: 80%;
+}
+
+/* Version Desktop */
+@media (min-width: 768px) {
+    .tabs {
+        justify-content: space-evenly;
+    }
 }

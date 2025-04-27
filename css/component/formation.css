@@ -90,11 +90,12 @@
     flex-wrap: wrap;
     gap: 0.7rem;
     margin-top: 1rem;
+    justify-content: center; /* Ou justify-content: left; */
 }
 
 .competence-tag {
-    background-color: var(--border); /* Utilise la couleur d'accent secondaire du thème */
-    color: var(--text-primary); /* Texte contrasté avec la couleur de fond */
+    background-color: var(--border);
+    color: var(--text-primary);
     padding: 0.4rem 0.9rem;
     border-radius: 4px;
     font-size: 0.9rem;
