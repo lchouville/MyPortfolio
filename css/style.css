@@ -1,11 +1,7 @@
-body{
-    /* Dimension */
-    width: 100vw;
-    height: 100vh;
-    /* Behaviour */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Visual */
-    font-family: fantasy;
-}
+@import url(component/theme.css);
+@import url(component/header.css);
+@import url(component/page.css);
+@import url(component/formation.css);
+@import url(component/project.css);
+@import url(component/experiences.css);
+@import url(component/footer.css);

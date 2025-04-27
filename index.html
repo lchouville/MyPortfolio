@@ -1,15 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luka's Porfolio</title>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="#" />
+    <title>Mon Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script type="module" src="js/main.js"></script>
-</head>
-<body>
-    <h1>Work In Progress</h1>
-</body>
+  </head>
+  <body>
+    <header>
+      <h1><span id="info-name">Nom Prénom</span></h1>
+      <p>
+        <span id="info-quote-text">"citation"</span>
+        <br>
+        <span id="info-quote-author">"author"</span>
+      </p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#main-content">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-content">
+      <div class="tab-container">
+        <div class="tabs">
+          <button class="tab-button active" data-tab="parcours-tab">
+            Formations
+          </button>
+          <button class="tab-button" data-tab="projets-tab">Projets</button>
+          <button class="tab-button" data-tab="professionnel-tab">
+            Parcours Professionnel
+          </button>
+        </div>
+
+        <div id="parcours-tab" class="tab-content active">
+          <h2>Parcours Scolaire</h2>
+          <div class="timeline">
+            
+          </div>
+        </div>
+
+        <div id="projets-tab" class="tab-content">
+          <h2>Projets</h2>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div
+                class="project-image"
+                style="background-color: #7aa095"
+              ></div>
+              <div class="project-content">
+                <h3>Nom du Projet</h3>
+                <p>
+                  Description détaillée de votre projet, des technologies
+                  utilisées et des défis relevés.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div
+                class="project-image"
+                style="background-color: #c9a85c"
+              ></div>
+              <div class="project-content">
+                <h3>Nom du Projet</h3>
+                <p>
+                  Description détaillée de votre projet, des technologies
+                  utilisées et des défis relevés.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">Node.js</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div
+                class="project-image"
+                style="background-color: #6d5c78"
+              ></div>
+              <div class="project-content">
+                <h3>Nom du Projet</h3>
+                <p>
+                  Description détaillée de votre projet, des technologies
+                  utilisées et des défis relevés.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">Django</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="professionnel-tab" class="tab-content">
+          <h2>Parcours Professionnel</h2>
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <h3 class="experience-title">Poste Occupé</h3>
+                <div class="experience-company">Nom de l'Entreprise</div>
+              </div>
+              <div class="experience-date">Jan 2022 - Présent</div>
+            </div>
+            <div class="experience-description">
+              <p>
+                Description détaillée de vos responsabilités, réalisations et
+                compétences développées dans ce poste.
+              </p>
+            </div>
+          </div>
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <h3 class="experience-title">Poste Occupé</h3>
+                <div class="experience-company">Nom de l'Entreprise</div>
+              </div>
+              <div class="experience-date">Jan 2020 - Déc 2021</div>
+            </div>
+            <div class="experience-description">
+              <p>
+                Description détaillée de vos responsabilités, réalisations et
+                compétences développées dans ce poste.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          N'hésitez pas à me contacter pour discuter d'opportunités
+          professionnelles ou de projets.
+        </p>
+        <div class="social-links">
+          <a id="linkedin" href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a id="github" href="#" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </section>
+    </main>
+
+    <div class="theme-selector">
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-palette"></i>
+      </button>
+      <div class="theme-menu" id="themeMenu">
+        <div class="theme-option active" data-theme="light">
+          <div class="theme-color color-light"></div>
+          <span>Fomcombe</span>
+        </div>
+        <div class="theme-option" data-theme="dark">
+          <div class="theme-color color-dark"></div>
+          <span>Gondor</span>
+        </div>
+        <div class="theme-option" data-theme="gondor">
+          <div class="theme-color color-gondor"></div>
+          <span>Minas Tirith</span>
+        </div>
+        <div class="theme-option" data-theme="mordor">
+          <div class="theme-color color-mordor"></div>
+          <span>Mordor</span>
+        </div>
+        <div class="theme-option" data-theme="lothlorien">
+          <div class="theme-color color-lothlorien"></div>
+          <span>Lothlorien</span>
+        </div>
+        <div class="theme-option" data-theme="erebor">
+          <div class="theme-color color-erebor"></div>
+          <span>Erebor</span>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 <span id="footer-name">Nom Prénom</span> - Tous droits réservés</p>
+    </footer>
+  </body>
 </html>

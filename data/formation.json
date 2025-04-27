@@ -1,0 +1,94 @@
+[
+  {
+    "intitule": "Bac+3 Developpeur Fullstack",
+    "ecole": "Zone 01",
+    "location": "Rouen",
+    "obtention": {
+      "dateDebut": "2023-05",
+      "dateFin": "Actuelement",
+      "mention": null
+    },
+    "description": "Formation approfondie en développement web fullstack.",
+    "competences": [
+      "GitHub",
+      "Rust",
+      "JavaScript",
+      "Go",
+      "Algorithmes",
+      "React Native",
+      "Conception web réactive",
+      "Gestion de bases de données",
+      "Gestion de projet",
+      "Python",
+      "Pandas",
+      "numpy",
+      "Visual Studio Code"
+    ]
+  },
+  {
+    "intitule": "Bac+2 Developpement Web & Web Mobile",
+    "ecole": "ENI Ecole Informatique",
+    "location": "En Ligne",
+    "obtention": {
+      "dateDebut": "2021-09",
+      "dateFin": "2022-05",
+      "mention": "Certificat de compétence front-end uniquement"
+    },
+    "description": "Formation en développement web et applications mobiles.",
+    "competences": [
+      "Java",
+      "JavaScript",
+      "Développement web",
+      "MySQL",
+      "HTML5",
+      "CSS"
+    ]
+  },
+  {
+    "intitule": "BTS SIO option SLAM",
+    "ecole": "Campus La Chataigneraie",
+    "location": "Mesnil-Esnard",
+    "obtention": {
+      "dateDebut": "2018",
+      "dateFin": "2020",
+      "mention": "Non passé"
+    },
+    "description": "Formation en développement d'applications et services informatiques.",
+    "competences": [
+      "C#",
+      "C++",
+      "Python",
+      "Microsoft SQL Server",
+      "MySQL",
+      "PHP",
+      "Symphonie",
+      "Visual Studio"
+    ]
+  },
+  {
+    "intitule": "Baccalauréat, systèmes électronique et numérique",
+    "ecole": "Lycée Grieu",
+    "location": "Rouen",
+    "obtention": {
+      "dateDebut": "2015",
+      "dateFin": "2018",
+      "mention": "Mention Assez bien"
+    },
+    "description": "Formation en systèmes électroniques et numériques.",
+    "competences": [
+      "HTML5",
+      "CSS",
+      "Configuration TCPIP",
+      "Gestion des services informatiques",
+      "Informatique",
+      "Électronique",
+      "Fibre optique",
+      "Documentation",
+      "Anglais",
+      "C++",
+      "Bash",
+      "Installation de matériel informatique",
+      "Installation réseau"
+    ]
+  }
+]

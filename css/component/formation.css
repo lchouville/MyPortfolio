@@ -1,0 +1,148 @@
+/* Section Parcours Scolaire */
+#parcours-tab {
+    background-color: var(--bg-secondary);
+    position: relative;
+}
+  
+.timeline {
+    position: relative;
+    max-width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+  
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    background-color: var(--border);
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    margin-left: -1px;
+}
+  
+.timeline-item {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 3rem; /* Augmenté pour plus de séparation entre les formations */
+}
+  
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    width: 5vw;
+    max-width: 20px;
+    height: 5vw;
+    max-height: 20px;
+    left: -6px;
+    background-color: var(--bg-secondary);
+    border: 3px solid var(--accent);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+  
+.timeline-content {
+    margin-left: 10vw;
+    padding: 2vw;
+    background-color: var(--bg-primary);
+    position: relative;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre pour plus de profondeur */
+}
+  
+.timeline-content h3 {
+    color: var(--accent);
+    margin-bottom: 0.8rem;
+    font-weight: bold; /* Mise en gras du titre */
+}
+  
+.timeline-content .date {
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.timeline-content .school {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.timeline-content .obtention {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.timeline-content .description {
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--border); /* Ligne de séparation avant les compétences */
+}
+
+/* Style pour les badges de compétences */
+.competences-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 1rem;
+}
+
+.competence-tag {
+    background-color: var(--border); /* Utilise la couleur d'accent secondaire du thème */
+    color: var(--text-primary); /* Texte contrasté avec la couleur de fond */
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    display: inline-block;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.competence-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Version Desktop */
+@media (min-width: 768px) {
+    .timeline {
+        max-width: 1200px;
+        padding: 0;
+    }
+  
+    .timeline::after {
+        left: 50%;
+    }
+  
+    .timeline-item {
+        width: 50%;
+    }
+  
+    .timeline-item:nth-child(odd) {
+        left: 0;
+    }
+  
+    .timeline-item:nth-child(even) {
+        left: 50%;
+    }
+  
+    .timeline-item::after {
+        right: -10px;
+        left: auto;
+    }
+  
+    .timeline-item:nth-child(even)::after {
+        left: -10px;
+        right: auto;
+    }
+  
+    .timeline-content {
+        margin-left: 0;
+        margin: 0px 15px;
+    }
+}
