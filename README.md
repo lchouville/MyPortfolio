@@ -17,7 +17,7 @@ This portfolio website serves as a central hub to learn more about me and my wor
 
 ## Access the Live Website
 
-You can view the live version of my portfolio at: (https://lchouville.github.io/MyPortfolio/)[https://lchouville.github.io/MyPortfolio/]
+You can view the live version of my portfolio at: [https://lchouville.github.io/MyPortfolio/](https://lchouville.github.io/MyPortfolio/)
 
 ## Project Structure
 
