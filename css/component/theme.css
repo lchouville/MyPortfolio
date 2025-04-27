@@ -1,0 +1,212 @@
+:root {
+  /* Mode clair - Terres Elfiques revisité */
+  --bg-primary-light: #f5f3ed;         /* Ivoire très doux */
+  --bg-secondary-light: #ebe8df;       /* Beige parcheminé */
+  --text-primary-light: #2d2d2d;       /* Charbon léger */
+  --text-secondary-light: #5a5a5a;     /* Gris doux */
+  --accent-light: #b89d5b;             /* Or ancien doux */
+  --accent-secondary-light: #7d9c8b;   /* Vert forêt désaturé */
+  --border-light: #d4cec3;             /* Gris parcheminé */
+
+  /* Mode sombre - Royaumes des Hommes et des Nains revisité */
+  --bg-primary-dark: #1e1f22;          /* Anthracite profond */
+  --bg-secondary-dark: #292a2d;        /* Gris basalte */
+  --text-primary-dark: #d8d8d8;         /* Gris clair */
+  --text-secondary-dark: #9a9a9a;       /* Gris moyen */
+  --accent-dark: #967847;              /* Bronze ancien */
+  --accent-secondary-dark: #5e5060;    /* Vieux violet désaturé */
+  --border-dark: #404347;              /* Gris granit */
+
+  /* Mode Gondor - Blanc de Minas Tirith revisité */
+  --bg-primary-gondor: #f3f3f7;
+  --bg-secondary-gondor: #e5e6ea;
+  --text-primary-gondor: #333340;
+  --text-secondary-gondor: #6a6a7a;
+  --accent-gondor: #84878f;
+  --accent-secondary-gondor: #44566d;
+  --border-gondor: #c9cbd3;
+
+  /* Mode Mordor - Sombre et feu revisité */
+  --bg-primary-mordor: #181611;
+  --bg-secondary-mordor: #23201b;
+  --text-primary-mordor: #e5d4b8;
+  --text-secondary-mordor: #a68d70;
+  --accent-mordor: #b23800;            /* Feu désaturé */
+  --accent-secondary-mordor: #7d5130;  /* Terre brûlée */
+  --border-mordor: #3d3127;
+
+  /* Mode Lothlorien - Doré et argenté revisité */
+  --bg-primary-lothlorien: #f8f4e7;
+  --bg-secondary-lothlorien: #efe8d5;
+  --text-primary-lothlorien: #3c3a2a;
+  --text-secondary-lothlorien: #68624b;
+  --accent-lothlorien: #cbb45e;         /* Or elfique vieilli */
+  --accent-secondary-lothlorien: #92aaac;
+  --border-lothlorien: #dcd4be;
+
+  /* Mode Erebor - Pierre et or revisité */
+  --bg-primary-erebor: #2c2a28;
+  --bg-secondary-erebor: #383532;
+  --text-primary-erebor: #e4ddd0;
+  --text-secondary-erebor: #ada799;
+  --accent-erebor: #bba85e;             /* Or des montagnes */
+  --accent-secondary-erebor: #5d676a;
+  --border-erebor: #4c4842;
+
+  /* Valeurs par défaut (mode clair) */
+  --bg-primary: var(--bg-primary-light);
+  --bg-secondary: var(--bg-secondary-light);
+  --text-primary: var(--text-primary-light);
+  --text-secondary: var(--text-secondary-light);
+  --accent: var(--accent-light);
+  --accent-secondary: var(--accent-secondary-light);
+  --border: var(--border-light);
+}
+
+
+[data-theme="dark"] {
+  --bg-primary: var(--bg-primary-dark);
+  --bg-secondary: var(--bg-secondary-dark);
+  --text-primary: var(--text-primary-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --accent: var(--accent-dark);
+  --accent-secondary: var(--accent-secondary-dark);
+  --border: var(--border-dark);
+}
+[data-theme="gondor"] {
+  --bg-primary: var(--bg-primary-gondor);
+  --bg-secondary: var(--bg-secondary-gondor);
+  --text-primary: var(--text-primary-gondor);
+  --text-secondary: var(--text-secondary-gondor);
+  --accent: var(--accent-gondor);
+  --accent-secondary: var(--accent-secondary-gondor);
+  --border: var(--border-gondor);
+}
+
+[data-theme="mordor"] {
+  --bg-primary: var(--bg-primary-mordor);
+  --bg-secondary: var(--bg-secondary-mordor);
+  --text-primary: var(--text-primary-mordor);
+  --text-secondary: var(--text-secondary-mordor);
+  --accent: var(--accent-mordor);
+  --accent-secondary: var(--accent-secondary-mordor);
+  --border: var(--border-mordor);
+}
+
+[data-theme="lothlorien"] {
+  --bg-primary: var(--bg-primary-lothlorien);
+  --bg-secondary: var(--bg-secondary-lothlorien);
+  --text-primary: var(--text-primary-lothlorien);
+  --text-secondary: var(--text-secondary-lothlorien);
+  --accent: var(--accent-lothlorien);
+  --accent-secondary: var(--accent-secondary-lothlorien);
+  --border: var(--border-lothlorien);
+}
+
+[data-theme="erebor"] {
+  --bg-primary: var(--bg-primary-erebor);
+  --bg-secondary: var(--bg-secondary-erebor);
+  --text-primary: var(--text-primary-erebor);
+  --text-secondary: var(--text-secondary-erebor);
+  --accent: var(--accent-erebor);
+  --accent-secondary: var(--accent-secondary-erebor);
+  --border: var(--border-erebor);
+}
+
+/* Sélecteur de thème */
+.theme-selector {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.theme-toggle {
+  background-color: var(--accent);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.theme-menu {
+  display: none;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  border: 1px solid var(--border);
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 220px;
+}
+
+.theme-menu.show {
+  display: flex;
+}
+
+.theme-option {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.theme-option:hover {
+  background-color: var(--bg-primary);
+}
+
+.theme-option.active {
+  background-color: var(--accent);
+  color: var(--bg-primary);
+}
+
+.theme-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  border: 1px solid var(--border);
+}
+
+.color-light {
+  background: linear-gradient(135deg, #f7f5f0 0%, #c9a85c 100%);
+}
+
+.color-dark {
+  background: linear-gradient(135deg, #1a1c22 0%, #a17742 100%);
+}
+.color-gondor {
+  background: linear-gradient(135deg, #f0f0f5 0%, #4b6280 100%);
+}
+
+.color-mordor {
+  background: linear-gradient(135deg, #1c1810 0%, #c53f00 100%);
+}
+
+.color-lothlorien {
+  background: linear-gradient(135deg, #f9f5e9 0%, #d6b75a 100%);
+}
+
+.color-erebor {
+  background: linear-gradient(135deg, #2a2827 0%, #c6b067 100%);
+}
+
+.theme-toggle:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}

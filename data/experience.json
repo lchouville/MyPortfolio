@@ -1,0 +1,74 @@
+[
+    {
+      "title": "Stagiaire Developper FullStack",
+      "company": "GETLEAZ",
+      "type": "Stage",
+      "location": "Normandie, France (À distance)",
+      "startDate": "2025-01",
+      "endDate": "2025-02",
+      "duration": "2 mois",
+      "description": "Stagiaire au sein de l'entreprise GetLeaz dans le cadre de ma formation de développeur FullStack à Zone01Normandie.\n\nCréation d'un prototype d'automatisation d'entrer de produit sur Wordpress en utilisant l'outils N8N.",
+      "skills": [
+        "PHP",
+        "JavaScript",
+        "N8N",
+        "Gestion de projet",
+        "Travail en équipe",
+        "Rédaction de documentation"
+      ]
+    },
+    {
+      "title": "Développeur web",
+      "company": "Ileaweb",
+      "type": "Stage",
+      "location": "France",
+      "startDate": "2022-03",
+      "endDate": "2022-05",
+      "duration": "3 mois",
+      "description": "Développement d'un site de e-commerce, utilisation du cms WordPress avec les technologies php, Javascript, html 5 et CSS 7",
+      "skills": [
+        "WordPress",
+        "PHP",
+        "JavaScript",
+        "HTML5",
+        "CSS"
+      ]
+    },
+    {
+      "title": "Développeur informatique",
+      "company": "Assystem",
+      "type": "Stage",
+      "location": "Le Petit-Quevilly, Normandie, France",
+      "startDate": "2019-05",
+      "endDate": "2019-06",
+      "duration": "2 mois",
+      "description": "Réalisation d'un stage de 5 semaines, au sein de l'entreprise Assystem en ayant pour mission d'étudier et tester des solutions logiciels libre pour remplacer leurs systèmes de gestion de projets.",
+      "skills": []
+    },
+    {
+      "title": "Stagiaire en service informatique",
+      "company": "Web en Seine",
+      "type": "Stage",
+      "location": "Bois Guillaume 76",
+      "startDate": "2018-02",
+      "endDate": "2018-03",
+      "duration": "2 mois",
+      "description": "Réalisation d’un stage de 5 semaines, au sein de la société : Weben Seine avec Mr Julien COLBEAU, saisie de base données pour la modification et la tenue d’un site internet spécialisé dans le commerce du cycle. Assistance lors de réalisation de formation dans le cadre d’utilisation d’outils informatique destiné à un public de débutant et senior.",
+      "skills": []
+    },
+    {
+      "title": "Stagiaire en service informatique",
+      "company": "Mairie de Bihorel",
+      "type": "Stage",
+      "location": "Bihorel 76",
+      "startDate": "2017-10",
+      "endDate": "2017-11",
+      "duration": "2 mois",
+      "description": "Réalisation d’un stage de 5 semaines au sein du service informatique de la Mairie de Bihorel, avec Mr Sébastien DAMBRY, gestion du projet de phishing, en retour d’une formation sur la sécurité numérique des employés de la mairie, réalisé et mis en place en autonomie. Gestion des différents parcs informatiques publiques de la commune, dépannage et configuration de nouveaux postes informatiques.",
+      "skills": [
+        "PHP",
+        "JavaScript",
+        "Gestion de projet"
+      ]
+    }
+  ]

@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Portfolio Personnel",
+    "status": "Terminé",
+    "description": "Un portfolio personnel interactif conçu pour présenter mes compétences, mon parcours et mes projets. L'objectif est de créer une vitrine en ligne attrayante et informative pour les visiteurs.",
+    "repository": "https://github.com/lchouville/MyPortfolio.git",
+    "access": "https://lchouville.github.io/MyPortfolio/",
+    "image": "/data/images/portfolio.png",
+    "techno": ["HTML", "CSS", "JavaScript", "JSON"]
+  },
+  {
+    "name": "GR.A.V.A.",
+    "status": "En cours",
+    "description": "G.R.A.V.A. est un projet de création d'avatars vectoriels en SVG, développé avec HTML, CSS et JavaScript. Il offre aux utilisateurs la possibilité de concevoir et de personnaliser des avatars directement dans leur navigateur, sans nécessiter de logiciel externe.",
+    "repository": null,
+    "access": null,
+    "image": null,
+    "techno": ["HTML", "CSS", "JavaScript", "SVG"]
+  }
+]
