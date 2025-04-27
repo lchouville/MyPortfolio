@@ -1,6 +1,6 @@
 header {
   background-color: var(--bg-secondary);
-  background-image: url("/asset/map-background.png");
+  background-image: url("/asset/map-bg.png");
   background-size: cover;
   background-position: center;
   padding: 2rem;

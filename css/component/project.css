@@ -34,6 +34,18 @@
   font-size: 0.8em;
   z-index: 10; /* Pour être au-dessus de l'image */
 }
+.finished{
+    background-color: rgba(3, 117, 9, 0.6); /* Fond sombre transparent */
+}
+.in-progress{
+    background-color: rgba(3, 117, 117, 0.6); /* Fond sombre transparent */
+}
+.paused{
+    background-color: rgba(117, 109, 3, 0.6); /* Fond sombre transparent */
+}
+.aborted{
+    background-color: rgba(117, 3, 3, 0.6); /* Fond sombre transparent */
+}
 .project-links {
   margin-top: 1rem;
   text-align: right; /* Aligner les liens à droite par défaut */
