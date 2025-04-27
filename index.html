@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="#" />
-    <title>Mon Portfolio</title>
+    <link rel="icon" href="asset/icon.png" />
+    <title>Portfolio Luka Chouville</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -18,7 +18,7 @@
       <h1><span id="info-name">Nom Prénom</span></h1>
       <p>
         <span id="info-quote-text">"citation"</span>
-        <br>
+        <br />
         <span id="info-quote-author">"author"</span>
       </p>
     </header>
@@ -44,9 +44,7 @@
 
         <div id="parcours-tab" class="tab-content active">
           <h2>Parcours Scolaire</h2>
-          <div class="timeline">
-            
-          </div>
+          <div class="timeline"></div>
         </div>
 
         <div id="projets-tab" class="tab-content">
@@ -142,15 +140,35 @@
         </div>
       </div>
 
-      <section id="contact">
+      <section id="contact" class="contact">
         <h2>Contact</h2>
         <p>
           N'hésitez pas à me contacter pour discuter d'opportunités
           professionnelles ou de projets.
         </p>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="button">Envoyer le message</button>
+          <div id="form-message" class="hidden"></div>
+        </form>
         <div class="social-links">
-          <a id="linkedin" href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a id="github" href="#" title="GitHub"><i class="fab fa-github"></i></a>
+          <a id="linkedin" href="#" title="LinkedIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a id="github" href="#" title="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
         </div>
       </section>
     </main>
@@ -188,7 +206,19 @@
     </div>
 
     <footer>
-      <p>&copy; 2025 <span id="footer-name">Nom Prénom</span> - Tous droits réservés</p>
+      <p>
+        &copy; 2025 <span id="footer-name">Nom Prénom</span> - Tous droits
+        réservés
+      </p>
     </footer>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("Jy5nh3lwJG1DAH__r"); // Remplacez par votre clé publique EmailJS
+      })();
+    </script>
   </body>
 </html>
