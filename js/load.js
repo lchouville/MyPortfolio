@@ -5,6 +5,7 @@ import { fetchFormation } from "./init/formation.js";
 import { fetchProjects } from "./init/project.js";
 import { fetchExperience } from "./init/experience.js";
 import { initContact } from "./init/contact.js";
+import { fetchAboutMe } from "./init/about.js";
 
 export function init() {
   document.addEventListener("DOMContentLoaded", () => {
@@ -12,6 +13,7 @@ export function init() {
     initTabs();
     
     fetchInfo();
+    fetchAboutMe();
     fetchFormation();
     fetchProjects();
     fetchExperience();

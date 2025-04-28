@@ -89,8 +89,8 @@
 }
 
 .project-tag {
-  background-color: var(--accent-secondary);
-  color: var(--bg-primary);
+  background-color: var(--tag-background);
+  color: var(--tag-text);
   padding: 0.2rem 0.6rem;
   border-radius: 3px;
   font-size: 0.8rem;

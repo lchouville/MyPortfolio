@@ -1,0 +1,49 @@
+#about-me {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+#about-me h1 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+#about-me p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.skills {
+  margin-bottom: 2rem;
+}
+
+.skills h3 {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.hardskills-tags,
+.softskills-tags,
+.interests-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  gap: 0.5rem;
+}
+
+.hardskills-tag,
+.softskills-tag,
+.interests-tag {
+  background-color: var(--tag-background);
+  color: var(--tag-text);
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}

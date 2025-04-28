@@ -94,8 +94,8 @@
 }
 
 .competence-tag {
-    background-color: var(--border);
-    color: var(--text-primary);
+    background-color: var(--tag-background);
+    color: var(--tag-text);
     padding: 0.4rem 0.9rem;
     border-radius: 4px;
     font-size: 0.9rem;

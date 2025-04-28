@@ -4,8 +4,8 @@
     "status": "Terminé",
     "description": "Un portfolio personnel interactif conçu pour présenter mes compétences, mon parcours et mes projets. L'objectif est de créer une vitrine en ligne attrayante et informative pour les visiteurs.",
     "repository": "https://github.com/lchouville/MyPortfolio.git",
-    "access": "https://lchouville.github.io/MyPortfolio/",
-    "image": "/data/images/portfolio.png",
+    "access": null,
+    "image": "data/images/portfolio.png",
     "techno": ["HTML", "CSS", "JavaScript", "JSON"]
   },
   {

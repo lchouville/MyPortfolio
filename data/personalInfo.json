@@ -1,5 +1,13 @@
 {
   "name": "Luka Chouville",
+  "title": "Développeur FullStack",
+  "summary": "Je sort d'un bac+3 développeur fullstack",
+  "skills": {
+    "hard_skills": ["Go", "JS", "SQL", "PHP", "Python"],
+    "soft_skills": ["Travail en équipe", "Gestion de projet", "Capacité d'apprentissage rapide"]
+  },
+  "interests": ["Guitare", "Jeux de rôles", "Seigneur des Anneaux", "Jeux vidéo", "Conception de programmes"],
+  "about_me": "Hello ! Je suis Luka Chouville, développeur FullStack, passionné par la technologie et le développement. Je m'efforce constamment d'améliorer mes compétences et de relever de nouveaux défis. Mon amour pour la guitare, les jeux de rôles et l'univers du Seigneur des Anneaux nourrit ma créativité et ma capacité à résoudre des problèmes de manière innovante. Je suis toujours à la recherche de projets stimulants où je peux apporter ma contribution et apprendre de nouvelles choses.",
   "quote": {
     "text": "\"La seule chose que l'on puisse décider est ce que l'on fait du temps qui nous est imparti.\"",
     "author": "— J.R.R. Tolkien"
