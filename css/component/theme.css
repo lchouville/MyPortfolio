@@ -1,22 +1,26 @@
 :root {
   /* Mode clair - Terres Elfiques revisité */
-  --bg-primary-light: #f5f3ed;         /* Ivoire très doux */
-  --bg-secondary-light: #ebe8df;       /* Beige parcheminé */
-  --text-primary-light: #2d2d2d;       /* Charbon léger */
-  --text-secondary-light: #5a5a5a;     /* Gris doux */
-  --accent-light: #b89d5b;             /* Or ancien doux */
-  --accent-secondary-light: #7d9c8b;   /* Vert forêt désaturé */
-  --border-light: #d4cec3;             /* Gris parcheminé */
-
+  --bg-primary-light: #f5f3ed; 
+  --bg-secondary-light: #ebe8df;
+  --text-primary-light: #2d2d2d;
+  --text-secondary-light: #5a5a5a;
+  --accent-light: #b89d5b;
+  --accent-secondary-light: #7d9c8b;
+  --border-light: #d4cec3;
+  --tag-background-light: #d8c79d; /* Beige doré clair */
+  --tag-text-light: #2d2d2d; /* Charbon léger */
+  
   /* Mode sombre - Royaumes des Hommes et des Nains revisité */
-  --bg-primary-dark: #1e1f22;          /* Anthracite profond */
-  --bg-secondary-dark: #292a2d;        /* Gris basalte */
-  --text-primary-dark: #d8d8d8;         /* Gris clair */
-  --text-secondary-dark: #9a9a9a;       /* Gris moyen */
-  --accent-dark: #967847;              /* Bronze ancien */
-  --accent-secondary-dark: #5e5060;    /* Vieux violet désaturé */
-  --border-dark: #404347;              /* Gris granit */
-
+  --bg-primary-dark: #1e1f22;
+  --bg-secondary-dark: #292a2d;
+  --text-primary-dark: #d8d8d8;
+  --text-secondary-dark: #9a9a9a;
+  --accent-dark: #967847;
+  --accent-secondary-dark: #5e5060;
+  --border-dark: #404347;
+  --tag-background-dark: #a18654; /* Bronze mat */
+  --tag-text-dark: #e4ddd0; /* Beige très clair */
+  
   /* Mode Gondor - Blanc de Minas Tirith revisité */
   --bg-primary-gondor: #f3f3f7;
   --bg-secondary-gondor: #e5e6ea;
@@ -25,33 +29,41 @@
   --accent-gondor: #84878f;
   --accent-secondary-gondor: #44566d;
   --border-gondor: #c9cbd3;
-
+  --tag-background-gondor: #72788c; /* Bleu acier doux */
+  --tag-text-gondor: #f3f3f7; /* Presque blanc */
+  
   /* Mode Mordor - Sombre et feu revisité */
   --bg-primary-mordor: #181611;
   --bg-secondary-mordor: #23201b;
   --text-primary-mordor: #e5d4b8;
   --text-secondary-mordor: #a68d70;
-  --accent-mordor: #b23800;            /* Feu désaturé */
-  --accent-secondary-mordor: #7d5130;  /* Terre brûlée */
+  --accent-mordor: #b23800;
+  --accent-secondary-mordor: #7d5130;
   --border-mordor: #3d3127;
-
+  --tag-background-mordor: #7d5130; /* Terre brûlée */
+  --tag-text-mordor: #f2e5d2; /* Ivoire vieilli */
+  
   /* Mode Lothlorien - Doré et argenté revisité */
   --bg-primary-lothlorien: #f8f4e7;
   --bg-secondary-lothlorien: #efe8d5;
   --text-primary-lothlorien: #3c3a2a;
   --text-secondary-lothlorien: #68624b;
-  --accent-lothlorien: #cbb45e;         /* Or elfique vieilli */
+  --accent-lothlorien: #cbb45e;
   --accent-secondary-lothlorien: #92aaac;
   --border-lothlorien: #dcd4be;
-
+  --tag-background-lothlorien: #c2b25a; /* Or elfique doux */
+  --tag-text-lothlorien: #3c3a2a; /* Brun foncé */
+  
   /* Mode Erebor - Pierre et or revisité */
   --bg-primary-erebor: #2c2a28;
   --bg-secondary-erebor: #383532;
   --text-primary-erebor: #e4ddd0;
   --text-secondary-erebor: #ada799;
-  --accent-erebor: #bba85e;             /* Or des montagnes */
+  --accent-erebor: #bba85e;
   --accent-secondary-erebor: #5d676a;
   --border-erebor: #4c4842;
+  --tag-background-erebor: #a6954d; /* Or terni */
+  --tag-text-erebor: #e4ddd0; /* Pierre claire */
 
   /* Valeurs par défaut (mode clair) */
   --bg-primary: var(--bg-primary-light);
@@ -61,6 +73,9 @@
   --accent: var(--accent-light);
   --accent-secondary: var(--accent-secondary-light);
   --border: var(--border-light);
+  --tag-text: var(--tag-text-light);
+  --tag-background: var(--tag-background-light);
+  
 }
 
 
@@ -72,6 +87,8 @@
   --accent: var(--accent-dark);
   --accent-secondary: var(--accent-secondary-dark);
   --border: var(--border-dark);
+  --tag-text: var(--tag-text-dark);
+  --tag-background: var(--tag-background-dark);
 }
 [data-theme="gondor"] {
   --bg-primary: var(--bg-primary-gondor);
@@ -81,6 +98,8 @@
   --accent: var(--accent-gondor);
   --accent-secondary: var(--accent-secondary-gondor);
   --border: var(--border-gondor);
+  --tag-text: var(--tag-text-gondor);
+  --tag-background: var(--tag-background-gondor);
 }
 
 [data-theme="mordor"] {
@@ -91,6 +110,8 @@
   --accent: var(--accent-mordor);
   --accent-secondary: var(--accent-secondary-mordor);
   --border: var(--border-mordor);
+  --tag-text: var(--tag-text-mordor);
+  --tag-background: var(--tag-background-mordor);
 }
 
 [data-theme="lothlorien"] {
@@ -101,6 +122,8 @@
   --accent: var(--accent-lothlorien);
   --accent-secondary: var(--accent-secondary-lothlorien);
   --border: var(--border-lothlorien);
+  --tag-text: var(--tag-text-lothlorien);
+  --tag-background: var(--tag-background-lothlorien);
 }
 
 [data-theme="erebor"] {
@@ -111,6 +134,8 @@
   --accent: var(--accent-erebor);
   --accent-secondary: var(--accent-secondary-erebor);
   --border: var(--border-erebor);
+  --tag-text: var(--tag-text-erebor);
+  --tag-background: var(--tag-background-erebor);
 }
 
 /* Sélecteur de thème */
