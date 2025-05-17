@@ -107,7 +107,8 @@ nav a:hover::after {
   padding-bottom: 0.5rem;
 }
 
-.tab-button {
+.tab-button,
+.sub-tab-btn {
   background: none;
   border: none;
   font-size: 1.2rem;
@@ -119,7 +120,8 @@ nav a:hover::after {
   user-select: none;
 }
 
-.tab-button::after {
+.tab-button::after,
+.sub-tab-btn::after {
   content: "";
   position: absolute;
   bottom: -0.5rem;
@@ -131,21 +133,23 @@ nav a:hover::after {
   transform: translateX(-50%);
 }
 
-.tab-button:hover {
+.tab-button:hover,
+.sub-tab-btn:hover {
   color: var(--accent);
 }
 
-.tab-button.active {
+.tab-button.active,
+.sub-tab-btn.active {
   color: var(--accent);
 }
 
-.tab-button.active::after {
+.tab-button.active::after,
+.sub-tab-btn.active::after {
   width: 80%;
 }
-
 /* Version Desktop */
 @media (min-width: 768px) {
-    .tabs {
-        justify-content: space-evenly;
-    }
+  .tabs {
+    justify-content: space-evenly;
+  }
 }

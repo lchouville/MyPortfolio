@@ -76,10 +76,11 @@
     <main id="main-content">
       <div class="tab-container">
         <div class="tabs">
-          <button class="tab-button active" data-tab="parcours-tab">
+          <button class="tab-button" data-tab="parcours-tab">
             Formations
           </button>
-          <button class="tab-button" data-tab="projets-tab">Projets</button>
+          <button class="tab-button active" data-tab="projets-tab">Projets</button>
+          <button class="tab-button" data-tab="skills-tab">Compétences</button>
           <button class="tab-button" data-tab="professionnel-tab">
             Parcours Professionnel
           </button>
@@ -95,6 +96,27 @@
           <div class="projects-grid"></div>
         </div>
 
+        <div id="skills-tab" class="tab-content">
+          <div class="tabs">
+            <button class="sub-tab-btn active" data-subtab="langages">Langages</button>
+            <button class="sub-tab-btn" data-subtab="outils">Outils</button>
+            <button class="sub-tab-btn" data-subtab="softskills">Soft Skills</button>
+          </div>
+          
+          <div class="sub-tab-content" id="langages">
+            <!-- Contenu langages -->
+             <p>1</p>
+          </div>
+          <div class="sub-tab-content" id="outils" style="display: none;">
+            <!-- Contenu outils -->
+             <p>2</p>
+          </div>
+          <div class="sub-tab-content" id="softskills" style="display: none;">
+            <!-- Contenu softskills -->
+             <p>3</p>
+          </div>
+        </div>
+        
         <div id="professionnel-tab" class="tab-content">
           <h2>Parcours Professionnel</h2>
         </div>
