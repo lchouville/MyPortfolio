@@ -1,0 +1,35 @@
+{
+  "HardSkills": {
+    "Language": [
+      {
+        "title": "Golang",
+        "icone": "devicon-go-plain"
+      },
+      {
+        "title": "Python",
+        "icone": "devicon-python-plain"
+      },
+      {
+        "title": "HTML",
+        "icone": "devicon-html5-plain"
+      },
+      {
+        "title": "CSS",
+        "icone": "devicon-css3-plain"
+      },
+      {
+        "title": "JS",
+        "icone": "devicon-javascript-plain"
+      },
+      {
+        "title": "PHP",
+        "icone": "devicon-php-plain"
+      },
+      {
+        "title": "SQL",
+        "icone": "devicon-mysql-plain"
+      }
+    ]
+  },
+  "SoftSkills": {}
+}
