@@ -1,0 +1,17 @@
+.tag-general {
+  border: 1px solid var(--tag-general-border);
+  background-color: var(--tag-general-bg);
+  color: var(--tag-general-text);
+}
+
+.tag-hard-skill {
+  border: 1px solid var(--tag-hard-border);
+  background-color: var(--tag-hard-bg);
+  color: var(--tag-hard-text);
+}
+
+.tag-soft-skill {
+  border: 1px solid var(--tag-soft-border);
+  background-color: var(--tag-soft-bg);
+  color: var(--tag-soft-text);
+}

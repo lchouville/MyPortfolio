@@ -1,0 +1,38 @@
+/* ================================
+   LIGHT THEMES - LORD OF THE RINGS
+   ================================ */
+
+/* RIVENDELL */
+:root[data-theme="rivendell"] {
+  --primary-bg: #f4faff;
+  --secondary-bg: #e0f0f6;
+  --accent-bg: #d1e7dd;
+
+  --text-primary: #1f2c3a;
+  --text-secondary: #34495e;
+  --text-muted: #6e7b83;
+
+  --accent-light: #3498db;
+  --accent-medium: #27ae60;
+  --accent-strong: #bdc3c7;
+
+  --border-color: #a5c8e0;
+  --shadow-light: rgba(52, 152, 219, 0.1);
+  --shadow-medium: rgba(52, 152, 219, 0.2);
+  --shadow-strong: rgba(44, 62, 80, 0.3);
+
+  --gradient-primary: linear-gradient(135deg, #f4faff 0%, #e0f0f6 100%);
+  --gradient-accent: linear-gradient(135deg, #3498db 0%, #27ae60 100%);
+
+  --tag-general-border: #3498db;
+  --tag-general-bg: rgba(52, 152, 219, 0.15);
+  --tag-general-text: #2c6fa3;
+
+  --tag-hard-border: #27ae60;
+  --tag-hard-bg: rgba(39, 174, 96, 0.15);
+  --tag-hard-text: #1f7d47;
+
+  --tag-soft-border: #bdc3c7;
+  --tag-soft-bg: rgba(189, 195, 199, 0.15);
+  --tag-soft-text: #6c7a89;
+}
