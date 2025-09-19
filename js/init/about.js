@@ -1,3 +1,7 @@
+import { mergeSkills } from "../function/skills.js";
+import { extractSkillsFromFormations } from "./formation.js";
+import { extractSkillsFromProjects } from "./project.js";
+
 // Select the about-me section from the DOM
 const aboutMeSection = document.getElementById("about-me");
 
@@ -16,17 +20,15 @@ const createSection = (titleText, items, itemClass) => {
   section.appendChild(title);
 
   const list = document.createElement("div");
-  list.classList.add(itemClass);
+  list.classList.add('competences-tags');
 
   // Create each tag and append it to the list
-  items.forEach((item) => {
-    const tag = document.createElement("span");
-    // Derive the individual tag class based on the list class (remove 's')
-    tag.classList.add(itemClass.slice(0, -1));
-    tag.textContent = item;
+  items.forEach(competence => {
+    const tag = document.createElement('span');
+    tag.classList.add('competence-tag', itemClass);
+    tag.textContent = competence;
     list.appendChild(tag);
   });
-
   section.appendChild(list);
   return section;
 };
@@ -35,7 +37,7 @@ const createSection = (titleText, items, itemClass) => {
  * Populate the about-me section with data
  * @param {Object} aboutMeData - JSON data containing title, about me text, skills and interests
  */
-const populateAboutMe = (aboutMeData) => {
+const populateAboutMe = (aboutMeData, mergedSkills) => {
   if (!aboutMeSection) {
     console.error("The #about-me element was not found.");
     return;
@@ -54,17 +56,17 @@ const populateAboutMe = (aboutMeData) => {
   skillsSection.classList.add("skills");
 
   skillsSection.appendChild(
-    createSection("Compétences Techniques", aboutMeData.skills.hard_skills, "hardskills-tags")
+    createSection("Compétences Techniques", mergedSkills.hard_skills, "hard-skill-tag")
   );
   skillsSection.appendChild(
-    createSection("Compétences Relationnelles", aboutMeData.skills.soft_skills, "softskills-tags")
+    createSection("Compétences Relationnelles", mergedSkills.soft_skills, "soft-skill-tag")
   );
 
   // Create the interests section
   const interestsSection = createSection(
     "Centres d'intérêt",
     aboutMeData.interests,
-    "interests-tags"
+    "interests-tag"
   );
 
   // Append everything to the about-me section
@@ -75,10 +77,30 @@ const populateAboutMe = (aboutMeData) => {
  * Fetch about-me data from JSON file and populate the page
  */
 export const fetchAboutMe = async () => {
+  let educationSkills
+  try {
+    const educationResponse = await fetch("data/formation.json");
+    const educationData = await educationResponse.json();
+    educationSkills = extractSkillsFromFormations(educationData)
+  } catch (error) {
+    console.error(
+      "Erreur lors du chargement du fichier education.json:",
+      error
+    );
+  }
+  let projectSkills
+  try {
+    const projectsResponse = await fetch("data/projects.json");
+    const projectsData = await projectsResponse.json();
+    projectSkills = extractSkillsFromProjects(projectsData)
+  } catch (error) {
+    console.error("Erreur lors du chargement du fichier projects.json:", error);
+  }
+  const mergedSkills = mergeSkills(educationSkills, projectSkills)
   try {
     const aboutMeResponse = await fetch("data/personalInfo.json");
     const aboutMeData = await aboutMeResponse.json();
-    populateAboutMe(aboutMeData);
+    populateAboutMe(aboutMeData, mergedSkills);
   } catch (error) {
     console.error("Error loading about_me.json file:", error);
   }

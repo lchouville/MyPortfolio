@@ -1,0 +1,66 @@
+/* Conteneur des compétences */
+.competences-container {
+    margin-top: 1rem;
+}
+
+/* Titre des catégories de compétences */
+.competences-title {
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: left;
+}
+
+/* Style pour les badges de compétences */
+.competences-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    justify-content: flex-start;
+}
+
+/* Style commun pour les tags */
+.competence-tag {
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Style spécifique pour les hard skills */
+.hard-skill-tag {
+    background-color: var(--hard-skill-bg);
+    color: var(--hard-skill-text);
+    border: 1px solid var(--hard-skill-border);
+}
+
+/* Style spécifique pour les soft skills */
+.soft-skill-tag {
+    background-color: var(--soft-skill-bg);
+    color: var(--soft-skill-text);
+    border: 1px solid var(--soft-skill-border);
+}
+
+.interests-tag {
+    background-color: var(--tag-background);
+    color: var(--tag-text);
+    border: 1px solid var(--border);
+}
+
+/* Effet de survol pour les tags */
+.competence-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Version Desktop */
+@media (min-width: 768px) {
+
+    /* Alignement des compétences à gauche sur desktop */
+    .competences-tags {
+        justify-content: flex-start;
+    }
+}

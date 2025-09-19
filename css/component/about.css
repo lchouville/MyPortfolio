@@ -17,33 +17,3 @@
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
 }
-
-.skills {
-  margin-bottom: 2rem;
-}
-
-.skills h3 {
-  font-size: 1.5rem;
-  color: var(--accent);
-  margin-bottom: 0.5rem;
-}
-
-.hardskills-tags,
-.softskills-tags,
-.interests-tags {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 1rem 0;
-  gap: 0.5rem;
-}
-
-.hardskills-tag,
-.softskills-tag,
-.interests-tag {
-  background-color: var(--tag-background);
-  color: var(--tag-text);
-  padding: 0.2rem 0.6rem;
-  border-radius: 3px;
-  font-size: 0.8rem;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}

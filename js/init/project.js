@@ -112,3 +112,22 @@ export const fetchProjects = async () => {
     console.error("Erreur lors du chargement du fichier projects.json:", error);
   }
 };
+
+export function extractSkillsFromProjects(projects) {
+  const allSkills = {
+    hard_skills: new Set(),
+    soft_skills: new Set()
+  };
+
+  projects.forEach(project => {
+    if (project.competences) {
+      project.competences.hard_skills.forEach(skill => allSkills.hard_skills.add(skill));
+      project.competences.soft_skills.forEach(skill => allSkills.soft_skills.add(skill));
+    }
+  });
+
+  return {
+    hard_skills: Array.from(allSkills.hard_skills),
+    soft_skills: Array.from(allSkills.soft_skills)
+  };
+}
