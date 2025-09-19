@@ -3,13 +3,29 @@
 ├── index.html
 ├── src
 │   ├── asset
+│   │   └── images
+│   │       ├── icon.png
+│   │       └── map-bg.png
 │   ├── css
+│   │   ├── component
+│   │   │   └── tags.css
 │   │   ├── style.css
-│   │   └── themes.css
+│   │   └── themes
+│   │       ├── dark
+│   │       │   ├── erebor.css
+│   │       │   ├── minas-morgul.css
+│   │       │   └── mordor.css
+│   │       ├── light
+│   │       │   ├── minas-tirith.css
+│   │       │   ├── rivendell.css
+│   │       │   └── shire.css
+│   │       └── themes.css
 │   ├── js
-│   │   ├── main.js
-│   │   └── themes.js
-│   ├── json
+│   │   ├── components
+│   │   │   └── themes.js
+│   │   ├── functions
+│   │   │   └── templates.js
+│   │   └── main.js
 │   └── template
 │       ├── banner.tmpl
 │       ├── footer.tmpl
@@ -17,5 +33,5 @@
 ├── TREE.md
 └── tree.sh
 
-7 directories, 10 files
+13 directories, 20 files
 ```

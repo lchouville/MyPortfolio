@@ -7,6 +7,6 @@ export const loadTemplate = async (url) => {
     return await response.text();
   } catch (error) {
     console.error("Erreur lors du chargement du template :", error);
-    return `<div class="error">Impossible de charger le sélecteur de thème.</div>`;
+    return `<div class="error">Impossible de charger le theme. ${url}</div>`;
   }
 };

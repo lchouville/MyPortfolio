@@ -1,0 +1,38 @@
+/* ================================
+   LIGHT THEMES - LORD OF THE RINGS
+   ================================ */
+
+/* SHIRE */
+:root[data-theme="shire"] {
+  --primary-bg: #f9f6e9;
+  --secondary-bg: #e8e0c7;
+  --accent-bg: #d4c5a0;
+
+  --text-primary: #2d2416;
+  --text-secondary: #5d4e32;
+  --text-muted: #7a6a4a;
+
+  --accent-light: #718c5a;
+  --accent-medium: #d4af37;
+  --accent-strong: #8b4513;
+
+  --border-color: #b8aa82;
+  --shadow-light: rgba(50, 40, 20, 0.1);
+  --shadow-medium: rgba(50, 40, 20, 0.2);
+  --shadow-strong: rgba(20, 15, 5, 0.3);
+
+  --gradient-primary: linear-gradient(135deg, #f9f6e9 0%, #e8e0c7 100%);
+  --gradient-accent: linear-gradient(135deg, #718c5a 0%, #d4af37 100%);
+
+  --tag-general-border: #718c5a;
+  --tag-general-bg: rgba(113, 140, 90, 0.15);
+  --tag-general-text: #4d6537;
+
+  --tag-hard-border: #d4af37;
+  --tag-hard-bg: rgba(212, 175, 55, 0.15);
+  --tag-hard-text: #a8842b;
+
+  --tag-soft-border: #8b4513;
+  --tag-soft-bg: rgba(139, 69, 19, 0.15);
+  --tag-soft-text: #5d2f0d;
+}
