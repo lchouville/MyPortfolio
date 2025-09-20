@@ -5,8 +5,8 @@ import { loadTemplate } from "./functions/templates.js"
 
 document.addEventListener("DOMContentLoaded", async () => {
     // Load Header
-    initBanner();
-    initNav();
+    await initBanner();
+    await initNav();
     // Load Themes Selector
     document.getElementById('themeSelectorContainer').innerHTML = await loadTemplate('./src/template/themes.tmpl');
     initTheme();
