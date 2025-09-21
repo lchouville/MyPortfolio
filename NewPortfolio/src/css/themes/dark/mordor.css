@@ -36,3 +36,7 @@
   --tag-soft-bg: rgba(77, 26, 26, 0.25);
   --tag-soft-text: #a63d3d;
 }
+
+.color-mordor {
+  background: linear-gradient(135deg, #0d0d0d, #ff1a1a);
+}

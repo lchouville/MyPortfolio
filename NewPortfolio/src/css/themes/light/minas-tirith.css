@@ -36,3 +36,7 @@
   --tag-soft-bg: rgba(107, 107, 107, 0.15);
   --tag-soft-text: #4d4d4d;
 }
+
+.color-minas-tirith {
+  background: linear-gradient(135deg, #fafafa, #c0c0c0);
+}

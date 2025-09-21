@@ -13,26 +13,50 @@
    ================================= */
 
 /* Backgrounds */
-.bg-primary { background-color: var(--primary-bg); }
-.bg-secondary { background-color: var(--secondary-bg); }
-.bg-accent { background-color: var(--accent-bg); }
+.bg-primary {
+  background-color: var(--primary-bg);
+}
+.bg-secondary {
+  background-color: var(--secondary-bg);
+}
+.bg-accent {
+  background-color: var(--accent-bg);
+}
 
 /* Text colors */
-.text-primary { color: var(--text-primary); }
-.text-secondary { color: var(--text-secondary); }
-.text-muted { color: var(--text-muted); }
+.text-primary {
+  color: var(--text-primary);
+}
+.text-secondary {
+  color: var(--text-secondary);
+}
+.text-muted {
+  color: var(--text-muted);
+}
 
 /* Borders */
-.border-theme { border-color: var(--border-color); }
+.border-theme {
+  border-color: var(--border-color);
+}
 
 /* Shadows */
-.shadow-light { box-shadow: 0 2px 4px var(--shadow-light); }
-.shadow-medium { box-shadow: 0 4px 8px var(--shadow-medium); }
-.shadow-strong { box-shadow: 0 8px 16px var(--shadow-strong); }
+.shadow-light {
+  box-shadow: 0 2px 4px var(--shadow-light);
+}
+.shadow-medium {
+  box-shadow: 0 4px 8px var(--shadow-medium);
+}
+.shadow-strong {
+  box-shadow: 0 8px 16px var(--shadow-strong);
+}
 
 /* Gradients */
-.gradient-primary { background: var(--gradient-primary); }
-.gradient-accent { background: var(--gradient-accent); }
+.gradient-primary {
+  background: var(--gradient-primary);
+}
+.gradient-accent {
+  background: var(--gradient-accent);
+}
 
 /* =================================
    TRANSITIONS AND ANIMATIONS
@@ -40,7 +64,8 @@
 
 /* Theme change animation */
 * {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 /* =================================
@@ -83,10 +108,8 @@
   display: none;
   opacity: 0;
   transform: translateY(10px);
-  transition:
-    opacity 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
-    transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
-    visibility 0.3s;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+    transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), visibility 0.3s;
   visibility: hidden;
 }
 
@@ -124,9 +147,7 @@
   padding: 0.5rem;
   cursor: pointer;
   border-radius: 8px;
-  transition:
-    background-color 0.2s ease,
-    transform 0.1s ease,
+  transition: background-color 0.2s ease, transform 0.1s ease,
     box-shadow 0.2s ease;
 }
 
@@ -157,22 +178,7 @@
   transform: scale(1.1);
 }
 
-/* Theme color preview styles (updated) */
-.color-shire {
-  background: linear-gradient(135deg, #f8f5e4, #d4c5a0);
-}
-.color-minas-tirith {
-  background: linear-gradient(135deg, #fafafa, #c0c0c0);
-}
-.color-rivendell {
-  background: linear-gradient(135deg, #f5f8fa, #3498db);
-}
-.color-minas-morgul {
-  background: linear-gradient(135deg, #1a1a2e, #0f3460);
-}
-.color-erebor {
-  background: linear-gradient(135deg, #2c1810, #4a2c1a);
-}
-.color-mordor {
-  background: linear-gradient(135deg, #0d0d0d, #2d1010);
+.themeicon {
+  color: var(--accent-light);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }

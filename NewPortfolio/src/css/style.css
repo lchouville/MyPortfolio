@@ -1,5 +1,7 @@
 @import url(themes/themes.css);
 @import url(components/header.css);
+@import url(components/about.css);
+@import url(components/tags.css);
 
 * {
   margin: 0;

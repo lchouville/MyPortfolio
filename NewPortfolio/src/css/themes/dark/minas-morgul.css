@@ -36,3 +36,7 @@
   --tag-soft-bg: rgba(43, 59, 85, 0.2);
   --tag-soft-text: #5c6c85;
 }
+
+.color-minas-morgul {
+  background: linear-gradient(135deg, #1a1a2e, #0f3460);
+}
