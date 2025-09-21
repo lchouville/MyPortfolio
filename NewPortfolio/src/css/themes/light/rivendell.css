@@ -36,3 +36,7 @@
   --tag-soft-bg: rgba(189, 195, 199, 0.15);
   --tag-soft-text: #6c7a89;
 }
+
+.color-rivendell {
+  background: linear-gradient(135deg, #f4faff, #3498db);
+}

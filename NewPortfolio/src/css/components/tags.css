@@ -1,17 +1,57 @@
+/* Style pour les badges de compétences */
+.competences-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  justify-content: flex-start;
+}
+
+/* Style commun pour les tags */
+.competence-tag {
+  padding: 0.4rem 0.8rem;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
 .tag-general {
-  border: 1px solid var(--tag-general-border);
+  border-color: var(--tag-general-border);
   background-color: var(--tag-general-bg);
   color: var(--tag-general-text);
 }
 
 .tag-hard-skill {
-  border: 1px solid var(--tag-hard-border);
+  border-color: var(--tag-hard-border);
   background-color: var(--tag-hard-bg);
   color: var(--tag-hard-text);
 }
 
 .tag-soft-skill {
-  border: 1px solid var(--tag-soft-border);
+  border-color: var(--tag-soft-border);
   background-color: var(--tag-soft-bg);
   color: var(--tag-soft-text);
+}
+
+.interests-tag {
+  background-color: var(--tag-general-bg);
+  color: var(--tag-general-text);
+  border: 1px solid var(--tag-general-border);
+}
+
+/* Effet de survol pour les tags */
+.competence-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Version Desktop */
+@media (min-width: 768px) {
+  /* Alignement des compétences à gauche sur desktop */
+  .competences-tags {
+    justify-content: flex-start;
+  }
 }

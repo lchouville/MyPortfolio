@@ -1,7 +1,11 @@
 {
-    "banner":{
-        "about":"A propos",
-        "home":"Portfolio",
-        "contact":"Contact"
-    }
+  "banner": {
+    "about": "A propos",
+    "home": "Portfolio",
+    "contact": "Contact"
+  },
+  "about":{
+    "title": "A propos de moi",
+    "hobby_title":"Centres d'intérêt"
+  }
 }

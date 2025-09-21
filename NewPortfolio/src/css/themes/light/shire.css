@@ -36,3 +36,7 @@
   --tag-soft-bg: rgba(139, 69, 19, 0.15);
   --tag-soft-text: #5d2f0d;
 }
+
+.color-shire {
+  background: linear-gradient(135deg, #f8f5e4, #b8aa82);
+}
