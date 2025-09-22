@@ -1,5 +1,6 @@
 import { loadData } from "../functions/data.js";
 import { loadTemplate } from "../functions/templates.js";
+let lockSend = false
 
 export async function initContact() {
 
@@ -24,28 +25,40 @@ export async function initContact() {
   contact.innerHTML = contatTmpl;
   // Append on App
   document.getElementById("app").appendChild(contact);
+  initEvent(dataSite.contact.emailJS);
 };
-function initEvent() {
+function initEvent(emailJSkey) {
   const contactForm = document.getElementById("contact-form");
   const formMessage = document.getElementById("form-message");
-  const serviceId = "service_jf3rq3w";
-  const templateId = "template_jf9dff8";
 
   contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
-
-    emailjs.sendForm(serviceId, templateId, this).then(
-      function () {
-        console.log("SUCCESS!");
-        formMessage.textContent = "Message envoyé avec succès !";
-        formMessage.className = "success";
-        contactForm.reset();
-      },
-      function (error) {
-        console.log("FAILED...", error);
-        formMessage.textContent = "Erreur lors de l'envoi du message.";
-        formMessage.className = "error";
-      }
-    );
+    if (!lockSend) {
+      lockSend = true
+      emailjs.sendForm(emailJSkey.serviceId, emailJSkey.templateId, this).then(
+        function () {
+          console.log("SUCCESS!");
+          formMessage.textContent = "Message envoyé avec succès !";
+          formMessage.className = "success";
+          contactForm.reset();
+          lockSend = false
+        },
+        function (error) {
+          console.log("FAILED...", error);
+          formMessage.textContent = "Erreur lors de l'envoi du message.";
+          formMessage.className = "error";
+          lockSend = false
+        }
+      );
+    }
   });
+
+  const publicKey = document.createElement("script")
+  publicKey.type = "text/javascript";
+  publicKey.innerHTML =
+    `(function () {
+        emailjs.init("{{publicKey}}");
+    })();`.replace(/{{publicKey}}/g, emailJSkey.publicKey)
+  // Append at body end
+  document.body.appendChild(publicKey)
 }

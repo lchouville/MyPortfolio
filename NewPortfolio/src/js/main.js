@@ -11,11 +11,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   await initBanner();
   await initNav();
   await initAbout();
+
   // Load Containt
   await initContact();
-
+  
   // Load Footer
   await initFooter();
+  
   // Load Themes Selector
   document.getElementById("themeSelectorContainer").innerHTML =
     await loadTemplate("./src/template/themes.tmpl");
