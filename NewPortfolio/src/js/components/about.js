@@ -7,6 +7,7 @@ export async function initAbout() {
   const dataPerso = await loadData("src/asset/data/personal-info.json");
   const about = document.createElement("section");
   about.id = "about-me"
+  about.className="mainPanel about-me"
   let aboutTmpl = await loadTemplate("./src/template/about.tmpl");
   // Replace Place-holder
   aboutTmpl = aboutTmpl

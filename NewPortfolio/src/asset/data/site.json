@@ -7,5 +7,17 @@
   "about":{
     "title": "A propos de moi",
     "hobby_title":"Centres d'intérêt"
+  },
+  "contact":{
+    "title":"Contact",
+    "text":"N'hésitez pas à me contacter pour discuter d'opportunités professionnelles ou de projets. ",
+    "name":"Nom :",
+    "email":"Email :",
+    "message":"Message :",
+    "submit":"Envoyer le message"
+  },
+  "footer":{
+    "year":"2025",
+    "copyright":"Tous droits réservés"
   }
 }
