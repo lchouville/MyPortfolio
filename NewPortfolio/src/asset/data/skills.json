@@ -1,0 +1,100 @@
+{
+    "hardSkills": {
+        "languages": [
+            {
+                "id": "html",
+                "name": "HTML5",
+                "details": [
+                    {
+                        "id": "semantic",
+                        "name": "Balises sémantiques"
+                    },
+                    {
+                        "id": "accessibility",
+                        "name": "Accessibilité (ARIA)"
+                    }
+                ]
+            },
+            {
+                "id": "css",
+                "name": "CSS3",
+                "details": [
+                    {
+                        "id": "responsive",
+                        "name": "Design responsive (Flexbox, Grid)"
+                    },
+                    {
+                        "id": "animations",
+                        "name": "Animations (Keyframes, Transitions)"
+                    }
+                ]
+            },
+            {
+                "id": "js",
+                "name": "JavaScript",
+                "details": [
+                    {
+                        "id": "es6",
+                        "name": "ES6+ (Arrow Functions, Modules)"
+                    },
+                    {
+                        "id": "async",
+                        "name": "Programmation asynchrone (Promises, Async/Await)"
+                    },
+                    {
+                        "id": "dom",
+                        "name": "Manipulation du DOM"
+                    }
+                ]
+            },
+            {
+                "id": "json",
+                "name": "JSON",
+                "details": [
+                    {
+                        "id": "data_driven",
+                        "name": "Gestion de données structurées"
+                    },
+                    {
+                        "id": "apis",
+                        "name": "Intégration avec des APIs REST"
+                    }
+                ]
+            }
+        ],
+        "tools": [
+            {
+                "id": "docker",
+                "name": "Docker",
+                "details": [
+                    {
+                        "id": "containerisation",
+                        "name": "Containerisation"
+                    },
+                    {
+                        "id": "compose",
+                        "name": "Docker Compose"
+                    }
+                ]
+            }
+        ]
+    },
+    "softSkills": {
+        "communication": [
+            {
+                "id": "teamwork",
+                "name": "Travail en équipe",
+                "details": [
+                    {
+                        "id": "collab",
+                        "name": "Collaboration"
+                    },
+                    {
+                        "id": "ecoute",
+                        "name": "Écoute active"
+                    }
+                ]
+            }
+        ]
+    }
+}

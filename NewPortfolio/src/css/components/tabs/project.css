@@ -1,5 +1,5 @@
 /* Section Projets */
-#projets-tab {
+.projets-tab {
   background-color: var(--secondary-bg);
 }
 
@@ -10,7 +10,8 @@
 }
 
 .project-card {
-  position: relative; /* Important pour positionner les éléments à l'intérieur */
+  position: relative;
+  /* Important pour positionner les éléments à l'intérieur */
   background-color: var(--primary-bg);
   border-radius: 6px;
   overflow: hidden;
@@ -18,6 +19,7 @@
   border: 1px solid var(--border-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
@@ -34,27 +36,32 @@
   font-size: 0.8em;
   z-index: 10;
 }
-.finished{
-    background-color: rgba(3, 117, 9, 0.6); 
+
+.finished {
+  background-color: rgba(3, 117, 9, 0.6);
 }
-.in-progress{
-    background-color: rgba(3, 117, 117, 0.6); 
+
+.in-progress {
+  background-color: rgba(3, 117, 117, 0.6);
 }
-.paused{
-    background-color: rgba(117, 109, 3, 0.6); 
+
+.paused {
+  background-color: rgba(117, 109, 3, 0.6);
 }
-.aborted{
-    background-color: rgba(117, 3, 3, 0.6);
+
+.aborted {
+  background-color: rgba(117, 3, 3, 0.6);
 }
+
 .project-links {
   margin-top: 1rem;
   text-align: right;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
+
 .project-links a {
   display: inline-block;
-  margin-left: 0.5rem;
   padding: 0.5rem 1rem;
   background-color: var(--accent-light);
   color: var(--primary-bg);
@@ -86,6 +93,7 @@
   flex-wrap: wrap;
   margin: 1rem;
   gap: 0.5rem;
+  justify-content: center;
 }
 
 .project-tag {

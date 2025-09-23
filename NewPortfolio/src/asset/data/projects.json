@@ -6,7 +6,13 @@
     "repository": "https://github.com/lchouville/MyPortfolio.git",
     "access": null,
     "image": "src/asset/images/projects/portfolio.png",
-    "techno": ["HTML5", "CSS3", "Vanilla JavaScript", "JSON (data-driven content)"]
+    "hardSkills": [
+      { "id": "html", "usedDetails": ["semantic"] },
+      { "id": "css", "usedDetails": ["responsive", "animations"] },
+      { "id": "js", "usedDetails": ["dom", "es6"] },
+      { "id": "json", "usedDetails": ["data_driven"] }
+    ],
+    "softSkills": []
   },
   {
     "name": "GR.A.V.A.",
@@ -15,6 +21,12 @@
     "repository": null,
     "access": null,
     "image": null,
-    "techno": ["HTML5", "CSS3", "Vanilla JavaScript", "SVG"]
+    "hardSkills": [
+      { "id": "html", "usedDetails": ["semantic"] },
+      { "id": "css", "usedDetails": ["animations", "flexbox"] },
+      { "id": "js", "usedDetails": ["dom"] },
+      { "id": "svg", "usedDetails": ["vector_graphics"] }
+    ],
+    "softSkills": []
   }
 ]

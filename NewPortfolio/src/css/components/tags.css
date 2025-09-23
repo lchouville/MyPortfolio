@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1rem;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 /* Style commun pour les tags */
@@ -48,10 +48,48 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Version Desktop */
-@media (min-width: 768px) {
-  /* Alignement des compétences à gauche sur desktop */
-  .competences-tags {
-    justify-content: flex-start;
-  }
+/* Style pour les détails (avec tooltip) */
+.competence-details {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #f0f0f0;
+  border-radius: 0 4px 4px 0;
+  font-size: 14px;
+  cursor: help; /* Indique qu'il y a une info-bulle */
 }
+
+/* Style de la popup (tooltip) pour les détails */
+.competence-details[title] {
+  position: relative;
+}
+
+.competence-details[title]::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  pointer-events: none;
+  z-index: 100;
+  width: max-content;
+  max-width: 300px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.competence-details[title]:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Version Desktop */
+@media (min-width: 768px) {}

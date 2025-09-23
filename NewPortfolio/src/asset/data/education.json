@@ -1,0 +1,202 @@
+[
+  {
+    "title": "Bac+5 Chef de Projets et green IT",
+    "school": "Zone 01",
+    "location": "Rouen",
+    "obtention": {
+      "dateDebut": "2025-08",
+      "dateFin": "2027-08",
+      "mention": "en cours"
+    },
+    "description": "Gestion de projet IT et Green IT : éco-conception, stratégie numérique responsable, conduite du changement.",
+    "competences": {
+      "hard_skills": [
+        "DevOps",
+        "Agile (Scrum, Kanban, Jira)",
+        "Éco-conception logicielle",
+        "Stratégie Green IT",
+        "Normes (REEN, RGAA, ISO)",
+        "Veille technologique"
+      ],
+      "soft_skills": [
+        "Leadership",
+        "Communication",
+        "Collaboration",
+        "Adaptabilité",
+        "Gestion de projet"
+      ]
+    }
+  },
+  {
+    "title": "Bac+3 Développeur Fullstack",
+    "school": "Zone 01",
+    "location": "Rouen",
+    "obtention": {
+      "dateDebut": "2023-05",
+      "dateFin": "2025-06",
+      "mention": "Obtenu"
+    },
+    "description": "Développement web fullstack : langages, frameworks, bases de données, DevOps, sécurité.",
+    "competences": {
+      "hard_skills": [
+        "GitHub",
+        "Rust",
+        "JavaScript (avancé)",
+        "Go",
+        "Algorithmes",
+        "React Native",
+        "Web réactif",
+        "Bases de données (MySQL, PostgreSQL, MongoDB)",
+        "Python",
+        "Pandas/NumPy",
+        "VS Code",
+        "TypeScript (avancé)",
+        "Next.js",
+        "GraphQL",
+        "React/Angular/Vue.js",
+        "Node.js/Django/Laravel",
+        "CI/CD (Docker)",
+        "Sécurité (OWASP)"
+      ],
+      "soft_skills": [
+        "Travail d’équipe",
+        "Communication technique",
+        "Autonomie",
+        "Veille techno",
+        "Résolution de problèmes"
+      ]
+    }
+  },
+  {
+    "title": "Bac+2 Développement Web & Web Mobile",
+    "school": "ENI school Informatique",
+    "location": "En Ligne",
+    "obtention": {
+      "dateDebut": "2021-09",
+      "dateFin": "2022-05",
+      "mention": "Certificat front-end"
+    },
+    "description": "Développement web et mobile : langages, frameworks, bases de données.",
+    "competences": {
+      "hard_skills": [
+        "Java",
+        "JavaScript",
+        "HTML5/CSS3",
+        "MySQL",
+        "Angular",
+        "Spring Boot/Node.js",
+        "PostgreSQL/MongoDB",
+        "GitHub",
+        "WordPress"
+      ],
+      "soft_skills": [
+        "Collaboration",
+        "Communication",
+        "Autonomie",
+        "Veille techno",
+        "Résolution de problèmes"
+      ]
+    }
+  },
+  {
+    "title": "Prépa Bachelor Game Design",
+    "school": "Institut Artline",
+    "location": "En ligne",
+    "obtention": {
+      "dateDebut": "2020-03",
+      "dateFin": "2020-12",
+      "mention": "Certificat"
+    },
+    "description": "Préparation aux métiers du game design : conception de jeux, narration, level design, outils graphiques et moteurs de jeu.",
+    "competences": {
+      "hard_skills": [
+        "Unity",
+        "Unreal Engine",
+        "Game design",
+        "Level design",
+        "Narration interactive",
+        "Modélisation 3D (Blender)",
+        "Texturing",
+        "Animation 2D/3D",
+        "Scripting (C#)",
+        "Game mechanics",
+        "UI/UX pour jeux",
+        "Prototypage",
+        "Photoshop",
+        "Illustrator"
+      ],
+      "soft_skills": [
+        "Créativité",
+        "Storytelling",
+        "Collaboration artistique",
+        "Gestion de projet créatif",
+        "Adaptabilité",
+        "Résolution de problèmes"
+      ]
+    }
+  },
+  {
+    "title": "BTS SIO option SLAM",
+    "school": "Campus La Chataigneraie",
+    "location": "Mesnil-Esnard",
+    "obtention": {
+      "dateDebut": "2018",
+      "dateFin": "2020",
+      "mention": "Non passé"
+    },
+    "description": "Développement d’applications et services IT : bases de données, sécurité, administration système.",
+    "competences": {
+      "hard_skills": [
+        "C#/C++",
+        "Python",
+        "SQL Server/MySQL",
+        "PHP",
+        "Symphony",
+        "VS",
+        "Modélisation (Merise, UML)",
+        "Virtualisation",
+        "Cybersécurité"
+      ],
+      "soft_skills": [
+        "Travail d’équipe",
+        "Communication",
+        "Autonomie",
+        "Veille techno",
+        "Résolution de problèmes"
+      ]
+    }
+  },
+  {
+    "title": "Bac Systèmes Électroniques et Numériques",
+    "school": "Lycée Grieu",
+    "location": "Rouen",
+    "obtention": {
+      "dateDebut": "2015",
+      "dateFin": "2018",
+      "mention": "Assez bien"
+    },
+    "description": "Systèmes électroniques et numériques : électronique, réseaux, sécurité, maintenance.",
+    "competences": {
+      "hard_skills": [
+        "HTML5/CSS",
+        "TCP/IP",
+        "Électronique",
+        "Fibre optique",
+        "C++/Bash",
+        "Installation réseau",
+        "Diagnostic/réparation",
+        "Sécurité réseaux",
+        "Télécommunications",
+        "Audiovisuel",
+        "Multimédia"
+      ],
+      "soft_skills": [
+        "Collaboration",
+        "Communication",
+        "Autonomie",
+        "Veille techno",
+        "Résolution de problèmes"
+      ]
+    }
+  }
+]
