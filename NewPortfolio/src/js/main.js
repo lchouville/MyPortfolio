@@ -5,12 +5,18 @@ import { loadTemplate } from "./functions/templates.js";
 import { initAbout } from "./components/about.js";
 import { initContact } from "./components/contact.js";
 import { initFooter } from "./components/footer.js";
+import { initMainTab } from "./components/tabsNav.js";
+import { fetchProjects } from "./components/tabs/project.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   // Load Header
   await initBanner();
   await initNav();
   await initAbout();
+
+  // Load Tabs
+  await initMainTab();
+  await fetchProjects();
 
   // Load Containt
   await initContact();

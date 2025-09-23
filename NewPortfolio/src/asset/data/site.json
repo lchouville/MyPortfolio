@@ -8,6 +8,12 @@
     "title": "A propos de moi",
     "hobby_title": "Centres d'intérêt"
   },
+  "tabs": {
+    "projects": "Projets",
+    "skills": "Compétences",
+    "certifications": "Formations",
+    "Experiences": "Parcours Professionnel"
+  },
   "contact": {
     "title": "Contact",
     "text": "N'hésitez pas à me contacter pour discuter d'opportunités professionnelles ou de projets. ",
