@@ -9,7 +9,7 @@ import { initMainTab } from "./components/tabs/tabsNav.js";
 import { fetchProjects } from "./components/tabs/project.js";
 import { initHead } from "./components/head.js";
 import { fetchEducation } from "./components/tabs/education.js";
-import { fetchExperience } from "./components/tabs/experiece.js";
+import { fetchExperience } from "./components/tabs/experience.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   // Load Head

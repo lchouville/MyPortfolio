@@ -1,9 +1,9 @@
 import { loadData } from "../../functions/data.js";
-import { createTagsList } from "../../functions/tags.js";
+import { createSkillsTags, createTagsList } from "../../functions/tags.js";
 import { loadTemplate } from "../../functions/templates.js";
 
 // Populate the professional experiences section
-function populateExperience(experienceData, experienceTmpl, errors) {
+function populateExperience(experienceData, experienceTmpl, errors, skills) {
     const professionalTab = document.getElementById("professional-tab");
     const experienceContainer = professionalTab;
 
@@ -33,19 +33,31 @@ function populateExperience(experienceData, experienceTmpl, errors) {
             .replace(/{{description}}/g, exp.description || "");
 
         // Add skills if any
-        if (Array.isArray(exp.skills) && exp.skills.length > 0) {
-            const skillsContainer = document.createElement("div");
-            skillsContainer.classList.add("skills-container");
+        if (Array.isArray(exp.hardSkills) && exp.hardSkills.length > 0) {
+            const hardSkillsContainer = document.createElement("div");
+            hardSkillsContainer.classList.add("skills-container");
 
             const SkillsTitle = document.createElement("h4");
-            SkillsTitle.textContent = "Skills";
+            SkillsTitle.textContent = "Hard Skills:";
             SkillsTitle.classList.add("skills-title");
 
-            skillsContainer.appendChild(
-                createTagsList(exp.skills, "tag-hard-skill")
+            hardSkillsContainer.appendChild(
+                createSkillsTags(exp.hardSkills, skills.hardSkills, "tag-hard-skill")
             );
-            experienceItem.appendChild(skillsContainer);
+            experienceItem.appendChild(hardSkillsContainer);
+        }
+        if (Array.isArray(exp.softSkills) && exp.softSkills.length > 0) {
+            const softSkillsContainer = document.createElement("div");
+            softSkillsContainer.classList.add("skills-container");
 
+            const SkillsTitle = document.createElement("h4");
+            SkillsTitle.textContent = "Soft Skills:";
+            SkillsTitle.classList.add("skills-title");
+
+            softSkillsContainer.appendChild(
+                createSkillsTags(exp.softSkills, skills.softSkills, "tag-soft-skill",true)
+            );
+            experienceItem.appendChild(softSkillsContainer);
         }
 
         experienceContainer.appendChild(experienceItem);
@@ -55,14 +67,15 @@ function populateExperience(experienceData, experienceTmpl, errors) {
 // Fetch and render experiences
 export const fetchExperience = async () => {
     try {
-        const [experienceResponse, experienceTmpl, errors] = await Promise.all([
+        const [experienceResponse, experienceTmpl, errors, skills] = await Promise.all([
             fetch("src/asset/data/experience.json"),
             loadTemplate("./src/template/tabs/experienceCard.tmpl"),
             loadData("src/asset/data/error.json"),
+            loadData("src/asset/data/skills.json")
         ]);
 
         const experienceData = await experienceResponse.json();
-        populateExperience(experienceData, experienceTmpl, errors);
+        populateExperience(experienceData, experienceTmpl, errors, skills);
     } catch (error) {
         console.error("Error while loading experience.json:", error);
     }

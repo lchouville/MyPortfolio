@@ -1,95 +1,108 @@
-/* Style pour les badges de compétences */
+/* ============================================= */
+/* COMPETENCE BADGES STYLES                      */
+/* ============================================= */
+/* Main container for all badges */
 .competences-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1rem;
+  margin: 0.5rem 0;
   justify-content: center;
+  position: relative;
 }
 
-/* Style commun pour les tags */
+/* Base style for all competence tags */
 .competence-tag {
+  position: relative;
+  display: inline-block;
   padding: 0.4rem 0.8rem;
-  border-style: solid;
-  border-width: 1px;
+  border: 1px solid;
   border-radius: 15px;
-  font-size: 0.85rem;
-  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  cursor: default;
+  white-space: nowrap;
 }
 
+/* Tag variants using CSS variables */
 .tag-general {
-  border-color: var(--tag-general-border);
-  background-color: var(--tag-general-bg);
-  color: var(--tag-general-text);
+  border-color: var(--tag-general-border, #d0d7de);
+  background-color: var(--tag-general-bg, #f0f6fc);
+  color: var(--tag-general-text, #1f2328);
 }
 
 .tag-hard-skill {
-  border-color: var(--tag-hard-border);
-  background-color: var(--tag-hard-bg);
-  color: var(--tag-hard-text);
+  border-color: var(--tag-hard-border, #ff9e0d);
+  background-color: var(--tag-hard-bg, #fff5e6);
+  color: var(--tag-hard-text, #9a3412);
 }
 
 .tag-soft-skill {
-  border-color: var(--tag-soft-border);
-  background-color: var(--tag-soft-bg);
-  color: var(--tag-soft-text);
+  font-weight: bold;
+  border-color: var(--tag-soft-border, #6e7781);
+  background-color: var(--tag-soft-bg, #e5e7eb);
+  color: var(--tag-soft-text, #24292f);
 }
 
-.interests-tag {
-  background-color: var(--tag-general-bg);
-  color: var(--tag-general-text);
-  border: 1px solid var(--tag-general-border);
-}
-
-/* Effet de survol pour les tags */
+/* Hover effect for tags */
 .competence-tag:hover {
   transform: translateY(-2px);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Style pour les détails (avec tooltip) */
-.competence-details {
+/* Style for subtags */
+.competence-subtag {
   display: inline-block;
-  padding: 4px 8px;
-  background-color: #f0f0f0;
-  border-radius: 0 4px 4px 0;
-  font-size: 14px;
-  cursor: help; /* Indique qu'il y a une info-bulle */
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-weight: normal;
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: inherit;
+  border: 1px dashed rgba(0, 0, 0, 0.1);
 }
 
-/* Style de la popup (tooltip) pour les détails */
-.competence-details[title] {
-  position: relative;
-}
+/* ============================================= */
+/* TOOLTIP STYLES                                */
+/* ============================================= */
 
-.competence-details[title]::after {
-  content: attr(title);
+.tooltip {
   position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #333;
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 4px;
-  font-size: 14px;
-  white-space: nowrap;
+  background-color: #24292f;
+  color: #ffffff;
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: normal;
+  max-width: 280px;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 10000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   pointer-events: none;
-  z-index: 100;
-  width: max-content;
-  max-width: 300px;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.competence-details[title]:hover::after {
-  opacity: 1;
-  visibility: visible;
+/* Tooltip arrow */
+.tooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
 }
 
-/* Version Desktop */
-@media (min-width: 768px) {}
+/* Arrow pointing up when tooltip is below */
+.tooltip.below::after {
+  top: -12px;
+  border-bottom-color: #24292f;
+}
+
+/* Arrow pointing down when tooltip is above */
+.tooltip.above::after {
+  bottom: -12px;
+  border-top-color: #24292f;
+}

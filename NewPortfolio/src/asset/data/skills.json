@@ -48,6 +48,20 @@
                 ]
             },
             {
+                "id": "php",
+                "name": "PHP",
+                "details": [
+                    {
+                        "id": "oop",
+                        "name": "Programmation orientée objet"
+                    },
+                    {
+                        "id": "wp",
+                        "name": "Intégration WordPress"
+                    }
+                ]
+            },
+            {
                 "id": "json",
                 "name": "JSON",
                 "details": [
@@ -58,6 +72,38 @@
                     {
                         "id": "apis",
                         "name": "Intégration avec des APIs REST"
+                    }
+                ]
+            }
+        ],
+        "cms": [
+            {
+                "id": "wordpress",
+                "name": "WordPress",
+                "details": [
+                    {
+                        "id": "plugins",
+                        "name": "Utilisation et personnalisation de plugins"
+                    },
+                    {
+                        "id": "themes",
+                        "name": "Création et modification de thèmes"
+                    }
+                ]
+            }
+        ],
+        "automation": [
+            {
+                "id": "n8n",
+                "name": "N8N",
+                "details": [
+                    {
+                        "id": "workflow",
+                        "name": "Création de workflows d’automatisation"
+                    },
+                    {
+                        "id": "integration",
+                        "name": "Intégration avec APIs tierces"
                     }
                 ]
             }
@@ -77,6 +123,36 @@
                     }
                 ]
             }
+        ],
+        "projectManagement": [
+            {
+                "id": "gestion_projet",
+                "name": "Gestion de projet",
+                "details": [
+                    {
+                        "id": "planning",
+                        "name": "Planification"
+                    },
+                    {
+                        "id": "suivi",
+                        "name": "Suivi d’avancement"
+                    }
+                ]
+            },
+            {
+                "id": "documentation",
+                "name": "Rédaction de documentation",
+                "details": [
+                    {
+                        "id": "tech",
+                        "name": "Documentation technique"
+                    },
+                    {
+                        "id": "user",
+                        "name": "Guides utilisateurs"
+                    }
+                ]
+            }
         ]
     },
     "softSkills": {
@@ -92,6 +168,52 @@
                     {
                         "id": "ecoute",
                         "name": "Écoute active"
+                    }
+                ]
+            },
+            {
+                "id": "communication",
+                "name": "Communication",
+                "details": [
+                    {
+                        "id": "oral",
+                        "name": "Communication orale"
+                    },
+                    {
+                        "id": "written",
+                        "name": "Communication écrite"
+                    }
+                ]
+            }
+        ],
+        "adaptability": [
+            {
+                "id": "adaptability",
+                "name": "Adaptabilité",
+                "details": [
+                    {
+                        "id": "resilience",
+                        "name": "Résilience face aux imprévus"
+                    },
+                    {
+                        "id": "learning",
+                        "name": "Capacité d’apprentissage rapide"
+                    },
+                    {
+                        "id": "flexibility",
+                        "name": "Flexibilité dans les méthodes de travail"
+                    },
+                    {
+                        "id": "curiosity",
+                        "name": "Curiosité intellectuelle"
+                    },
+                    {
+                        "id": "creativity",
+                        "name": "Créativité dans la résolution de problèmes"
+                    },
+                    {
+                        "id": "autonomy",
+                        "name": "Autonomie"
                     }
                 ]
             }

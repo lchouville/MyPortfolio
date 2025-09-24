@@ -17,7 +17,7 @@ export async function initAbout() {
     .replace(/{{hobby_title}}/g, dataSite.about.hobby_title)
   about.innerHTML = aboutTmpl;
 
-  about.appendChild(createTagsList(dataPerso.interests,"interests-tag"))
+  about.appendChild(createTagsList(dataPerso.interests,"tag-general"))
   // Append on App
   document.getElementById("app").appendChild(about);
 }
