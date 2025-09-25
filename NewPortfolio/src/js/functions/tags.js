@@ -37,10 +37,7 @@ export function createSkillsTags(
 
     let top = window.scrollY + tagRect.top - tooltipRect.height - 8;
     let left =
-      window.scrollX +
-      tagRect.left +
-      tagRect.width / 2 -
-      tooltipRect.width / 2;
+      window.scrollX + tagRect.left + tagRect.width / 2 - tooltipRect.width / 2;
 
     tooltip.classList.remove("above", "below");
 
@@ -86,9 +83,26 @@ export function createSkillsTags(
       tooltip.classList.remove("above", "below");
     }, 150);
   };
+   // 🔹 Compute length = skill name + all used details names
+  const getSkillLength = (skill) => {
+    const skillObj = allSkills.find(s => s.id === skill.id);
+    if (!skillObj) return 0;
+
+    let totalLength = skillObj.name.length;
+
+    if (skill.usedDetails?.length > 0 && skillObj.details && asSubBlocks) {
+      const details = skillObj.details.filter(d => skill.usedDetails.includes(d.id));
+      totalLength += details.reduce((sum, d) => sum + d.name.length, 0);
+    }
+
+    return totalLength;
+  };
+
+  // 🔹 Sort skills based on computed length
+  const sortedSkills = [...skills].sort((a, b) => getSkillLength(a) - getSkillLength(b));
 
   // Build each skill tag
-  skills.forEach((skill) => {
+  sortedSkills.forEach((skill) => {
     const skillObj = allSkills.find((s) => s.id === skill.id);
     if (!skillObj) return;
 

@@ -1,222 +1,257 @@
 {
-    "hardSkills": {
-        "languages": [
-            {
-                "id": "html",
-                "name": "HTML5",
-                "details": [
-                    {
-                        "id": "semantic",
-                        "name": "Balises sémantiques"
-                    },
-                    {
-                        "id": "accessibility",
-                        "name": "Accessibilité (ARIA)"
-                    }
-                ]
-            },
-            {
-                "id": "css",
-                "name": "CSS3",
-                "details": [
-                    {
-                        "id": "responsive",
-                        "name": "Design responsive (Flexbox, Grid)"
-                    },
-                    {
-                        "id": "animations",
-                        "name": "Animations (Keyframes, Transitions)"
-                    }
-                ]
-            },
-            {
-                "id": "js",
-                "name": "JavaScript",
-                "details": [
-                    {
-                        "id": "es6",
-                        "name": "ES6+ (Arrow Functions, Modules)"
-                    },
-                    {
-                        "id": "async",
-                        "name": "Programmation asynchrone (Promises, Async/Await)"
-                    },
-                    {
-                        "id": "dom",
-                        "name": "Manipulation du DOM"
-                    }
-                ]
-            },
-            {
-                "id": "php",
-                "name": "PHP",
-                "details": [
-                    {
-                        "id": "oop",
-                        "name": "Programmation orientée objet"
-                    },
-                    {
-                        "id": "wp",
-                        "name": "Intégration WordPress"
-                    }
-                ]
-            },
-            {
-                "id": "json",
-                "name": "JSON",
-                "details": [
-                    {
-                        "id": "data_driven",
-                        "name": "Gestion de données structurées"
-                    },
-                    {
-                        "id": "apis",
-                        "name": "Intégration avec des APIs REST"
-                    }
-                ]
-            }
-        ],
-        "cms": [
-            {
-                "id": "wordpress",
-                "name": "WordPress",
-                "details": [
-                    {
-                        "id": "plugins",
-                        "name": "Utilisation et personnalisation de plugins"
-                    },
-                    {
-                        "id": "themes",
-                        "name": "Création et modification de thèmes"
-                    }
-                ]
-            }
-        ],
-        "automation": [
-            {
-                "id": "n8n",
-                "name": "N8N",
-                "details": [
-                    {
-                        "id": "workflow",
-                        "name": "Création de workflows d’automatisation"
-                    },
-                    {
-                        "id": "integration",
-                        "name": "Intégration avec APIs tierces"
-                    }
-                ]
-            }
-        ],
-        "tools": [
-            {
-                "id": "docker",
-                "name": "Docker",
-                "details": [
-                    {
-                        "id": "containerisation",
-                        "name": "Containerisation"
-                    },
-                    {
-                        "id": "compose",
-                        "name": "Docker Compose"
-                    }
-                ]
-            }
-        ],
-        "projectManagement": [
-            {
-                "id": "gestion_projet",
-                "name": "Gestion de projet",
-                "details": [
-                    {
-                        "id": "planning",
-                        "name": "Planification"
-                    },
-                    {
-                        "id": "suivi",
-                        "name": "Suivi d’avancement"
-                    }
-                ]
-            },
-            {
-                "id": "documentation",
-                "name": "Rédaction de documentation",
-                "details": [
-                    {
-                        "id": "tech",
-                        "name": "Documentation technique"
-                    },
-                    {
-                        "id": "user",
-                        "name": "Guides utilisateurs"
-                    }
-                ]
-            }
+  "hardSkills": {
+    "languages": [
+      {
+        "id": "html",
+        "name": "HTML5",
+        "details": [
+          { "id": "semantic", "name": "Balises sémantiques" },
+          { "id": "accessibility", "name": "Accessibilité (ARIA)" }
         ]
-    },
-    "softSkills": {
-        "communication": [
-            {
-                "id": "teamwork",
-                "name": "Travail en équipe",
-                "details": [
-                    {
-                        "id": "collab",
-                        "name": "Collaboration"
-                    },
-                    {
-                        "id": "ecoute",
-                        "name": "Écoute active"
-                    }
-                ]
-            },
-            {
-                "id": "communication",
-                "name": "Communication",
-                "details": [
-                    {
-                        "id": "oral",
-                        "name": "Communication orale"
-                    },
-                    {
-                        "id": "written",
-                        "name": "Communication écrite"
-                    }
-                ]
-            }
-        ],
-        "adaptability": [
-            {
-                "id": "adaptability",
-                "name": "Adaptabilité",
-                "details": [
-                    {
-                        "id": "resilience",
-                        "name": "Résilience face aux imprévus"
-                    },
-                    {
-                        "id": "learning",
-                        "name": "Capacité d’apprentissage rapide"
-                    },
-                    {
-                        "id": "flexibility",
-                        "name": "Flexibilité dans les méthodes de travail"
-                    },
-                    {
-                        "id": "curiosity",
-                        "name": "Curiosité intellectuelle"
-                    },
-                    {
-                        "id": "creativity",
-                        "name": "Créativité dans la résolution de problèmes"
-                    },
-                    {
-                        "id": "autonomy",
-                        "name": "Autonomie"
-                    }
-                ]
-            }
+      },
+      {
+        "id": "css",
+        "name": "CSS3",
+        "details": [
+          { "id": "responsive", "name": "Design responsive (Flexbox, Grid)" },
+          { "id": "animations", "name": "Animations (Keyframes, Transitions)" }
         ]
-    }
+      },
+      {
+        "id": "js",
+        "name": "JavaScript",
+        "details": [
+          { "id": "es6", "name": "ES6+ (Arrow Functions, Modules)" },
+          { "id": "async", "name": "Programmation asynchrone (Promises, Async/Await)" },
+          { "id": "dom", "name": "Manipulation du DOM" }
+        ]
+      },
+      {
+        "id": "typescript",
+        "name": "TypeScript",
+        "details": [
+          { "id": "advanced", "name": "Utilisation avancée de TypeScript" }
+        ]
+      },
+      {
+        "id": "php",
+        "name": "PHP",
+        "details": [
+          { "id": "oop", "name": "Programmation orientée objet" },
+          { "id": "wp", "name": "Intégration WordPress" }
+        ]
+      },
+      { "id": "rust", "name": "Rust", "details": [] },
+      { "id": "go", "name": "Go", "details": [] },
+      { "id": "java", "name": "Java", "details": [] },
+      { "id": "csharp", "name": "C#", "details": [] },
+      { "id": "cpp", "name": "C++", "details": [] },
+      {
+        "id": "json",
+        "name": "JSON",
+        "details": [
+          { "id": "data_driven", "name": "Gestion de données structurées" },
+          { "id": "apis", "name": "Intégration avec des APIs REST" }
+        ]
+      },
+      {
+        "id": "python",
+        "name": "Python",
+        "details": [
+          { "id": "pandas", "name": "Pandas" },
+          { "id": "numpy", "name": "NumPy" }
+        ]
+      }
+    ],
+    "cms": [
+      {
+        "id": "wordpress",
+        "name": "WordPress",
+        "details": [
+          { "id": "plugins", "name": "Utilisation et personnalisation de plugins" },
+          { "id": "themes", "name": "Création et modification de thèmes" }
+        ]
+      }
+    ],
+    "automation": [
+      {
+        "id": "n8n",
+        "name": "N8N",
+        "details": [
+          { "id": "workflow", "name": "Création de workflows d’automatisation" },
+          { "id": "integration", "name": "Intégration avec APIs tierces" }
+        ]
+      }
+    ],
+    "frameworks": [
+      { "id": "angular", "name": "Angular", "details": [] },
+      { "id": "react", "name": "React", "details": [] },
+      { "id": "vue", "name": "Vue.js", "details": [] },
+      { "id": "nextjs", "name": "Next.js", "details": [] },
+      { "id": "nodejs", "name": "Node.js", "details": [] },
+      { "id": "django", "name": "Django", "details": [] },
+      { "id": "laravel", "name": "Laravel", "details": [] },
+      { "id": "springboot", "name": "Spring Boot", "details": [] },
+      { "id": "symfony", "name": "Symfony", "details": [] }
+    ],
+    "databases": [
+      { "id": "mysql", "name": "MySQL", "details": [] },
+      { "id": "sqlserver", "name": "SQL Server", "details": [] },
+      { "id": "postgresql", "name": "PostgreSQL", "details": [] },
+      { "id": "mongodb", "name": "MongoDB", "details": [] }
+    ],
+    "tools": [
+      { "id": "github", "name": "GitHub", "details": [] },
+      { "id": "vscode", "name": "VS Code", "details": [] },
+      { "id": "visualstudio", "name": "Visual Studio", "details": [] },
+      { "id": "merise", "name": "Merise", "details": [] },
+      { "id": "uml", "name": "UML", "details": [] },
+      {
+        "id": "docker",
+        "name": "Docker",
+        "details": [
+          { "id": "containerisation", "name": "Containerisation" },
+          { "id": "compose", "name": "Docker Compose" }
+        ]
+      }
+    ],
+    "gameDev": [
+      { "id": "unity", "name": "Unity", "details": [] },
+      {
+        "id": "gamedesign",
+        "name": "Game design",
+        "details": [
+          { "id": "leveldesign", "name": "Level design" },
+          { "id": "gamemechanics", "name": "Mécaniques de jeu" }
+        ]
+      },
+      {
+        "id": "blender",
+        "name": "Blender",
+        "details": [
+          { "id": "modélisation3D", "name": "Modélisation 3D" },
+          { "id": "texturing", "name": "Texturing" },
+          { "id": "animation", "name": "Animation" }
+        ]
+      },
+      { "id": "photoshop", "name": "Photoshop", "details": [] },
+      { "id": "illustrator", "name": "Illustrator", "details": [] },
+      { "id": "unreal", "name": "Unreal Engine", "details": [] }
+    ],
+    "network": [
+      { "id": "tcpip", "name": "TCP/IP", "details": [] },
+      { "id": "electronics", "name": "Électronique", "details": [] },
+      { "id": "fiber", "name": "Fibre optique", "details": [] },
+      { "id": "network_install", "name": "Installation réseau", "details": [] },
+      { "id": "network_security", "name": "Sécurité réseaux", "details": [] },
+      { "id": "telecom", "name": "Télécommunications", "details": [] },
+      { "id": "audiovisual", "name": "Audiovisuel", "details": [] },
+      { "id": "multimedia", "name": "Multimédia", "details": [] }
+    ],
+    "methods": [
+      { "id": "devops", "name": "DevOps", "details": [] },
+      {
+        "id": "agile",
+        "name": "Agile",
+        "details": [
+          { "id": "scrum", "name": "Scrum" },
+          { "id": "kanban", "name": "Kanban" },
+          { "id": "jira", "name": "Jira" }
+        ]
+      },
+      { "id": "eco_it", "name": "Éco-conception logicielle", "details": [] },
+      { "id": "green_it", "name": "Stratégie Green IT", "details": [] },
+      {
+        "id": "normes",
+        "name": "Normes IT",
+        "details": [
+          { "id": "REEN", "name": "Loi REEN" },
+          { "id": "RGAA", "name": "Accessibilité RGAA" },
+          { "id": "ISO", "name": "Normes ISO" }
+        ]
+      }
+    ],
+    "security": [
+      { "id": "owasp", "name": "Sécurité OWASP", "details": [] },
+      { "id": "cybersecurity", "name": "Cybersécurité", "details": [] }
+    ],
+    "projectManagement": [
+      {
+        "id": "gestion_projet",
+        "name": "Gestion de projet",
+        "details": [
+          { "id": "planning", "name": "Planification" },
+          { "id": "suivi", "name": "Suivi d’avancement" }
+        ]
+      },
+      {
+        "id": "documentation",
+        "name": "Rédaction de documentation",
+        "details": [
+          { "id": "tech", "name": "Documentation technique" },
+          { "id": "user", "name": "Guides utilisateurs" }
+        ]
+      }
+    ],
+    "theory": [
+      { "id": "algorithms", "name": "Algorithmique", "details": [] }
+    ]
+  },
+  "softSkills": {
+    "leadership": [
+      {
+        "id": "leadership",
+        "name": "Leadership",
+        "details": [
+          { "id": "inspiration", "name": "Capacité à motiver" },
+          { "id": "decision", "name": "Prise de décision" }
+        ]
+      }
+    ],
+    "communication": [
+      {
+        "id": "teamwork",
+        "name": "Travail en équipe",
+        "details": [
+          { "id": "collab", "name": "Collaboration" },
+          { "id": "ecoute", "name": "Écoute active" }
+        ]
+      },
+      {
+        "id": "communication",
+        "name": "Communication",
+        "details": [
+          { "id": "oral", "name": "Communication orale" },
+          { "id": "written", "name": "Communication écrite" },
+          { "id": "tech", "name": "Communication technique" }
+        ]
+      }
+    ],
+    "adaptability": [
+      {
+        "id": "adaptability",
+        "name": "Adaptabilité",
+        "details": [
+          { "id": "resilience", "name": "Résilience face aux imprévus" },
+          { "id": "learning", "name": "Capacité d’apprentissage rapide" },
+          { "id": "flexibility", "name": "Flexibilité dans les méthodes de travail" },
+          { "id": "creativity", "name": "Créativité dans la résolution de problèmes" },
+          { "id": "autonomy", "name": "Autonomie" },
+          { "id": "problem_solving", "name": "Résolution de problèmes" },
+          { "id": "storytelling", "name": "Storytelling" },
+          { "id": "artistic_collab", "name": "Collaboration artistique" },
+          { "id": "creative_pm", "name": "Gestion de projet créatif" }
+        ]
+      }
+    ],
+    "curiosity": [
+      {
+        "id": "curiosity",
+        "name": "Curiosité",
+        "details": [
+          { "id": "veille", "name": "Veille technologique" }
+        ]
+      }
+    ]
+  }
 }
