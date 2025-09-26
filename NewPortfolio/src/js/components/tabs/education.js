@@ -2,6 +2,41 @@ import { loadData } from "../../functions/data.js";
 import { createSkillsTags, createTagsList } from "../../functions/tags.js";
 import { loadTemplate } from "../../functions/templates.js";
 
+// Helper function to normalize skills data (works with both old and new structure)
+function normalizeSkillsData(skillsData) {
+  const normalized = {};
+
+  // Process hardSkills
+  if (skillsData.hardSkills) {
+    normalized.hardSkills = {};
+    for (const [category, items] of Object.entries(skillsData.hardSkills)) {
+      // Check if it's the new structure with 'items' array
+      if (items.items) {
+        normalized.hardSkills[category] = items.items;
+      } else if (Array.isArray(items)) {
+        // Old structure - keep as is
+        normalized.hardSkills[category] = items;
+      }
+    }
+  }
+
+  // Process softSkills
+  if (skillsData.softSkills) {
+    normalized.softSkills = {};
+    for (const [category, items] of Object.entries(skillsData.softSkills)) {
+      // Check if it's the new structure with 'items' array
+      if (items.items) {
+        normalized.softSkills[category] = items.items;
+      } else if (Array.isArray(items)) {
+        // Old structure - keep as is
+        normalized.softSkills[category] = items;
+      }
+    }
+  }
+
+  return normalized;
+}
+
 // Populate the education timeline with items
 function populateEducation(educationData, formationTmpl, errors, skills) {
   const parcoursTab = document.getElementById("parcours-tab");
@@ -14,6 +49,9 @@ function populateEducation(educationData, formationTmpl, errors, skills) {
     );
     return;
   }
+
+  // Normalize skills data to work with both old and new structure
+  const normalizedSkills = normalizeSkillsData(skills);
 
   educationData.forEach((item) => {
     const timelineItem = document.createElement("div");
@@ -45,21 +83,25 @@ function populateEducation(educationData, formationTmpl, errors, skills) {
 
       if (item.hardSkills?.length > 0) {
         const hardSkillsTitle = document.createElement("h4");
-        hardSkillsTitle.textContent = "Hard Skills";
+        hardSkillsTitle.textContent = "Compétences Techniques";
         hardSkillsTitle.classList.add("skills-title");
         skillsContainer.appendChild(hardSkillsTitle);
+
+        // Use normalized skills data
         skillsContainer.appendChild(
-          createSkillsTags(item.hardSkills, skills.hardSkills, "tag-hard-skill")
+          createSkillsTags(item.hardSkills, normalizedSkills.hardSkills, "tag-hard-skill")
         );
       }
 
       if (item.softSkills?.length > 0) {
         const softSkillsTitle = document.createElement("h4");
-        softSkillsTitle.textContent = "Soft Skills";
+        softSkillsTitle.textContent = "Compétences Transversales";
         softSkillsTitle.classList.add("skills-title");
         skillsContainer.appendChild(softSkillsTitle);
+
+        // Use normalized skills data
         skillsContainer.appendChild(
-          createSkillsTags(item.softSkills, skills.softSkills, "tag-soft-skill",true)
+          createSkillsTags(item.softSkills, normalizedSkills.softSkills, "tag-soft-skill", true)
         );
       }
 

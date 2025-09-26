@@ -1,0 +1,243 @@
+/* ============================================= */
+/* SKILLS SECTION STYLES                        */
+/* ============================================= */
+
+/* Main skills container */
+#skills-tab {
+    padding: 1.5rem;
+    background-color: var(--bg-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow-light);
+}
+
+/* Main section (Hard Skills / Soft Skills) */
+.skills-section {
+    margin-bottom: 2.5rem;
+    padding: 1rem;
+    background-color: var(--block-bg-color);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+.skills-section-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+    color: var(--accent-light);
+    border-bottom: 2px solid var(--accent-light);
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skills-section-title::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--accent-light);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.skills-section-description {
+    margin-bottom: 1.5rem;
+    color: var(--secondary-text-color);
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0 0.5rem;
+}
+
+/* Category block */
+.skill-block {
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--block-border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--block-bg-color);
+    box-shadow: 0 2px 6px var(--shadow-light);
+    transition: box-shadow 0.3s ease;
+}
+
+.skill-block:hover {
+    box-shadow: 0 4px 12px var(--shadow-medium);
+}
+
+/* Category header */
+.skill-block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--primary-bg);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.skill-block-header:hover {
+    background-color: var(--block-hover-bg-color);
+}
+
+.skill-block-header span {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.skill-category-description {
+    margin-bottom: 1rem;
+    color: var(--secondary-text-color);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    font-style: italic;
+    padding: 0 0.5rem;
+}
+
+/* Chevron icon */
+.chevron-icon {
+    transition: transform 0.3s ease;
+    color: var(--secondary-text-color);
+    font-size: 1.1rem;
+}
+
+.chevron-icon.rotate {
+    transform: rotate(180deg);
+}
+
+/* Category content */
+.skill-block-content {
+    display: none;
+    padding: 1rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.skill-block-content.open {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Skills grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+/* Individual skill */
+.skill-item {
+    border: 1px solid var(--block-border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    background: var(--primary-bg);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px var(--shadow-medium);
+}
+
+.skill-name {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-description {
+    margin-bottom: 0.8rem;
+    color: var(--secondary-text-color);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Skill details list */
+.skill-details {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skill-details li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.4rem;
+    color: var(--secondary-text-color);
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.skill-details li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-light);
+    font-weight: bold;
+}
+
+.detail-description {
+    font-size: 0.8rem;
+    color: var(--secondary-text-color);
+    font-weight: normal;
+    display: block;
+    margin-top: 0.2rem;
+    padding-left: 1.2rem;
+}
+
+/* Hard vs Soft skill indicators */
+.tag-hard-skill {
+    border-left: 4px solid var(--tag-hard-border);
+}
+
+.tag-soft-skill {
+    border-left: 4px solid var(--tag-soft-border);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-section-title {
+        font-size: 1.4rem;
+    }
+
+    .skill-block-header span {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-section {
+        padding: 0.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .skill-block {
+        margin-bottom: 1rem;
+    }
+
+    .skill-item {
+        padding: 0.8rem;
+    }
+}

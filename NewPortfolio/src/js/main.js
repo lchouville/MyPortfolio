@@ -10,6 +10,7 @@ import { fetchProjects } from "./components/tabs/project.js";
 import { initHead } from "./components/head.js";
 import { fetchEducation } from "./components/tabs/education.js";
 import { fetchExperience } from "./components/tabs/experience.js";
+import { fetchSkills } from "./components/tabs/skills.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   // Load Head
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Load Tabs
   await initMainTab();
   await fetchProjects();
+  await fetchSkills();
   await fetchEducation();
   await fetchExperience();
 
