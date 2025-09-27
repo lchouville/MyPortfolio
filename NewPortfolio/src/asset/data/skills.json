@@ -1,342 +1,788 @@
 {
   "hardSkills": {
+    "name": "Compétences Techniques",
+    "desc": "Compétences techniques spécifiques liées au développement, aux outils et aux technologies.",
     "languages": {
-      "title": "Langages de programmation",
-      "description": "Langages utilisés pour créer des sites web, applications et logiciels. Chaque langage a ses spécificités et domaines d'application.",
+      "title": "Langages",
+      "description": "Bases du développement web et logiciel.",
       "items": [
         {
           "id": "html",
           "name": "HTML5",
-          "description": "Langage de balisage pour structurer le contenu des pages web (le 'squelette' d'un site).",
+          "description": "Structure des pages web.",
           "details": [
-            { "id": "semantic", "name": "Balises sémantiques", "description": "Utilisation de balises qui décrivent le sens du contenu (comme <header>, <article>) pour améliorer l'accessibilité et le référencement." },
-            { "id": "accessibility", "name": "Accessibilité (ARIA)", "description": "Techniques pour rendre les sites web utilisables par tous, y compris les personnes en situation de handicap." }
+            {
+              "id": "semantic",
+              "name": "Balises sémantiques",
+              "description": "Code clair et accessible."
+            },
+            {
+              "id": "accessibility",
+              "name": "Accessibilité (ARIA)",
+              "description": "Sites utilisables par tous."
+            }
           ]
         },
         {
           "id": "css",
           "name": "CSS3",
-          "description": "Langage pour styliser et mettre en forme les pages web (les 'vêtements' du site).",
+          "description": "Mise en forme et design.",
           "details": [
-            { "id": "responsive", "name": "Design responsive", "description": "Adaptation de l'affichage pour tous types d'écrans (ordinateur, tablette, mobile) en utilisant Flexbox et Grid." },
-            { "id": "animations", "name": "Animations", "description": "Création d'effets visuels dynamiques comme des transitions et des animations." }
+            {
+              "id": "responsive",
+              "name": "Design responsive",
+              "description": "Adapté à tous les écrans."
+            },
+            {
+              "id": "animations",
+              "name": "Animations",
+              "description": "Effets visuels dynamiques."
+            }
           ]
         },
         {
           "id": "js",
           "name": "JavaScript",
-          "description": "Langage de programmation pour rendre les pages web interactives (comportements dynamiques).",
+          "description": "Interactions web dynamiques.",
           "details": [
-            { "id": "es6", "name": "ES6+", "description": "Version moderne de JavaScript avec des fonctionnalités avancées comme les fonctions fléchées et les modules." },
-            { "id": "async", "name": "Programmation asynchrone", "description": "Gestion des opérations qui prennent du temps (comme les requêtes serveur) sans bloquer l'affichage." },
-            { "id": "dom", "name": "Manipulation du DOM", "description": "Modification dynamique du contenu et de la structure d'une page web." }
+            {
+              "id": "es6",
+              "name": "ES6+",
+              "description": "Syntaxe moderne et claire."
+            },
+            {
+              "id": "async",
+              "name": "Asynchrone",
+              "description": "Requêtes et traitements fluides."
+            },
+            {
+              "id": "dom",
+              "name": "DOM",
+              "description": "Modification du contenu en direct."
+            }
           ]
         },
         {
           "id": "typescript",
           "name": "TypeScript",
-          "description": "Version typée de JavaScript qui aide à détecter des erreurs pendant le développement.",
-          "details": [
-            { "id": "advanced", "name": "Utilisation avancée", "description": "Maîtrise des types complexes et des design patterns en TypeScript." }
-          ]
+          "description": "JavaScript sécurisé et typé."
         },
         {
           "id": "php",
           "name": "PHP",
-          "description": "Langage côté serveur principalement utilisé pour les sites web dynamiques.",
+          "description": "Web dynamique côté serveur.",
           "details": [
-            { "id": "oop", "name": "Programmation orientée objet", "description": "Organisation du code en 'objets' pour une meilleure structure et réutilisabilité." },
-            { "id": "wp", "name": "Intégration WordPress", "description": "Développement de thèmes et plugins pour le CMS WordPress." }
+            {
+              "id": "oop",
+              "name": "POO",
+              "description": "Code organisé et réutilisable."
+            },
+            {
+              "id": "wp",
+              "name": "WordPress",
+              "description": "Thèmes et plugins personnalisés."
+            }
           ]
         },
-        { "id": "rust", "name": "Rust", "description": "Langage système moderne axé sur la performance et la sécurité." },
-        { "id": "go", "name": "Go", "description": "Langage développé par Google pour les applications performantes et concurrentes." },
-        { "id": "java", "name": "Java", "description": "Langage polyvalent utilisé pour les applications d'entreprise et Android." },
-        { "id": "csharp", "name": "C#", "description": "Langage développé par Microsoft pour les applications Windows et .NET." },
-        { "id": "cpp", "name": "C++", "description": "Langage puissant utilisé pour les logiciels système et les jeux vidéo." },
+        {
+          "id": "rust",
+          "name": "Rust",
+          "description": "Performance et sécurité."
+        },
+        {
+          "id": "go",
+          "name": "Go",
+          "description": "Applications rapides et fiables.",
+          "details": [
+            {
+              "id": "vanilla",
+              "name": "Natif",
+              "description": ""
+            },
+            {
+              "id": "goroutine",
+              "name": "Go Routine",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "java",
+          "name": "Java",
+          "description": "Applications d’entreprise et Android."
+        },
+        {
+          "id": "csharp",
+          "name": "C#",
+          "description": "Applications Windows et .NET."
+        },
+        {
+          "id": "cpp",
+          "name": "C++",
+          "description": "Jeux et logiciels système."
+        },
         {
           "id": "python",
           "name": "Python",
-          "description": "Langage polyvalent connu pour sa simplicité, utilisé en data science, IA et automatisation.",
+          "description": "IA, data et automatisation.",
           "details": [
-            { "id": "pandas", "name": "Pandas", "description": "Bibliothèque pour la manipulation et l'analyse de données." },
-            { "id": "numpy", "name": "NumPy", "description": "Bibliothèque pour le calcul scientifique et les opérations sur tableaux." }
+            {
+              "id": "pandas",
+              "name": "Pandas",
+              "description": "Analyse de données."
+            },
+            {
+              "id": "numpy",
+              "name": "NumPy",
+              "description": "Calcul scientifique."
+            }
           ]
         },
         {
           "id": "json",
           "name": "JSON",
-          "description": "Format léger pour échanger des données entre applications.",
+          "description": "Échange de données.",
           "details": [
-            { "id": "data_driven", "name": "Gestion de données structurées", "description": "Manipulation et validation de données au format JSON." },
-            { "id": "apis", "name": "Intégration avec des APIs REST", "description": "Communication avec des services web externes via des interfaces de programmation." }
+            {
+              "id": "data_driven",
+              "name": "Structuration",
+              "description": "Données organisées."
+            },
+            {
+              "id": "apis",
+              "name": "APIs REST",
+              "description": "Connexion avec services externes."
+            }
           ]
         }
       ]
     },
+    "frameworks": {
+      "title": "Frameworks",
+      "description": "Outils pour accélérer le dev.",
+      "items": [
+        {
+          "id": "react",
+          "name": "React",
+          "description": "Interfaces modernes."
+        },
+        {
+          "id": "nextjs",
+          "name": "Next.js",
+          "description": "React avec rendu serveur."
+        },
+        {
+          "id": "nodejs",
+          "name": "Node.js",
+          "description": "JS côté serveur."
+        },
+        { "id": "symfony", "name": "Symfony", "description": "PHP modulaire." }
+      ]
+    },
+    "databases": {
+      "title": "Bases de données",
+      "description": "Stockage et gestion des données.",
+      "items": [
+        {
+          "id": "mysql",
+          "name": "MySQL",
+          "description": "Base relationnelle populaire."
+        },
+        {
+          "id": "sqlserver",
+          "name": "SQL Server",
+          "description": "Base relationnelle Microsoft."
+        },
+        {
+          "id": "oracle",
+          "name": "Oracle",
+          "description": "Base relationnelle d’entreprise."
+        },
+        {
+          "id": "javaee",
+          "name": "Java EE",
+          "description": "Applications web d’entreprise en Java."
+        }
+      ]
+    },
     "cms": {
-      "title": "Systèmes de gestion de contenu",
-      "description": "Outils pour créer et gérer des sites web sans coder. Ils permettent de séparer le contenu de la présentation.",
+      "title": "CMS",
+      "description": "Gestion de sites sans coder.",
       "items": [
         {
           "id": "wordpress",
           "name": "WordPress",
-          "description": "CMS le plus populaire pour créer des sites web et blogs.",
+          "description": "Création et gestion de sites.",
           "details": [
-            { "id": "plugins", "name": "Utilisation et personnalisation de plugins", "description": "Ajout de fonctionnalités supplémentaires via des extensions." },
-            { "id": "themes", "name": "Création et modification de thèmes", "description": "Personnalisation de l'apparence des sites WordPress." }
+            {
+              "id": "plugins",
+              "name": "Plugins",
+              "description": "Fonctionnalités ajoutées."
+            },
+            {
+              "id": "themes",
+              "name": "Thèmes",
+              "description": "Apparence sur mesure."
+            }
           ]
         }
       ]
     },
     "automation": {
       "title": "Automatisation",
-      "description": "Outils pour automatiser des tâches répétitives et créer des workflows entre différentes applications.",
+      "description": "Tâches et flux automatisés.",
       "items": [
         {
           "id": "n8n",
           "name": "N8N",
-          "description": "Outil d'automatisation open-source pour connecter différentes applications et services.",
+          "description": "Automatisation open-source.",
           "details": [
-            { "id": "workflow", "name": "Création de workflows", "description": "Automatisation de processus métiers en enchaînant des actions." },
-            { "id": "integration", "name": "Intégration avec APIs tierces", "description": "Connexion avec des services externes via leurs APIs." }
+            {
+              "id": "workflow",
+              "name": "Workflows",
+              "description": "Chaîne d’actions automatisées."
+            },
+            {
+              "id": "integration",
+              "name": "Intégrations",
+              "description": "Connexion aux APIs."
+            }
           ]
         }
       ]
     },
-    "frameworks": {
-      "title": "Frameworks et bibliothèques",
-      "description": "Ensembles d'outils et de conventions qui facilitent le développement d'applications en fournissant une structure de base.",
-      "items": [
-        { "id": "angular", "name": "Angular", "description": "Framework JavaScript pour créer des applications web dynamiques (Google)." },
-        { "id": "react", "name": "React", "description": "Bibliothèque JavaScript pour construire des interfaces utilisateur (Facebook)." },
-        { "id": "vue", "name": "Vue.js", "description": "Framework JavaScript progressif pour créer des interfaces utilisateur." },
-        { "id": "nextjs", "name": "Next.js", "description": "Framework React pour créer des applications web avec rendu côté serveur." },
-        { "id": "nodejs", "name": "Node.js", "description": "Environnement pour exécuter JavaScript côté serveur." },
-        { "id": "django", "name": "Django", "description": "Framework Python pour le développement web rapide et sécurisé." },
-        { "id": "laravel", "name": "Laravel", "description": "Framework PHP élégant pour le développement web." },
-        { "id": "springboot", "name": "Spring Boot", "description": "Framework Java pour créer des applications d'entreprise." },
-        { "id": "symfony", "name": "Symfony", "description": "Ensemble de composants PHP pour développer des applications web." }
-      ]
-    },
-    "databases": {
-      "title": "Bases de données",
-      "description": "Systèmes pour stocker, organiser et récupérer des données de manière efficace.",
-      "items": [
-        { "id": "mysql", "name": "MySQL", "description": "Base de données relationnelle open-source très populaire." },
-        { "id": "sqlserver", "name": "SQL Server", "description": "Base de données relationnelle développée par Microsoft." },
-        { "id": "postgresql", "name": "PostgreSQL", "description": "Base de données relationnelle open-source avancée." },
-        { "id": "mongodb", "name": "MongoDB", "description": "Base de données NoSQL orientée documents." }
-      ]
-    },
     "tools": {
-      "title": "Outils de développement",
-      "description": "Logiciels et plateformes qui aident les développeurs à écrire, tester et déployer du code.",
+      "title": "Outils",
+      "description": "Aide au développement et au déploiement.",
       "items": [
-        { "id": "github", "name": "GitHub", "description": "Plateforme d'hébergement de code et de collaboration." },
-        { "id": "vscode", "name": "VS Code", "description": "Éditeur de code source léger et puissant (Microsoft)." },
-        { "id": "visualstudio", "name": "Visual Studio", "description": "Environnement de développement intégré (IDE) complet (Microsoft)." },
-        { "id": "merise", "name": "Merise", "description": "Méthode d'analyse et de conception des systèmes d'information." },
-        { "id": "uml", "name": "UML", "description": "Langage de modélisation pour visualiser la conception des logiciels." },
+        {
+          "id": "github",
+          "name": "GitHub",
+          "description": "Code et collaboration.",
+          "details": [
+            { "id": "versioning", "name": "Gestion de versions" },
+            { "id": "branching", "name": "Branches & workflow" },
+            {
+              "id": "github_pages",
+              "name": "Déploiement GitHub Pages",
+              "description": "Mise en ligne de projets statiques directement depuis GitHub"
+            }
+          ]
+        },
+        {
+          "id": "vscode",
+          "name": "VS Code",
+          "description": "Éditeur moderne."
+        },
+        {
+          "id": "visualstudio",
+          "name": "Visual Studio",
+          "description": "IDE complet."
+        },
+        {
+          "id": "svg",
+          "name": "SVG",
+          "description": "Graphiques vectoriels pour le web.",
+          "details": [
+            {
+              "id": "vector_graphics",
+              "name": "Graphiques vectoriels",
+              "description": "Dessin scalable et clair."
+            },
+            {
+              "id": "transformations",
+              "name": "Transformations",
+              "description": "Rotation, translation et mise à l’échelle des formes."
+            }
+          ]
+        },
         {
           "id": "docker",
           "name": "Docker",
-          "description": "Plateforme pour développer, livrer et exécuter des applications dans des conteneurs.",
+          "description": "Apps en conteneurs.",
           "details": [
-            { "id": "containerisation", "name": "Containerisation", "description": "Emballage d'une application et de ses dépendances dans un conteneur isolé." },
-            { "id": "compose", "name": "Docker Compose", "description": "Outil pour définir et exécuter des applications multi-conteneurs." }
+            {
+              "id": "containerisation",
+              "name": "Containerisation",
+              "description": "Isolation des applis."
+            },
+            {
+              "id": "compose",
+              "name": "Compose",
+              "description": "Gestion multi-conteneurs."
+            }
           ]
         }
       ]
     },
     "gameDev": {
-      "title": "Développement de jeux",
-      "description": "Compétences et outils spécifiques à la création de jeux vidéo et d'expériences interactives.",
+      "title": "Jeux vidéo",
+      "description": "Création de jeux et expériences 3D.",
       "items": [
-        { "id": "unity", "name": "Unity", "description": "Moteur de jeu multiplateforme pour créer des jeux 2D et 3D." },
+        {
+          "id": "unity",
+          "name": "Unity",
+          "description": "Jeux 2D/3D multiplateforme."
+        },
         {
           "id": "gamedesign",
           "name": "Game design",
-          "description": "Conception des règles, mécaniques et expériences de jeu.",
+          "description": "Conception des mécaniques de jeu.",
           "details": [
-            { "id": "leveldesign", "name": "Level design", "description": "Création des niveaux et environnements de jeu." },
-            { "id": "gamemechanics", "name": "Mécaniques de jeu", "description": "Conception des systèmes et règles qui rendent un jeu amusant." }
+            {
+              "id": "leveldesign",
+              "name": "Level design",
+              "description": "Création de niveaux."
+            },
+            {
+              "id": "gamemechanics",
+              "name": "Mécaniques",
+              "description": "Règles et systèmes de jeu."
+            }
           ]
         },
         {
           "id": "blender",
           "name": "Blender",
-          "description": "Logiciel open-source de création 3D (modélisation, animation, rendu).",
+          "description": "Création 3D complète.",
           "details": [
-            { "id": "modélisation3D", "name": "Modélisation 3D", "description": "Création d'objets et personnages en trois dimensions." },
-            { "id": "texturing", "name": "Texturing", "description": "Application de textures et matériaux sur les modèles 3D." },
-            { "id": "animation", "name": "Animation", "description": "Création de mouvements et d'animations pour les objets 3D." }
+            {
+              "id": "modélisation3D",
+              "name": "Modélisation",
+              "description": "Objets et personnages."
+            },
+            {
+              "id": "texturing",
+              "name": "Texturing",
+              "description": "Textures et matériaux."
+            },
+            {
+              "id": "animation",
+              "name": "Animation",
+              "description": "Mouvements et effets."
+            }
           ]
         },
-        { "id": "photoshop", "name": "Photoshop", "description": "Logiciel de retouche et création d'images (Adobe)." },
-        { "id": "illustrator", "name": "Illustrator", "description": "Logiciel de création graphique vectorielle (Adobe)." },
-        { "id": "unreal", "name": "Unreal Engine", "description": "Moteur de jeu puissant connu pour ses graphismes réalistes." }
+        {
+          "id": "photoshop",
+          "name": "Photoshop",
+          "description": "Retouche d’images."
+        },
+        {
+          "id": "illustrator",
+          "name": "Illustrator",
+          "description": "Graphisme vectoriel."
+        }
       ]
     },
     "network": {
-      "title": "Réseaux et télécommunications",
-      "description": "Compétences liées à l'infrastructure réseau, la connectivité et les technologies de communication.",
+      "title": "Réseaux",
+      "description": "Connectivité et infrastructures.",
       "items": [
-        { "id": "tcpip", "name": "TCP/IP", "description": "Protocoles fondamentaux pour la communication sur Internet." },
-        { "id": "electronics", "name": "Électronique", "description": "Connaissances de base en circuits électroniques et composants." },
-        { "id": "fiber", "name": "Fibre optique", "description": "Technologie de transmission de données par câbles en fibre de verre." },
-        { "id": "network_install", "name": "Installation réseau", "description": "Mise en place et configuration d'équipements réseau." },
-        { "id": "network_security", "name": "Sécurité réseaux", "description": "Protection des réseaux contre les intrusions et attaques." },
-        { "id": "telecom", "name": "Télécommunications", "description": "Technologies de transmission de données à distance." },
-        { "id": "audiovisual", "name": "Audiovisuel", "description": "Gestion des systèmes audio et vidéo." },
-        { "id": "multimedia", "name": "Multimédia", "description": "Intégration de différents médias (texte, image, son, vidéo)." }
+        {
+          "id": "tcpip",
+          "name": "TCP/IP",
+          "description": "Protocoles Internet."
+        },
+        {
+          "id": "electronics",
+          "name": "Électronique",
+          "description": "Bases en circuits."
+        },
+        {
+          "id": "fiber",
+          "name": "Fibre optique",
+          "description": "Transmission haut débit."
+        },
+        {
+          "id": "network_install",
+          "name": "Installation",
+          "description": "Mise en place d’équipements."
+        },
+        {
+          "id": "network_security",
+          "name": "Sécurité",
+          "description": "Protection des réseaux."
+        },
+        {
+          "id": "telecom",
+          "name": "Télécoms",
+          "description": "Communication à distance."
+        },
+        {
+          "id": "audiovisual",
+          "name": "Audiovisuel",
+          "description": "Gestion audio/vidéo."
+        },
+        {
+          "id": "multimedia",
+          "name": "Multimédia",
+          "description": "Texte, son, image, vidéo."
+        }
       ]
     },
     "methods": {
-      "title": "Méthodologies et bonnes pratiques",
-      "description": "Approches et standards pour organiser le travail et garantir la qualité des développements.",
+      "title": "Méthodes",
+      "description": "Organisation et qualité du travail.",
       "items": [
-        { "id": "devops", "name": "DevOps", "description": "Pratiques pour améliorer la collaboration entre développement et opérations." },
+        {
+          "id": "merise",
+          "name": "Merise",
+          "description": "Méthode d’analyse SI.",
+          "details": [
+            {
+              "id": "mcd",
+              "name": "MCD",
+              "description": "Modèle Conceptuel de Données."
+            },
+            {
+              "id": "mld",
+              "name": "MLD",
+              "description": "Modèle Logique de Données."
+            },
+            {
+              "id": "mdp",
+              "name": "MDP",
+              "description": "Modèle Physique de Données."
+            }
+          ]
+        },
+        {
+          "id": "uml",
+          "name": "UML",
+          "description": "Modélisation logicielle."
+        },
+        {
+          "id": "devops",
+          "name": "DevOps",
+          "description": "Collaboration dev/ops."
+        },
         {
           "id": "agile",
           "name": "Agile",
-          "description": "Méthodologie de gestion de projet itérative et collaborative.",
+          "description": "Méthodes souples de projet.",
           "details": [
-            { "id": "scrum", "name": "Scrum", "description": "Cadre de travail Agile avec des itérations courtes (sprints)." },
-            { "id": "kanban", "name": "Kanban", "description": "Méthode visuelle pour gérer le travail en cours." },
-            { "id": "jira", "name": "Jira", "description": "Outil de gestion de projet Agile (Atlassian)." }
+            {
+              "id": "scrum",
+              "name": "Scrum",
+              "description": "Travail en sprints."
+            },
+            {
+              "id": "kanban",
+              "name": "Kanban",
+              "description": "Tableaux visuels."
+            },
+            {
+              "id": "jira",
+              "name": "Jira",
+              "description": "Suivi de projet Agile."
+            }
           ]
         },
-        { "id": "eco_it", "name": "Éco-conception logicielle", "description": "Réduction de l'impact environnemental des applications." },
-        { "id": "green_it", "name": "Stratégie Green IT", "description": "Approche pour un numérique plus responsable." },
+        {
+          "id": "eco_it",
+          "name": "Éco-conception",
+          "description": "Logiciels éco-responsables."
+        },
+        {
+          "id": "green_it",
+          "name": "Green IT",
+          "description": "Numérique durable."
+        },
         {
           "id": "normes",
           "name": "Normes IT",
-          "description": "Respect des standards et réglementations du secteur.",
+          "description": "Respect des standards.",
           "details": [
-            { "id": "REEN", "name": "Loi REEN", "description": "Réglementation sur l'efficacité énergétique du numérique." },
-            { "id": "RGAA", "name": "Accessibilité RGAA", "description": "Référentiel général d'amélioration de l'accessibilité." },
-            { "id": "ISO", "name": "Normes ISO", "description": "Standards internationaux pour la qualité et la sécurité." }
+            {
+              "id": "REEN",
+              "name": "Loi REEN",
+              "description": "Efficacité énergétique."
+            },
+            {
+              "id": "RGAA",
+              "name": "Accessibilité",
+              "description": "Norme française RGAA."
+            },
+            {
+              "id": "ISO",
+              "name": "ISO",
+              "description": "Standards internationaux."
+            }
           ]
         }
       ]
     },
     "security": {
-      "title": "Sécurité informatique",
-      "description": "Compétences pour protéger les systèmes et les données contre les cybermenaces.",
+      "title": "Sécurité",
+      "description": "Protection des systèmes.",
       "items": [
-        { "id": "owasp", "name": "Sécurité OWASP", "description": "Bonnes pratiques de sécurité pour les applications web." },
-        { "id": "cybersecurity", "name": "Cybersécurité", "description": "Protection des systèmes contre les cyberattaques." }
+        {
+          "id": "owasp",
+          "name": "OWASP",
+          "description": "Bonnes pratiques web."
+        },
+        {
+          "id": "cybersecurity",
+          "name": "Cybersécurité",
+          "description": "Sécurité globale IT."
+        }
       ]
     },
     "projectManagement": {
       "title": "Gestion de projet",
-      "description": "Compétences pour organiser, planifier et suivre les projets informatiques.",
+      "description": "Planification et suivi d’équipes.",
       "items": [
         {
           "id": "gestion_projet",
           "name": "Gestion de projet",
-          "description": "Organisation et suivi des projets du début à la fin.",
+          "description": "Organisation des tâches.",
           "details": [
-            { "id": "planning", "name": "Planification", "description": "Établissement des échéances et allocation des ressources." },
-            { "id": "suivi", "name": "Suivi d'avancement", "description": "Contrôle du respect des délais et du budget." }
+            {
+              "id": "planning",
+              "name": "Planning",
+              "description": "Gestion du temps."
+            },
+            {
+              "id": "suivi",
+              "name": "Suivi",
+              "description": "Contrôle des objectifs."
+            }
           ]
         },
         {
           "id": "documentation",
-          "name": "Rédaction de documentation",
-          "description": "Création de supports clairs pour les utilisateurs et les développeurs.",
+          "name": "Documentation",
+          "description": "Supports clairs et utiles.",
           "details": [
-            { "id": "tech", "name": "Documentation technique", "description": "Explications détaillées pour les développeurs." },
-            { "id": "user", "name": "Guides utilisateurs", "description": "Manuels et tutoriels pour les utilisateurs finaux." }
+            {
+              "id": "tech",
+              "name": "Technique",
+              "description": "Docs pour devs."
+            },
+            {
+              "id": "user",
+              "name": "Utilisateur",
+              "description": "Guides simples."
+            }
           ]
         }
       ]
     },
     "theory": {
-      "title": "Concepts théoriques",
-      "description": "Fondamentaux informatiques et algorithmiques qui sous-tendent tous les développements.",
+      "title": "Théorie",
+      "description": "Fondations informatiques.",
       "items": [
-        { "id": "algorithms", "name": "Algorithmique", "description": "Étude des méthodes pour résoudre des problèmes de manière efficace." }
+        {
+          "id": "algorithms",
+          "name": "Algorithmique",
+          "description": "Résolution de problèmes."
+        }
       ]
     }
   },
   "softSkills": {
+    "name": "Compétences Transversales",
+    "desc": "Compétences non-techniques comme la communication, le travail d'équipe et la gestion de projet.",
+
     "leadership": {
-      "title": "Leadership",
-      "description": "Capacité à guider, motiver et inspirer une équipe vers des objectifs communs.",
-      "items": [
+      "name": "Leadership",
+      "description": "Capacité à motiver et guider.",
+      "details": [
         {
-          "id": "leadership",
-          "name": "Leadership",
-          "description": "Aptitude à prendre des initiatives et à fédérer une équipe.",
-          "details": [
-            { "id": "inspiration", "name": "Capacité à motiver", "description": "Savoir encourager et donner de l'élan à son équipe." },
-            { "id": "decision", "name": "Prise de décision", "description": "Pouvoir trancher et assumer des choix difficiles." }
-          ]
+          "id": "inspiration",
+          "name": "Motivation",
+          "description": "Donner de l’élan à l’équipe."
+        },
+        {
+          "id": "decision",
+          "name": "Décision",
+          "description": "Trancher avec assurance."
         }
       ]
     },
+
     "communication": {
-      "title": "Communication",
-      "description": "Compétences pour échanger efficacement avec différents interlocuteurs.",
-      "items": [
+      "name": "Communication",
+      "description": "Échanges clairs et efficaces.",
+      "details": [
+        {
+          "id": "oral",
+          "name": "Oral",
+          "description": "Présentation claire et efficace."
+        },
+        {
+          "id": "written",
+          "name": "Écrit",
+          "description": "Rédaction lisible et structurée."
+        },
+        {
+          "id": "tech",
+          "name": "Technique",
+          "description": "Explications adaptées aux non-techniques."
+        },
+        {
+          "id": "ecoute",
+          "name": "Écoute active",
+          "description": "Compréhension des besoins."
+        },
         {
           "id": "teamwork",
           "name": "Travail en équipe",
-          "description": "Collaboration efficace avec des collègues de différents métiers.",
-          "details": [
-            { "id": "collab", "name": "Collaboration", "description": "Travail conjoint pour atteindre des objectifs communs." },
-            { "id": "ecoute", "name": "Écoute active", "description": "Comprendre pleinement les besoins et idées des autres." }
-          ]
+          "description": "Atteindre des objectifs communs."
+        }
+      ]
+    },
+
+    "adaptability": {
+      "name": "Adaptabilité",
+      "description": "Réactivité face au changement.",
+      "details": [
+        {
+          "id": "resilience",
+          "name": "Résilience",
+          "description": "Rebondir face aux obstacles."
         },
         {
-          "id": "communication",
-          "name": "Communication",
-          "description": "Transmission claire et adaptée d'informations.",
-          "details": [
-            { "id": "oral", "name": "Communication orale", "description": "Expression claire à l'oral, en réunion ou en présentation." },
-            { "id": "written", "name": "Communication écrite", "description": "Rédaction de documents clairs et structurés." },
-            { "id": "tech", "name": "Communication technique", "description": "Explication de concepts techniques à des non-experts." }
-          ]
-        }
-      ]
-    },
-    "adaptability": {
-      "title": "Adaptabilité",
-      "description": "Capacité à s'ajuster à des situations changeantes et à apprendre rapidement.",
-      "items": [
+          "id": "analysis",
+          "name": "Sens de l’analyse",
+          "description": "Comprendre rapidement un problème."
+        },
         {
-          "id": "adaptability",
-          "name": "Adaptabilité",
-          "description": "Flexibilité face aux changements et aux imprévus.",
-          "details": [
-            { "id": "resilience", "name": "Résilience", "description": "Capacité à rebondir face aux difficultés." },
-            { "id": "learning", "name": "Apprentissage rapide", "description": "Assimilation rapide de nouvelles compétences." },
-            { "id": "flexibility", "name": "Flexibilité", "description": "Adaptation aux nouvelles méthodes et outils." },
-            { "id": "creativity", "name": "Créativité", "description": "Trouver des solutions originales aux problèmes." },
-            { "id": "autonomy", "name": "Autonomie", "description": "Capacité à travailler seul(e) sans supervision constante." },
-            { "id": "problem_solving", "name": "Résolution de problèmes", "description": "Analyse et solution des difficultés rencontrées." },
-            { "id": "storytelling", "name": "Storytelling", "description": "Art de raconter des histoires pour capter l'attention." },
-            { "id": "artistic_collab", "name": "Collaboration artistique", "description": "Travail avec des profils créatifs (designers, artistes)." },
-            { "id": "creative_pm", "name": "Gestion de projet créatif", "description": "Pilotage de projets nécessitant une approche innovante." }
-          ]
+          "id": "organization",
+          "name": "Organisation",
+          "description": "Structurer efficacement les tâches."
+        },
+        {
+          "id": "learning",
+          "name": "Apprentissage rapide",
+          "description": "Acquisition rapide de nouvelles compétences."
+        },
+        {
+          "id": "flexibility",
+          "name": "Flexibilité",
+          "description": "Utilisation de méthodes variées."
+        },
+        {
+          "id": "autonomy",
+          "name": "Autonomie",
+          "description": "Capacité à travailler seul efficacement."
+        },
+        {
+          "id": "problem_solving",
+          "name": "Résolution de problèmes",
+          "description": "Trouver des solutions adaptées."
+        },
+        {
+          "id": "involvement",
+          "name": "Implication",
+          "description": "Engagement fort dans les projets."
         }
       ]
     },
-    "curiosity": {
-      "title": "Curiosité et veille",
-      "description": "Intérêt pour les nouvelles technologies et volonté de se tenir informé.",
-      "items": [
+
+    "creativity": {
+      "name": "Créativité & Curiosité",
+      "description": "Capacité à innover et à apprendre en continu.",
+      "details": [
+        {
+          "id": "artistic_collab",
+          "name": "Collaboration créative",
+          "description": "Travail avec designers et artistes."
+        },
+        {
+          "id": "creative_pm",
+          "name": "Gestion de projets créatifs",
+          "description": "Approches innovantes dans les projets."
+        },
+        {
+          "id": "storytelling",
+          "name": "Storytelling",
+          "description": "Capacité à captiver par le récit."
+        },
         {
           "id": "curiosity",
           "name": "Curiosité",
-          "description": "Envie d'explorer de nouveaux domaines et technologies.",
-          "details": [
-            { "id": "veille", "name": "Veille technologique", "description": "Suivi des dernières tendances et innovations du secteur." }
-          ]
+          "description": "Ouverture aux nouveautés et apprentissage continu."
+        },
+        {
+          "id": "veille",
+          "name": "Veille technologique",
+          "description": "Suivi régulier des tendances."
         }
       ]
     }
+  },
+  "interests": {
+    "name": "Centres d'intérêt",
+    "desc": "Activités et passions personnelles.",
+    "items": [
+      {
+        "id": "music",
+        "name": "Musique",
+        "description": "Passion pour la pratique et l'écoute musicale.",
+        "details": [
+          {
+            "id": "guitar_autodidact",
+            "name": "Guitare",
+            "description": "Pratique autodidacte, apprentissage personnel et créativité."
+          },
+          {
+            "id": "metal",
+            "name": "Metal",
+            "description": "Appréciation et jeu de morceaux énergiques."
+          },
+          {
+            "id": "rock",
+            "name": "Rock",
+            "description": "Exploration de classiques et modernes."
+          },
+          {
+            "id": "classic",
+            "name": "Musique classique",
+            "description": "Écoute et inspiration mélodique."
+          },
+          {
+            "id": "pop",
+            "name": "Pop",
+            "description": "Ouverture à des styles accessibles et variés."
+          },
+          {
+            "id": "folk",
+            "name": "Folk",
+            "description": "Intérêt pour les sonorités acoustiques et traditionnelles."
+          }
+        ]
+      },
+      {
+        "id": "roleplay",
+        "name": "Jeux de rôles",
+        "description": "Création et interprétation de personnages."
+      },
+      {
+        "id": "lotr",
+        "name": "Seigneur des Anneaux",
+        "description": "Passion pour l'univers de Tolkien."
+      },
+      {
+        "id": "videogames",
+        "name": "Jeux vidéo",
+        "description": "Intérêt pour les expériences interactives.",
+        "details": [
+          { "id": "warthunder", "name": "War Thunder" },
+          { "id": "skyrim", "name": "Skyrim" },
+          { "id": "minecraft", "name": "Minecraft" },
+          { "id": "hoi4", "name": "Hearts of Iron IV" },
+          { "id": "rimworld", "name": "RimWorld" },
+          { "id": "ets2", "name": "Euro Truck Simulator 2" },
+          { "id": "satisfactory", "name": "Satisfactory" }
+        ]
+      },
+      {
+        "id": "programming",
+        "name": "Conception de programmes",
+        "description": "Expérimentations logicielles personnelles."
+      }
+    ]
   }
 }

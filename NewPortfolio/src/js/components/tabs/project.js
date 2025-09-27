@@ -1,14 +1,7 @@
 import { loadData } from "../../functions/data.js";
 import { createSkillsTags } from "../../functions/tags.js";
 import { loadTemplate } from "../../functions/templates.js";
-
-// Generate a random pastel color for placeholders
-const getRandomPastelColor = () => {
-  const hue = Math.floor(Math.random() * 360);
-  const saturation = 40 + Math.floor(Math.random() * 30); // 40-70%
-  const lightness = 60 + Math.floor(Math.random() * 30);  // 60-90%
-  return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
-};
+import { getRandomPastelColor, normalizeSkillsData } from "../../functions/utils-skills.js";
 
 // Map project status → CSS class
 const STATUS_CLASSES = {
@@ -17,21 +10,6 @@ const STATUS_CLASSES = {
   "En pause": "paused",
   "Annulé": "aborted",
   "": "no-status"
-};
-
-// Create technology tags
-const createTechTags = (techList) => {
-  const wrapper = document.createElement("div");
-  wrapper.classList.add("project-tags");
-  [...techList]
-    .sort((a, b) => a.length - b.length) // shortest first
-    .forEach((tech) => {
-      const tag = document.createElement("span");
-      tag.classList.add("project-tag");
-      tag.textContent = tech;
-      wrapper.appendChild(tag);
-    });
-  return wrapper;
 };
 
 // Create project links (view project / view code)
@@ -54,43 +32,6 @@ const createProjectLinks = (access, repository) => {
   }
   return linksWrapper;
 };
-
-// Helper function to normalize skills data (works with both old and new structure)
-function normalizeSkillsData(skillsData) {
-  const normalized = {};
-
-  if (!skillsData) return normalized;
-
-  // Process hardSkills
-  if (skillsData.hardSkills) {
-    normalized.hardSkills = {};
-    for (const [category, items] of Object.entries(skillsData.hardSkills)) {
-      // Check if it's the new structure with 'items' array
-      if (items.items) {
-        normalized.hardSkills[category] = items.items;
-      } else if (Array.isArray(items)) {
-        // Old structure - keep as is
-        normalized.hardSkills[category] = items;
-      }
-    }
-  }
-
-  // Process softSkills
-  if (skillsData.softSkills) {
-    normalized.softSkills = {};
-    for (const [category, items] of Object.entries(skillsData.softSkills)) {
-      // Check if it's the new structure with 'items' array
-      if (items.items) {
-        normalized.softSkills[category] = items.items;
-      } else if (Array.isArray(items)) {
-        // Old structure - keep as is
-        normalized.softSkills[category] = items;
-      }
-    }
-  }
-
-  return normalized;
-}
 
 // Build project cards and append them to the grid
 function populateProjects(projectsData, projectCardTmpl, errors, skills) {
@@ -132,7 +73,7 @@ function populateProjects(projectsData, projectCardTmpl, errors, skills) {
       skillsContainer.appendChild(skillsTitle);
 
       skillsContainer.appendChild(
-        createSkillsTags(project.hardSkills, normalizedSkills.hardSkills, "tag-hard-skill")
+        createSkillsTags(project.hardSkills, normalizedSkills.flat.hardSkills, "tag-hard-skill")
       );
 
       projectCard.appendChild(skillsContainer);

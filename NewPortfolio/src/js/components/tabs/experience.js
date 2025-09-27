@@ -1,43 +1,7 @@
 import { loadData } from "../../functions/data.js";
 import { createSkillsTags, createTagsList } from "../../functions/tags.js";
 import { loadTemplate } from "../../functions/templates.js";
-
-// Helper function to normalize skills data (works with both old and new structure)
-function normalizeSkillsData(skillsData) {
-  if (!skillsData) return {};
-
-  const normalized = {};
-
-  // Process hardSkills
-  if (skillsData.hardSkills) {
-    normalized.hardSkills = {};
-    for (const [category, items] of Object.entries(skillsData.hardSkills)) {
-      // Check if it's the new structure with 'items' array
-      if (items.items) {
-        normalized.hardSkills[category] = items.items;
-      } else if (Array.isArray(items)) {
-        // Old structure - keep as is
-        normalized.hardSkills[category] = items;
-      }
-    }
-  }
-
-  // Process softSkills
-  if (skillsData.softSkills) {
-    normalized.softSkills = {};
-    for (const [category, items] of Object.entries(skillsData.softSkills)) {
-      // Check if it's the new structure with 'items' array
-      if (items.items) {
-        normalized.softSkills[category] = items.items;
-      } else if (Array.isArray(items)) {
-        // Old structure - keep as is
-        normalized.softSkills[category] = items;
-      }
-    }
-  }
-
-  return normalized;
-}
+import { normalizeSkillsData } from "../../functions/utils-skills.js";
 
 // Populate the professional experiences section
 function populateExperience(experienceData, experienceTmpl, errors, skills) {
@@ -81,7 +45,7 @@ function populateExperience(experienceData, experienceTmpl, errors, skills) {
             hardSkillsContainer.appendChild(hardSkillsTitle);
 
             hardSkillsContainer.appendChild(
-                createSkillsTags(exp.hardSkills, normalizedSkills.hardSkills, "tag-hard-skill")
+                createSkillsTags(exp.hardSkills, normalizedSkills.flat.hardSkills, "tag-hard-skill")
             );
 
             experienceItem.appendChild(hardSkillsContainer);
@@ -97,7 +61,7 @@ function populateExperience(experienceData, experienceTmpl, errors, skills) {
             softSkillsContainer.appendChild(softSkillsTitle);
 
             softSkillsContainer.appendChild(
-                createSkillsTags(exp.softSkills, normalizedSkills.softSkills, "tag-soft-skill", true)
+                createSkillsTags(exp.softSkills, normalizedSkills.flat.softSkills, "tag-soft-skill", true)
             );
 
             experienceItem.appendChild(softSkillsContainer);

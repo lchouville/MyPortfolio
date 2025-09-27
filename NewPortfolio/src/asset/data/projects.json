@@ -7,12 +7,31 @@
     "access": null,
     "image": "src/asset/images/projects/portfolio.png",
     "hardSkills": [
-      { "id": "html", "usedDetails": ["semantic"] },
-      { "id": "css", "usedDetails": ["responsive", "animations"] },
-      { "id": "js", "usedDetails": ["dom", "es6"] },
-      { "id": "json", "usedDetails": ["data_driven"] }
+      { "id": "html", "usedDetails": ["semantic", "accessibility", "seo"] },
+      {
+        "id": "css",
+        "usedDetails": ["responsive", "animations", "grid_flexbox", "variables"]
+      },
+      { "id": "js", "usedDetails": ["dom", "es6", "modules", "fetch_api"] },
+      {
+        "id": "json",
+        "usedDetails": ["data_driven", "structure", "dynamic_content"]
+      },
+      {
+        "id": "github",
+        "usedDetails": ["versioning", "branching", "github_pages"]
+      },
+      { "id": "design", "usedDetails": ["uiux", "color_palette", "typography"] }
     ],
-    "softSkills": []
+    "softSkills": [
+      {
+        "id": "adaptability",
+        "usedDetails": ["learning", "autonomy", "curiosity"]
+      },
+      { "id": "organization", "usedDetails": ["planning", "time_management"] },
+      { "id": "communication", "usedDetails": ["visual_storytelling"] },
+      { "id": "creativity", "usedDetails": ["originality", "problem_solving"] }
+    ]
   },
   {
     "name": "GR.A.V.A.",
@@ -22,11 +41,42 @@
     "access": null,
     "image": null,
     "hardSkills": [
-      { "id": "html", "usedDetails": ["semantic"] },
-      { "id": "css", "usedDetails": ["animations", "flexbox"] },
-      { "id": "js", "usedDetails": ["dom"] },
-      { "id": "svg", "usedDetails": ["vector_graphics"] }
+      {
+        "id": "html",
+        "usedDetails": ["semantic"],
+        "level": "advanced",
+        "context": "Structure des interfaces et intégration des éléments interactifs"
+      },
+      {
+        "id": "css",
+        "usedDetails": ["animations", "flexbox"],
+        "level": "advanced",
+        "context": "Animations CSS pour les interactions et mise en page flexible"
+      },
+      {
+        "id": "js",
+        "usedDetails": ["dom"],
+        "level": "advanced",
+        "context": "Manipulation du DOM pour la génération dynamique des avatars"
+      },
+      {
+        "id": "svg",
+        "usedDetails": ["vector_graphics"],
+        "level": "intermediate",
+        "context": "Utilisation d’éléments SVG pour dessiner et personnaliser les avatars"
+      }
     ],
-    "softSkills": []
+    "softSkills": [
+      {
+        "id": "creativity",
+        "usedDetails": [],
+        "context": "Conception d’avatars uniques et stylisés"
+      },
+      {
+        "id": "problem_solving",
+        "usedDetails": [],
+        "context": "Gestion des contraintes techniques liées au rendu SVG"
+      }
+    ]
   }
 ]
