@@ -1,0 +1,833 @@
+{
+  "hardSkills": {
+    "name": "Compétences Techniques",
+    "desc": "Compétences techniques spécifiques liées au développement, aux outils et aux technologies.",
+    "languages": {
+      "title": "Langages",
+      "description": "Bases du développement web et logiciel.",
+      "items": [
+        {
+          "id": "html",
+          "name": "HTML5",
+          "description": "Structure des pages web.",
+          "details": [
+            {
+              "id": "semantic",
+              "name": "Balises sémantiques",
+              "description": "Code clair et accessible."
+            },
+            {
+              "id": "accessibility",
+              "name": "Accessibilité (ARIA)",
+              "description": "Sites utilisables par tous."
+            }
+          ]
+        },
+        {
+          "id": "css",
+          "name": "CSS3",
+          "description": "Mise en forme et design.",
+          "details": [
+            {
+              "id": "responsive",
+              "name": "Design responsive",
+              "description": "Adapté à tous les écrans."
+            },
+            {
+              "id": "animations",
+              "name": "Animations",
+              "description": "Effets visuels dynamiques."
+            }
+          ]
+        },
+        {
+          "id": "js",
+          "name": "JavaScript",
+          "description": "Interactions web dynamiques.",
+          "details": [
+            {
+              "id": "es6",
+              "name": "ES6+",
+              "description": "Syntaxe moderne et claire."
+            },
+            {
+              "id": "async",
+              "name": "Asynchrone",
+              "description": "Requêtes et traitements fluides."
+            },
+            {
+              "id": "dom",
+              "name": "DOM",
+              "description": "Modification du contenu en direct."
+            }
+          ]
+        },
+        {
+          "id": "typescript",
+          "name": "TypeScript",
+          "description": "JavaScript sécurisé et typé."
+        },
+        {
+          "id": "php",
+          "name": "PHP",
+          "description": "Web dynamique côté serveur.",
+          "details": [
+            {
+              "id": "oop",
+              "name": "POO",
+              "description": "Code organisé et réutilisable."
+            },
+            {
+              "id": "wp",
+              "name": "WordPress",
+              "description": "Thèmes et plugins personnalisés."
+            }
+          ]
+        },
+        {
+          "id": "rust",
+          "name": "Rust",
+          "description": "Performance et sécurité."
+        },
+        {
+          "id": "go",
+          "name": "Go",
+          "description": "Applications rapides et fiables.",
+          "details": [
+            {
+              "id": "vanilla",
+              "name": "Natif",
+              "description": ""
+            },
+            {
+              "id": "goroutine",
+              "name": "Go Routine",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "java",
+          "name": "Java",
+          "description": "Applications d’entreprise et Android."
+        },
+        {
+          "id": "csharp",
+          "name": "C#",
+          "description": "Applications Windows et .NET."
+        },
+        {
+          "id": "cpp",
+          "name": "C++",
+          "description": "Jeux et logiciels système."
+        },
+        {
+          "id": "python",
+          "name": "Python",
+          "description": "IA, data et automatisation.",
+          "details": [
+            {
+              "id": "pandas",
+              "name": "Pandas",
+              "description": "Analyse de données."
+            },
+            {
+              "id": "numpy",
+              "name": "NumPy",
+              "description": "Calcul scientifique."
+            }
+          ]
+        },
+        {
+          "id": "json",
+          "name": "JSON",
+          "description": "Échange de données.",
+          "details": [
+            {
+              "id": "data_driven",
+              "name": "Structuration",
+              "description": "Données organisées."
+            },
+            {
+              "id": "apis",
+              "name": "APIs REST",
+              "description": "Connexion avec services externes."
+            }
+          ]
+        }
+      ]
+    },
+    "frameworks": {
+      "title": "Frameworks",
+      "description": "Outils pour accélérer le dev.",
+      "items": [
+        {
+          "id": "react",
+          "name": "React",
+          "description": "Interfaces modernes."
+        },
+        {
+          "id": "nextjs",
+          "name": "Next.js",
+          "description": "React avec rendu serveur."
+        },
+        {
+          "id": "nodejs",
+          "name": "Node.js",
+          "description": "JS côté serveur."
+        },
+        {
+          "id": "symfony",
+          "name": "Symfony",
+          "description": "PHP modulaire."
+        }
+      ]
+    },
+    "databases": {
+      "title": "Bases de données",
+      "description": "Stockage et gestion des données.",
+      "items": [
+        {
+          "id": "mysql",
+          "name": "MySQL",
+          "description": "Base relationnelle populaire."
+        },
+        {
+          "id": "sqlserver",
+          "name": "SQL Server",
+          "description": "Base relationnelle Microsoft."
+        },
+        {
+          "id": "oracle",
+          "name": "Oracle",
+          "description": "Base relationnelle d’entreprise."
+        },
+        {
+          "id": "javaee",
+          "name": "Java EE",
+          "description": "Applications web d’entreprise en Java."
+        }
+      ]
+    },
+    "cms": {
+      "title": "CMS",
+      "description": "Gestion de sites sans coder.",
+      "items": [
+        {
+          "id": "wordpress",
+          "name": "WordPress",
+          "description": "Création et gestion de sites.",
+          "details": [
+            {
+              "id": "plugins",
+              "name": "Plugins",
+              "description": "Fonctionnalités ajoutées."
+            },
+            {
+              "id": "themes",
+              "name": "Thèmes",
+              "description": "Apparence sur mesure."
+            }
+          ]
+        }
+      ]
+    },
+    "automation": {
+      "title": "Automatisation",
+      "description": "Tâches et flux automatisés.",
+      "items": [
+        {
+          "id": "n8n",
+          "name": "N8N",
+          "description": "Automatisation open-source.",
+          "details": [
+            {
+              "id": "workflow",
+              "name": "Workflows",
+              "description": "Chaîne d’actions automatisées."
+            },
+            {
+              "id": "integration",
+              "name": "Intégrations",
+              "description": "Connexion aux APIs."
+            }
+          ]
+        }
+      ]
+    },
+    "tools": {
+      "title": "Outils",
+      "description": "Aide au développement et au déploiement.",
+      "items": [
+        {
+          "id": "github",
+          "name": "GitHub",
+          "description": "Code et collaboration.",
+          "details": [
+            {
+              "id": "versioning",
+              "name": "Gestion de versions"
+            },
+            {
+              "id": "branching",
+              "name": "Branches & workflow"
+            },
+            {
+              "id": "github_pages",
+              "name": "Déploiement GitHub Pages",
+              "description": "Mise en ligne de projets statiques directement depuis GitHub"
+            }
+          ]
+        },
+        {
+          "id": "vscode",
+          "name": "VS Code",
+          "description": "Éditeur moderne."
+        },
+        {
+          "id": "visualstudio",
+          "name": "Visual Studio",
+          "description": "IDE complet."
+        },
+        {
+          "id": "svg",
+          "name": "SVG",
+          "description": "Graphiques vectoriels pour le web.",
+          "details": [
+            {
+              "id": "vector_graphics",
+              "name": "Graphiques vectoriels",
+              "description": "Dessin scalable et clair."
+            },
+            {
+              "id": "transformations",
+              "name": "Transformations",
+              "description": "Rotation, translation et mise à l’échelle des formes."
+            }
+          ]
+        },
+        {
+          "id": "docker",
+          "name": "Docker",
+          "description": "Apps en conteneurs.",
+          "details": [
+            {
+              "id": "containerisation",
+              "name": "Containerisation",
+              "description": "Isolation des applis."
+            },
+            {
+              "id": "compose",
+              "name": "Compose",
+              "description": "Gestion multi-conteneurs."
+            }
+          ]
+        }
+      ]
+    },
+    "gameDev": {
+      "title": "Jeux vidéo",
+      "description": "Création de jeux et expériences 3D.",
+      "items": [
+        {
+          "id": "unity",
+          "name": "Unity",
+          "description": "Jeux 2D/3D multiplateforme."
+        },
+        {
+          "id": "gamedesign",
+          "name": "Game design",
+          "description": "Conception des mécaniques de jeu.",
+          "details": [
+            {
+              "id": "leveldesign",
+              "name": "Level design",
+              "description": "Création de niveaux."
+            },
+            {
+              "id": "gamemechanics",
+              "name": "Mécaniques",
+              "description": "Règles et systèmes de jeu."
+            }
+          ]
+        },
+        {
+          "id": "blender",
+          "name": "Blender",
+          "description": "Création 3D complète.",
+          "details": [
+            {
+              "id": "modélisation3D",
+              "name": "Modélisation",
+              "description": "Objets et personnages."
+            },
+            {
+              "id": "texturing",
+              "name": "Texturing",
+              "description": "Textures et matériaux."
+            },
+            {
+              "id": "animation",
+              "name": "Animation",
+              "description": "Mouvements et effets."
+            }
+          ]
+        },
+        {
+          "id": "photoshop",
+          "name": "Photoshop",
+          "description": "Retouche d’images."
+        },
+        {
+          "id": "illustrator",
+          "name": "Illustrator",
+          "description": "Graphisme vectoriel."
+        }
+      ]
+    },
+    "network": {
+      "title": "Réseaux",
+      "description": "Connectivité et infrastructures.",
+      "items": [
+        {
+          "id": "tcpip",
+          "name": "TCP/IP",
+          "description": "Protocoles Internet."
+        },
+        {
+          "id": "electronics",
+          "name": "Électronique",
+          "description": "Bases en circuits."
+        },
+        {
+          "id": "fiber",
+          "name": "Fibre optique",
+          "description": "Transmission haut débit."
+        },
+        {
+          "id": "network_install",
+          "name": "Installation",
+          "description": "Mise en place d’équipements."
+        },
+        {
+          "id": "network_security",
+          "name": "Sécurité",
+          "description": "Protection des réseaux."
+        },
+        {
+          "id": "telecom",
+          "name": "Télécoms",
+          "description": "Communication à distance."
+        },
+        {
+          "id": "audiovisual",
+          "name": "Audiovisuel",
+          "description": "Gestion audio/vidéo."
+        },
+        {
+          "id": "multimedia",
+          "name": "Multimédia",
+          "description": "Texte, son, image, vidéo."
+        }
+      ]
+    },
+    "methods": {
+      "title": "Méthodes",
+      "description": "Organisation et qualité du travail.",
+      "items": [
+        {
+          "id": "merise",
+          "name": "Merise",
+          "description": "Méthode d’analyse SI.",
+          "details": [
+            {
+              "id": "mcd",
+              "name": "MCD",
+              "description": "Modèle Conceptuel de Données."
+            },
+            {
+              "id": "mld",
+              "name": "MLD",
+              "description": "Modèle Logique de Données."
+            },
+            {
+              "id": "mdp",
+              "name": "MDP",
+              "description": "Modèle Physique de Données."
+            }
+          ]
+        },
+        {
+          "id": "uml",
+          "name": "UML",
+          "description": "Modélisation logicielle."
+        },
+        {
+          "id": "devops",
+          "name": "DevOps",
+          "description": "Collaboration dev/ops."
+        },
+        {
+          "id": "agile",
+          "name": "Agile",
+          "description": "Méthodes souples de projet.",
+          "details": [
+            {
+              "id": "scrum",
+              "name": "Scrum",
+              "description": "Travail en sprints."
+            },
+            {
+              "id": "kanban",
+              "name": "Kanban",
+              "description": "Tableaux visuels."
+            },
+            {
+              "id": "jira",
+              "name": "Jira",
+              "description": "Suivi de projet Agile."
+            }
+          ]
+        },
+        {
+          "id": "eco_it",
+          "name": "Éco-conception",
+          "description": "Logiciels éco-responsables."
+        },
+        {
+          "id": "green_it",
+          "name": "Green IT",
+          "description": "Numérique durable."
+        },
+        {
+          "id": "normes",
+          "name": "Normes IT",
+          "description": "Respect des standards.",
+          "details": [
+            {
+              "id": "REEN",
+              "name": "Loi REEN",
+              "description": "Efficacité énergétique."
+            },
+            {
+              "id": "RGAA",
+              "name": "Accessibilité",
+              "description": "Norme française RGAA."
+            },
+            {
+              "id": "ISO",
+              "name": "ISO",
+              "description": "Standards internationaux."
+            }
+          ]
+        }
+      ]
+    },
+    "security": {
+      "title": "Sécurité",
+      "description": "Protection des systèmes.",
+      "items": [
+        {
+          "id": "owasp",
+          "name": "OWASP",
+          "description": "Bonnes pratiques web."
+        },
+        {
+          "id": "cybersecurity",
+          "name": "Cybersécurité",
+          "description": "Sécurité globale IT."
+        }
+      ]
+    },
+    "projectManagement": {
+      "title": "Gestion de projet",
+      "description": "Planification et suivi d’équipes.",
+      "items": [
+        {
+          "id": "gestion_projet",
+          "name": "Gestion de projet",
+          "description": "Organisation des tâches.",
+          "details": [
+            {
+              "id": "planning",
+              "name": "Planning",
+              "description": "Gestion du temps."
+            },
+            {
+              "id": "suivi",
+              "name": "Suivi",
+              "description": "Contrôle des objectifs."
+            }
+          ]
+        },
+        {
+          "id": "documentation",
+          "name": "Documentation",
+          "description": "Supports clairs et utiles.",
+          "details": [
+            {
+              "id": "tech",
+              "name": "Technique",
+              "description": "Docs pour devs."
+            },
+            {
+              "id": "user",
+              "name": "Utilisateur",
+              "description": "Guides simples."
+            }
+          ]
+        }
+      ]
+    },
+    "theory": {
+      "title": "Théorie",
+      "description": "Fondations informatiques.",
+      "items": [
+        {
+          "id": "algorithms",
+          "name": "Algorithmique",
+          "description": "Résolution de problèmes."
+        }
+      ]
+    }
+  },
+  "softSkills": {
+    "name": "Compétences Transversales",
+    "desc": "Compétences non-techniques comme la communication, le travail d'équipe et la gestion de projet.",
+    "leadership": {
+      "name": "Leadership",
+      "description": "Capacité à motiver et guider.",
+      "details": [
+        {
+          "id": "inspiration",
+          "name": "Motivation",
+          "description": "Donner de l’élan à l’équipe."
+        },
+        {
+          "id": "decision",
+          "name": "Décision",
+          "description": "Trancher avec assurance."
+        }
+      ]
+    },
+    "communication": {
+      "name": "Communication",
+      "description": "Échanges clairs et efficaces.",
+      "details": [
+        {
+          "id": "oral",
+          "name": "Oral",
+          "description": "Présentation claire et efficace."
+        },
+        {
+          "id": "written",
+          "name": "Écrit",
+          "description": "Rédaction lisible et structurée."
+        },
+        {
+          "id": "tech",
+          "name": "Technique",
+          "description": "Explications adaptées aux non-techniques."
+        },
+        {
+          "id": "ecoute",
+          "name": "Écoute active",
+          "description": "Compréhension des besoins."
+        },
+        {
+          "id": "teamwork",
+          "name": "Travail en équipe",
+          "description": "Atteindre des objectifs communs."
+        }
+      ]
+    },
+    "adaptability": {
+      "name": "Adaptabilité",
+      "description": "Réactivité face au changement.",
+      "details": [
+        {
+          "id": "resilience",
+          "name": "Résilience",
+          "description": "Rebondir face aux obstacles."
+        },
+        {
+          "id": "analysis",
+          "name": "Sens de l’analyse",
+          "description": "Comprendre rapidement un problème."
+        },
+        {
+          "id": "organization",
+          "name": "Organisation",
+          "description": "Structurer efficacement les tâches."
+        },
+        {
+          "id": "learning",
+          "name": "Apprentissage rapide",
+          "description": "Acquisition rapide de nouvelles compétences."
+        },
+        {
+          "id": "flexibility",
+          "name": "Flexibilité",
+          "description": "Utilisation de méthodes variées."
+        },
+        {
+          "id": "autonomy",
+          "name": "Autonomie",
+          "description": "Capacité à travailler seul efficacement."
+        },
+        {
+          "id": "problem_solving",
+          "name": "Résolution de problèmes",
+          "description": "Trouver des solutions adaptées."
+        },
+        {
+          "id": "involvement",
+          "name": "Implication",
+          "description": "Engagement fort dans les projets."
+        }
+      ]
+    },
+    "creativity": {
+      "name": "Créativité & Curiosité",
+      "description": "Capacité à innover et à apprendre en continu.",
+      "details": [
+        {
+          "id": "artistic_collab",
+          "name": "Collaboration créative",
+          "description": "Travail avec designers et artistes."
+        },
+        {
+          "id": "creative_pm",
+          "name": "Gestion de projets créatifs",
+          "description": "Approches innovantes dans les projets."
+        },
+        {
+          "id": "storytelling",
+          "name": "Storytelling",
+          "description": "Capacité à captiver par le récit."
+        },
+        {
+          "id": "curiosity",
+          "name": "Curiosité",
+          "description": "Ouverture aux nouveautés et apprentissage continu."
+        },
+        {
+          "id": "veille",
+          "name": "Veille technologique",
+          "description": "Suivi régulier des tendances."
+        }
+      ]
+    }
+  },
+  "interests": {
+    "name": "Centres d'intérêt",
+    "desc": "Activités et passions personnelles.",
+    "categories": {
+      "music": {
+        "title": "Musique",
+        "description": "Pratique et écoute musicale.",
+        "items": [
+          {
+            "id": "music",
+            "name": "Musique",
+            "description": "Intérêt pour les expériences interactives.",
+            "details": [
+              {
+                "id": "guitar_autodidact",
+                "name": "Guitare",
+                "description": "Pratique autodidacte, apprentissage personnel et créativité."
+              },
+              {
+                "id": "metal",
+                "name": "Metal",
+                "description": "Appréciation et jeu de morceaux énergiques."
+              },
+              {
+                "id": "rock",
+                "name": "Rock",
+                "description": "Exploration de classiques et modernes."
+              },
+              {
+                "id": "classic",
+                "name": "Musique classique",
+                "description": "Écoute et inspiration mélodique."
+              },
+              {
+                "id": "pop",
+                "name": "Pop",
+                "description": "Ouverture à des styles accessibles et variés."
+              },
+              {
+                "id": "folk",
+                "name": "Folk",
+                "description": "Intérêt pour les sonorités acoustiques et traditionnelles."
+              }
+            ]
+          }
+        ]
+      },
+      "games": {
+        "title": "Jeux & Univers",
+        "description": "Jeux de rôles, jeux vidéo et univers imaginaires.",
+        "items": [
+          {
+            "id": "roleplay",
+            "name": "Jeux de rôles",
+            "description": "Création et interprétation de personnages."
+          },
+          {
+            "id": "lotr",
+            "name": "Seigneur des Anneaux",
+            "description": "Passion pour l'univers de Tolkien."
+          },
+          {
+            "id": "videogames",
+            "name": "Jeux vidéo",
+            "description": "Intérêt pour les expériences interactives.",
+            "details": [
+              {
+                "id": "warthunder",
+                "name": "War Thunder"
+              },
+              {
+                "id": "skyrim",
+                "name": "Skyrim"
+              },
+              {
+                "id": "minecraft",
+                "name": "Minecraft"
+              },
+              {
+                "id": "hoi4",
+                "name": "Hearts of Iron IV"
+              },
+              {
+                "id": "rimworld",
+                "name": "RimWorld"
+              },
+              {
+                "id": "ets2",
+                "name": "Euro Truck Simulator 2"
+              },
+              {
+                "id": "satisfactory",
+                "name": "Satisfactory"
+              }
+            ]
+          }
+        ]
+      },
+      "creation": {
+        "title": "Création",
+        "description": "Expérimentations et projets personnels.",
+        "items": [
+          {
+            "id": "programming",
+            "name": "Conception de programmes",
+            "description": "Expérimentations logicielles personnelles."
+          }
+        ]
+      }
+    }
+  }
+}
