@@ -10,6 +10,7 @@
           "id": "html",
           "name": "HTML5",
           "description": "Structure des pages web.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg",
           "details": [
             {
               "id": "semantic",
@@ -27,6 +28,7 @@
           "id": "css",
           "name": "CSS3",
           "description": "Mise en forme et design.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg",
           "details": [
             {
               "id": "responsive",
@@ -44,6 +46,7 @@
           "id": "js",
           "name": "JavaScript",
           "description": "Interactions web dynamiques.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
           "details": [
             {
               "id": "es6",
@@ -65,12 +68,14 @@
         {
           "id": "typescript",
           "name": "TypeScript",
-          "description": "JavaScript sécurisé et typé."
+          "description": "JavaScript sécurisé et typé.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
         },
         {
           "id": "php",
           "name": "PHP",
           "description": "Web dynamique côté serveur.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
           "details": [
             {
               "id": "oop",
@@ -87,12 +92,14 @@
         {
           "id": "rust",
           "name": "Rust",
-          "description": "Performance et sécurité."
+          "description": "Performance et sécurité.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg"
         },
         {
           "id": "go",
           "name": "Go",
           "description": "Applications rapides et fiables.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg",
           "details": [
             {
               "id": "vanilla",
@@ -109,22 +116,26 @@
         {
           "id": "java",
           "name": "Java",
-          "description": "Applications d’entreprise et Android."
+          "description": "Applications d’entreprise et Android.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg"
         },
         {
           "id": "csharp",
           "name": "C#",
-          "description": "Applications Windows et .NET."
+          "description": "Applications Windows et .NET.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
         },
         {
           "id": "cpp",
           "name": "C++",
-          "description": "Jeux et logiciels système."
+          "description": "Jeux et logiciels système.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
         },
         {
           "id": "python",
           "name": "Python",
           "description": "IA, data et automatisation.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg",
           "details": [
             {
               "id": "pandas",
@@ -142,6 +153,7 @@
           "id": "json",
           "name": "JSON",
           "description": "Échange de données.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-original.svg",
           "details": [
             {
               "id": "data_driven",
@@ -164,22 +176,26 @@
         {
           "id": "react",
           "name": "React",
-          "description": "Interfaces modernes."
+          "description": "Interfaces modernes.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
         },
         {
           "id": "nextjs",
           "name": "Next.js",
-          "description": "React avec rendu serveur."
+          "description": "React avec rendu serveur.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
         },
         {
           "id": "nodejs",
           "name": "Node.js",
-          "description": "JS côté serveur."
+          "description": "JS côté serveur.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
         },
         {
           "id": "symfony",
           "name": "Symfony",
-          "description": "PHP modulaire."
+          "description": "PHP modulaire.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/symfony/symfony-original.svg"
         }
       ]
     },
@@ -190,22 +206,26 @@
         {
           "id": "mysql",
           "name": "MySQL",
-          "description": "Base relationnelle populaire."
+          "description": "Base relationnelle populaire.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
         },
         {
           "id": "sqlserver",
           "name": "SQL Server",
-          "description": "Base relationnelle Microsoft."
+          "description": "Base relationnelle Microsoft.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg"
         },
         {
           "id": "oracle",
           "name": "Oracle",
-          "description": "Base relationnelle d’entreprise."
+          "description": "Base relationnelle d’entreprise.",
+          "icon": ""
         },
         {
           "id": "javaee",
           "name": "Java EE",
-          "description": "Applications web d’entreprise en Java."
+          "description": "Applications web d’entreprise en Java.",
+          "icon": ""
         }
       ]
     },
@@ -217,6 +237,7 @@
           "id": "wordpress",
           "name": "WordPress",
           "description": "Création et gestion de sites.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-original.svg",
           "details": [
             {
               "id": "plugins",
@@ -240,6 +261,7 @@
           "id": "n8n",
           "name": "N8N",
           "description": "Automatisation open-source.",
+          "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAM1BMVEVHcEzrS3HrS3HrS3HrS3HrSnPqS3HqS3HqS3HrS3HqS3HrSnHqS3HqS3HqS3HrS3HqS3FCR2ANAAAAEXRSTlMAKXFeFwVB6924gIjOxFOrmtUKd24AAACZSURBVHgB3dBBDgMhCAXQz4gACur9T9vWtLOpJxgSVo+QD3h80VX4CLVC1NQPSqX1FllFx5/xNJ/vBtlGakuAOlZjQKww16IeSQA4LVRQNM2BFow92T+GYQK3qQui7truVNhIcM2NEXptuuNl5HdtAj14h/gx9TWAWlZnQHRQhGsBcDoller0en6cK+GMADjU9nvOenXCw+oFhVkFUeZv5wAAAAAASUVORK5CYII=",
           "details": [
             {
               "id": "workflow",
@@ -263,6 +285,7 @@
           "id": "github",
           "name": "GitHub",
           "description": "Code et collaboration.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg",
           "details": [
             {
               "id": "versioning",
@@ -282,17 +305,20 @@
         {
           "id": "vscode",
           "name": "VS Code",
-          "description": "Éditeur moderne."
+          "description": "Éditeur moderne.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original-wordmark.svg"
         },
         {
           "id": "visualstudio",
           "name": "Visual Studio",
-          "description": "IDE complet."
+          "description": "IDE complet.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg"
         },
         {
           "id": "svg",
           "name": "SVG",
           "description": "Graphiques vectoriels pour le web.",
+          "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/SVG_Logo.svg/120px-SVG_Logo.svg.png",
           "details": [
             {
               "id": "vector_graphics",
@@ -310,6 +336,7 @@
           "id": "docker",
           "name": "Docker",
           "description": "Apps en conteneurs.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg",
           "details": [
             {
               "id": "containerisation",
@@ -332,12 +359,14 @@
         {
           "id": "unity",
           "name": "Unity",
-          "description": "Jeux 2D/3D multiplateforme."
+          "description": "Jeux 2D/3D multiplateforme.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg"
         },
         {
           "id": "gamedesign",
           "name": "Game design",
           "description": "Conception des mécaniques de jeu.",
+          "icon": "",
           "details": [
             {
               "id": "leveldesign",
@@ -355,6 +384,7 @@
           "id": "blender",
           "name": "Blender",
           "description": "Création 3D complète.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg",
           "details": [
             {
               "id": "modélisation3D",
@@ -376,12 +406,14 @@
         {
           "id": "photoshop",
           "name": "Photoshop",
-          "description": "Retouche d’images."
+          "description": "Retouche d’images.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg"
         },
         {
           "id": "illustrator",
           "name": "Illustrator",
-          "description": "Graphisme vectoriel."
+          "description": "Graphisme vectoriel.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-original.svg"
         }
       ]
     },
@@ -392,42 +424,50 @@
         {
           "id": "tcpip",
           "name": "TCP/IP",
-          "description": "Protocoles Internet."
+          "description": "Protocoles Internet.",
+          "icon": ""
         },
         {
           "id": "electronics",
           "name": "Électronique",
-          "description": "Bases en circuits."
+          "description": "Bases en circuits.",
+          "icon": ""
         },
         {
           "id": "fiber",
           "name": "Fibre optique",
-          "description": "Transmission haut débit."
+          "description": "Transmission haut débit.",
+          "icon": ""
         },
         {
           "id": "network_install",
           "name": "Installation",
-          "description": "Mise en place d’équipements."
+          "description": "Mise en place d’équipements.",
+          "icon": ""
         },
         {
           "id": "network_security",
           "name": "Sécurité",
-          "description": "Protection des réseaux."
+          "description": "Protection des réseaux.",
+          "icon": ""
         },
         {
           "id": "telecom",
           "name": "Télécoms",
-          "description": "Communication à distance."
+          "description": "Communication à distance.",
+          "icon": ""
         },
         {
           "id": "audiovisual",
           "name": "Audiovisuel",
-          "description": "Gestion audio/vidéo."
+          "description": "Gestion audio/vidéo.",
+          "icon": ""
         },
         {
           "id": "multimedia",
           "name": "Multimédia",
-          "description": "Texte, son, image, vidéo."
+          "description": "Texte, son, image, vidéo.",
+          "icon": ""
         }
       ]
     },
@@ -439,6 +479,7 @@
           "id": "merise",
           "name": "Merise",
           "description": "Méthode d’analyse SI.",
+          "icon": "",
           "details": [
             {
               "id": "mcd",
@@ -460,17 +501,20 @@
         {
           "id": "uml",
           "name": "UML",
-          "description": "Modélisation logicielle."
+          "description": "Modélisation logicielle.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unifiedmodelinglanguage/unifiedmodelinglanguage-original.svg"
         },
         {
           "id": "devops",
           "name": "DevOps",
-          "description": "Collaboration dev/ops."
+          "description": "Collaboration dev/ops.",
+          "icon": ""
         },
         {
           "id": "agile",
           "name": "Agile",
           "description": "Méthodes souples de projet.",
+          "icon": "",
           "details": [
             {
               "id": "scrum",
@@ -492,17 +536,20 @@
         {
           "id": "eco_it",
           "name": "Éco-conception",
-          "description": "Logiciels éco-responsables."
+          "description": "Logiciels éco-responsables.",
+          "icon": ""
         },
         {
           "id": "green_it",
           "name": "Green IT",
-          "description": "Numérique durable."
+          "description": "Numérique durable.",
+          "icon": ""
         },
         {
           "id": "normes",
           "name": "Normes IT",
           "description": "Respect des standards.",
+          "icon": "",
           "details": [
             {
               "id": "REEN",
@@ -530,12 +577,14 @@
         {
           "id": "owasp",
           "name": "OWASP",
-          "description": "Bonnes pratiques web."
+          "description": "Bonnes pratiques web.",
+          "icon": ""
         },
         {
           "id": "cybersecurity",
           "name": "Cybersécurité",
-          "description": "Sécurité globale IT."
+          "description": "Sécurité globale IT.",
+          "icon": ""
         }
       ]
     },
@@ -547,6 +596,7 @@
           "id": "gestion_projet",
           "name": "Gestion de projet",
           "description": "Organisation des tâches.",
+          "icon": "",
           "details": [
             {
               "id": "planning",
@@ -564,6 +614,7 @@
           "id": "documentation",
           "name": "Documentation",
           "description": "Supports clairs et utiles.",
+          "icon": "",
           "details": [
             {
               "id": "tech",
@@ -586,7 +637,8 @@
         {
           "id": "algorithms",
           "name": "Algorithmique",
-          "description": "Résolution de problèmes."
+          "description": "Résolution de problèmes.",
+          "icon": ""
         }
       ]
     }
@@ -597,6 +649,7 @@
     "leadership": {
       "name": "Leadership",
       "description": "Capacité à motiver et guider.",
+      "icon": "",
       "details": [
         {
           "id": "inspiration",
@@ -613,6 +666,7 @@
     "communication": {
       "name": "Communication",
       "description": "Échanges clairs et efficaces.",
+      "icon": "",
       "details": [
         {
           "id": "oral",
@@ -644,6 +698,7 @@
     "adaptability": {
       "name": "Adaptabilité",
       "description": "Réactivité face au changement.",
+      "icon": "",
       "details": [
         {
           "id": "resilience",
@@ -690,6 +745,7 @@
     "creativity": {
       "name": "Créativité & Curiosité",
       "description": "Capacité à innover et à apprendre en continu.",
+      "icon": "",
       "details": [
         {
           "id": "artistic_collab",
@@ -726,6 +782,7 @@
       "music": {
         "title": "Musique",
         "description": "Pratique et écoute musicale.",
+        "icon": "",
         "items": [
           {
             "id": "music",
@@ -769,6 +826,7 @@
       "games": {
         "title": "Jeux & Univers",
         "description": "Jeux de rôles, jeux vidéo et univers imaginaires.",
+        "icon": "",
         "items": [
           {
             "id": "roleplay",
@@ -820,6 +878,7 @@
       "creation": {
         "title": "Création",
         "description": "Expérimentations et projets personnels.",
+        "icon": "",
         "items": [
           {
             "id": "programming",

@@ -87,7 +87,13 @@
   color: var(--accent-light);
   margin-bottom: 0.5rem;
 }
-
+.skills-title {
+    font-size: 1rem;    
+    color: var(--accent-strong);
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
 .project-tags {
   display: flex;
   flex-wrap: wrap;

@@ -106,3 +106,13 @@
   bottom: -12px;
   border-top-color: #24292f;
 }
+
+/* Style for skill icons */
+.competence-icon {
+  width: 1.2rem;               /* Set a consistent size for icons */
+  height: 1.2rem;
+  object-fit: contain;         /* Ensure the icon fits within the dimensions */
+  margin-right: 0.4rem;        /* Add spacing between the icon and text */
+  display: inline-block;       /* Align with the text */
+  vertical-align: middle;      /* Center align with the text */
+}

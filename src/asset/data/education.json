@@ -110,7 +110,6 @@
     "hardSkills": [
       { "id": "unity", "usedDetails": [] },
       { "id": "unreal", "usedDetails": [] },
-      { "id": "gamedesign", "usedDetails": [] },
       { "id": "blender", "usedDetails": ["modélisation3D", "texturing", "animation"] },
       { "id": "photoshop", "usedDetails": [] },
       { "id": "illustrator", "usedDetails": [] },

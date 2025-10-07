@@ -48,6 +48,9 @@ const populateSkills = (skillsData) => {
       // Header
       const header = document.createElement("div");
       header.classList.add("skill-block-header");
+      header.tabIndex = 0;
+      header.setAttribute("role", "button");
+      header.setAttribute("aria-expanded", "false");
 
       const headerTitle = document.createElement("span");
       headerTitle.textContent = categoryData.title || categoryName;
@@ -61,6 +64,10 @@ const populateSkills = (skillsData) => {
       // Content
       const content = document.createElement("div");
       content.classList.add("skill-block-content");
+      // initial collapsed state via inline style (robuste même si CSS chargé tard)
+      content.style.maxHeight = "0px";
+      content.style.overflow = "hidden";
+      content.style.transition = "max-height 0.33s ease, opacity 0.25s ease";
 
       // Category description if available
       if (categoryData.description) {
@@ -74,15 +81,30 @@ const populateSkills = (skillsData) => {
       skillsGrid.classList.add("skills-grid");
 
       // Add skills items
-      categoryData.items.forEach((skill) => {
+      (categoryData.items || []).forEach((skill) => {
         const skillItem = document.createElement("div");
         skillItem.classList.add("skill-item", itemClass);
+
+        // Header (icon + name in line)
+        const skillHeader = document.createElement("div");
+        skillHeader.classList.add("skill-header");
+
+        if (skill.icon) {
+          const icon = document.createElement("img");
+          icon.src = skill.icon;
+          icon.alt = `${skill.name} icon`;
+          icon.classList.add("skill-icon");
+          skillHeader.appendChild(icon);
+        }
 
         const skillName = document.createElement("h4");
         skillName.classList.add("skill-name");
         skillName.textContent = skill.name;
-        skillItem.appendChild(skillName);
+        skillHeader.appendChild(skillName);
 
+        skillItem.appendChild(skillHeader);
+
+        // Description
         if (skill.description) {
           const skillDescription = document.createElement("p");
           skillDescription.textContent = skill.description;
@@ -90,6 +112,7 @@ const populateSkills = (skillsData) => {
           skillItem.appendChild(skillDescription);
         }
 
+        // Details list
         if (skill.details && skill.details.length > 0) {
           const detailsList = document.createElement("ul");
           detailsList.classList.add("skill-details");
@@ -116,11 +139,41 @@ const populateSkills = (skillsData) => {
 
       content.appendChild(skillsGrid);
 
-      header.addEventListener("click", () => {
+      // Toggle function (robuste, accessible, animée)
+      const toggleContent = () => {
         const isOpen = content.classList.toggle("open");
+        // if opening -> set maxHeight to scrollHeight to animate; if closing -> 0
+        if (isOpen) {
+          // ensure browser has rendered content to get correct scrollHeight
+          requestAnimationFrame(() => {
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.opacity = "1";
+          });
+          header.setAttribute("aria-expanded", "true");
+        } else {
+          // collapse
+          content.style.maxHeight = "0px";
+          content.style.opacity = "0";
+          header.setAttribute("aria-expanded", "false");
+        }
         chevron.classList.toggle("rotate", isOpen);
+      };
+
+      // Click handler
+      header.addEventListener("click", (e) => {
+        e.preventDefault();
+        toggleContent();
       });
 
+      // Keyboard handler (Enter / Space)
+      header.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggleContent();
+        }
+      });
+
+      // Append header + content to block
       categoryBlock.appendChild(header);
       categoryBlock.appendChild(content);
       sectionBlock.appendChild(categoryBlock);

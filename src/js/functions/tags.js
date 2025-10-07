@@ -108,7 +108,20 @@ export function createSkillsTags(
 
     const tag = document.createElement("span");
     tag.classList.add("competence-tag", itemClass);
-    tag.textContent = skillObj.name;
+
+    // Add icon if available
+    if (skillObj.icon) {
+      const icon = document.createElement("img");
+      icon.src = skillObj.icon;
+      icon.alt = `${skillObj.name} icon`;
+      icon.classList.add("competence-icon");
+      tag.appendChild(icon);
+    }
+
+    const text = document.createElement("span");
+    text.textContent = skillObj.name;
+    tag.appendChild(text);
+
     list.appendChild(tag);
 
     // If details exist
