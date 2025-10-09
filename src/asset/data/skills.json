@@ -225,7 +225,7 @@
           "id": "javaee",
           "name": "Java EE",
           "description": "Applications web d’entreprise en Java.",
-          "icon": ""
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg"
         }
       ]
     },
