@@ -1,41 +1,68 @@
 [
   {
     "name": "Portfolio Personnel",
-    "status": "Terminé",
+    "status": "live",
     "description": "Un portfolio personnel interactif conçu pour présenter mes compétences, mon parcours et mes projets. L'objectif est de créer une vitrine en ligne attrayante et informative pour les visiteurs.",
     "repository": "https://github.com/lchouville/MyPortfolio.git",
     "access": null,
     "image": "src/asset/images/projects/portfolio.png",
     "hardSkills": [
-      { "id": "html", "usedDetails": ["semantic", "accessibility", "seo"] },
+      {
+        "id": "html",
+        "usedDetails": [
+          "semantic",
+          "accessibility",
+          "seo"
+        ]
+      },
       {
         "id": "css",
-        "usedDetails": ["responsive", "animations", "grid_flexbox", "variables"]
+        "usedDetails": [
+          "responsive",
+          "animations",
+          "grid_flexbox",
+          "variables"
+        ]
       },
-      { "id": "js", "usedDetails": ["dom", "es6", "modules", "fetch_api"] },
+      {
+        "id": "js",
+        "usedDetails": [
+          "dom",
+          "es6",
+          "modules",
+          "fetch_api"
+        ]
+      },
       {
         "id": "json",
-        "usedDetails": ["data_driven", "structure", "dynamic_content"]
+        "usedDetails": [
+          "data_driven",
+          "structure",
+          "dynamic_content"
+        ]
       },
       {
         "id": "github",
-        "usedDetails": ["versioning", "branching", "github_pages"]
+        "usedDetails": [
+          "versioning",
+          "branching",
+          "github_pages"
+        ]
       },
-      { "id": "design", "usedDetails": ["uiux", "color_palette", "typography"] }
-    ],
-    "softSkills": [
       {
-        "id": "adaptability",
-        "usedDetails": ["learning", "autonomy", "curiosity"]
-      },
-      { "id": "organization", "usedDetails": ["planning", "time_management"] },
-      { "id": "communication", "usedDetails": ["visual_storytelling"] },
-      { "id": "creativity", "usedDetails": ["originality", "problem_solving"] }
-    ]
+        "id": "design",
+        "usedDetails": [
+          "uiux",
+          "color_palette",
+          "typography"
+        ]
+      }
+    ],
+    "softSkills": []
   },
   {
     "name": "GR.A.V.A.",
-    "status": "En cours",
+    "status": "paused",
     "description": "G.R.A.V.A. est un projet de création d'avatars vectoriels en SVG, développé avec HTML, CSS et JavaScript. Il offre aux utilisateurs la possibilité de concevoir et de personnaliser des avatars directement dans leur navigateur, sans nécessiter de logiciel externe.",
     "repository": null,
     "access": null,
@@ -43,40 +70,68 @@
     "hardSkills": [
       {
         "id": "html",
-        "usedDetails": ["semantic"],
+        "usedDetails": [
+          "semantic"
+        ],
         "level": "advanced",
         "context": "Structure des interfaces et intégration des éléments interactifs"
       },
       {
         "id": "css",
-        "usedDetails": ["animations", "flexbox"],
+        "usedDetails": [
+          "animations",
+          "flexbox"
+        ],
         "level": "advanced",
         "context": "Animations CSS pour les interactions et mise en page flexible"
       },
       {
         "id": "js",
-        "usedDetails": ["dom"],
+        "usedDetails": [
+          "dom"
+        ],
         "level": "advanced",
         "context": "Manipulation du DOM pour la génération dynamique des avatars"
       },
       {
         "id": "svg",
-        "usedDetails": ["vector_graphics"],
+        "usedDetails": [
+          "vector_graphics"
+        ],
         "level": "intermediate",
         "context": "Utilisation d’éléments SVG pour dessiner et personnaliser les avatars"
       }
     ],
-    "softSkills": [
-      {
-        "id": "creativity",
-        "usedDetails": [],
-        "context": "Conception d’avatars uniques et stylisés"
-      },
-      {
-        "id": "problem_solving",
-        "usedDetails": [],
-        "context": "Gestion des contraintes techniques liées au rendu SVG"
-      }
-    ]
+    "softSkills": []
+  },
+  {
+    "name": "P.M.S.",
+    "status": "paused",
+    "description": "",
+    "repository": null,
+    "access": null,
+    "image": null,
+    "hardSkills": [],
+    "softSkills": []
+  },
+  {
+    "name": "Digisphere",
+    "status": "archived",
+    "description": "",
+    "repository": null,
+    "access": null,
+    "image": null,
+    "hardSkills": [],
+    "softSkills": []
+  },
+  {
+    "name": "Smart Road",
+    "status": "finished",
+    "description": "",
+    "repository": null,
+    "access": null,
+    "image": null,
+    "hardSkills": [],
+    "softSkills": []
   }
 ]

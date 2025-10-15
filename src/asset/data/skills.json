@@ -646,136 +646,189 @@
   "softSkills": {
     "name": "Compétences Transversales",
     "desc": "Compétences non-techniques comme la communication, le travail d'équipe et la gestion de projet.",
-    "leadership": {
-      "name": "Leadership",
-      "description": "Capacité à motiver et guider.",
-      "icon": "",
-      "details": [
-        {
-          "id": "inspiration",
-          "name": "Motivation",
-          "description": "Donner de l’élan à l’équipe."
-        },
-        {
-          "id": "decision",
-          "name": "Décision",
-          "description": "Trancher avec assurance."
-        }
-      ]
-    },
     "communication": {
-      "name": "Communication",
+      "title": "Communication",
       "description": "Échanges clairs et efficaces.",
-      "icon": "",
-      "details": [
+      "items": [
         {
           "id": "oral",
-          "name": "Oral",
-          "description": "Présentation claire et efficace."
+          "name": "Communication orale",
+          "description": "Présentation claire et efficace.",
+          "icon": ""
         },
         {
           "id": "written",
-          "name": "Écrit",
-          "description": "Rédaction lisible et structurée."
+          "name": "Communication écrite",
+          "description": "Rédaction lisible et structurée.",
+          "icon": ""
         },
         {
           "id": "tech",
-          "name": "Technique",
-          "description": "Explications adaptées aux non-techniques."
+          "name": "Vulgarisation technique",
+          "description": "Explications adaptées aux non-techniques.",
+          "icon": ""
         },
         {
           "id": "ecoute",
           "name": "Écoute active",
-          "description": "Compréhension des besoins."
+          "description": "Compréhension des besoins.",
+          "icon": ""
+        }
+      ]
+    },
+    "teamwork": {
+      "title": "Travail d'équipe",
+      "description": "Collaboration et interactions efficaces.",
+      "items": [
+        {
+          "id": "collaboration",
+          "name": "Collaboration",
+          "description": "Atteindre des objectifs communs.",
+          "icon": ""
         },
         {
-          "id": "teamwork",
-          "name": "Travail en équipe",
-          "description": "Atteindre des objectifs communs."
+          "id": "leadership",
+          "name": "Leadership",
+          "description": "Motiver et guider l'équipe.",
+          "icon": "",
+          "details": [
+            {
+              "id": "inspiration",
+              "name": "Motivation",
+              "description": "Donner de l'élan à l'équipe."
+            },
+            {
+              "id": "decision",
+              "name": "Prise de décision",
+              "description": "Trancher avec assurance."
+            }
+          ]
+        },
+        {
+          "id": "artistic_collab",
+          "name": "Collaboration créative",
+          "description": "Travail avec designers et artistes.",
+          "icon": ""
         }
       ]
     },
     "adaptability": {
-      "name": "Adaptabilité",
+      "title": "Adaptabilité",
       "description": "Réactivité face au changement.",
-      "icon": "",
-      "details": [
+      "items": [
+        {
+          "id": "flexibility",
+          "name": "Flexibilité",
+          "description": "Utilisation de méthodes variées.",
+          "icon": ""
+        },
         {
           "id": "resilience",
           "name": "Résilience",
-          "description": "Rebondir face aux obstacles."
-        },
-        {
-          "id": "analysis",
-          "name": "Sens de l’analyse",
-          "description": "Comprendre rapidement un problème."
-        },
-        {
-          "id": "organization",
-          "name": "Organisation",
-          "description": "Structurer efficacement les tâches."
+          "description": "Rebondir face aux obstacles.",
+          "icon": ""
         },
         {
           "id": "learning",
           "name": "Apprentissage rapide",
-          "description": "Acquisition rapide de nouvelles compétences."
-        },
-        {
-          "id": "flexibility",
-          "name": "Flexibilité",
-          "description": "Utilisation de méthodes variées."
-        },
-        {
-          "id": "autonomy",
-          "name": "Autonomie",
-          "description": "Capacité à travailler seul efficacement."
-        },
-        {
-          "id": "problem_solving",
-          "name": "Résolution de problèmes",
-          "description": "Trouver des solutions adaptées."
-        },
-        {
-          "id": "involvement",
-          "name": "Implication",
-          "description": "Engagement fort dans les projets."
-        }
-      ]
-    },
-    "creativity": {
-      "name": "Créativité & Curiosité",
-      "description": "Capacité à innover et à apprendre en continu.",
-      "icon": "",
-      "details": [
-        {
-          "id": "artistic_collab",
-          "name": "Collaboration créative",
-          "description": "Travail avec designers et artistes."
-        },
-        {
-          "id": "creative_pm",
-          "name": "Gestion de projets créatifs",
-          "description": "Approches innovantes dans les projets."
-        },
-        {
-          "id": "storytelling",
-          "name": "Storytelling",
-          "description": "Capacité à captiver par le récit."
+          "description": "Acquisition rapide de nouvelles compétences.",
+          "icon": ""
         },
         {
           "id": "curiosity",
           "name": "Curiosité",
-          "description": "Ouverture aux nouveautés et apprentissage continu."
+          "description": "Ouverture aux nouveautés et apprentissage continu.",
+          "icon": ""
         },
         {
           "id": "veille",
           "name": "Veille technologique",
-          "description": "Suivi régulier des tendances."
+          "description": "Suivi régulier des tendances.",
+          "icon": ""
+        }
+      ]
+    },
+    "problemSolving": {
+      "title": "Résolution de problèmes",
+      "description": "Analyse et solutions efficaces.",
+      "items": [
+        {
+          "id": "analysis",
+          "name": "Sens de l'analyse",
+          "description": "Comprendre rapidement un problème.",
+          "icon": ""
+        },
+        {
+          "id": "problem_solving",
+          "name": "Résolution de problèmes",
+          "description": "Trouver des solutions adaptées.",
+          "icon": ""
+        },
+        {
+          "id": "critical_thinking",
+          "name": "Esprit critique",
+          "description": "Évaluation objective des situations.",
+          "icon": ""
+        }
+      ]
+    },
+    "organization": {
+      "title": "Organisation",
+      "description": "Gestion efficace du temps et des tâches.",
+      "items": [
+        {
+          "id": "organization",
+          "name": "Organisation",
+          "description": "Structurer efficacement les tâches.",
+          "icon": ""
+        },
+        {
+          "id": "autonomy",
+          "name": "Autonomie",
+          "description": "Capacité à travailler seul efficacement.",
+          "icon": ""
+        },
+        {
+          "id": "time_management",
+          "name": "Gestion du temps",
+          "description": "Priorisation et respect des délais.",
+          "icon": ""
+        },
+        {
+          "id": "involvement",
+          "name": "Implication",
+          "description": "Engagement fort dans les projets.",
+          "icon": ""
+        }
+      ]
+    },
+    "creativity": {
+      "title": "Créativité",
+      "description": "Innovation et pensée originale.",
+      "items": [
+        {
+          "id": "innovation",
+          "name": "Innovation",
+          "description": "Approches nouvelles et originales.",
+          "icon": ""
+        },
+        {
+          "id": "creative_pm",
+          "name": "Gestion de projets créatifs",
+          "description": "Approches innovantes dans les projets.",
+          "icon": ""
+        },
+        {
+          "id": "storytelling",
+          "name": "Storytelling",
+          "description": "Capacité à captiver par le récit.",
+          "icon": ""
         }
       ]
     }
   },
   "interests": {
+    "title": "Centres d'intérêt",
     "name": "Centres d'intérêt",
     "desc": "Activités et passions personnelles.",
     "categories": {

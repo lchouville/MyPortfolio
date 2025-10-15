@@ -10,6 +10,14 @@
   },
   "tabs": {
     "projects": "Projets",
+    "projects-status": {
+      "inProgress": "En Cours",
+      "finished": "Terminé",
+      "live": "En Ligne",
+      "prototype": "Prototype",
+      "archived": "Archivé",
+      "paused":"En Pause"
+    },
     "skills": "Compétences",
     "certifications": "Formations",
     "Experiences": "Parcours Professionnel"

@@ -3,15 +3,6 @@ import { createSkillsTags } from "../../functions/tags.js";
 import { loadTemplate } from "../../functions/templates.js";
 import { getRandomPastelColor, normalizeSkillsData } from "../../functions/utils-skills.js";
 
-// Map project status → CSS class
-const STATUS_CLASSES = {
-  "Terminé": "finished",
-  "En cours": "in-progress",
-  "En pause": "paused",
-  "Annulé": "aborted",
-  "": "no-status"
-};
-
 // Create project links (view project / view code)
 const createProjectLinks = (access, repository) => {
   const linksWrapper = document.createElement("div");
@@ -34,32 +25,38 @@ const createProjectLinks = (access, repository) => {
 };
 
 // Build project cards and append them to the grid
-function populateProjects(projectsData, projectCardTmpl, errors, skills) {
+function populateProjects(projectsData, projectCardTmpl, errors, skills, siteData) {
   const projectsGrid = document.getElementById("projects-grid");
   if (!projectsGrid) {
     console.error(errors.grid404 || "Projects grid not found");
     return;
   }
 
-  // Normalize skills data to work with both old and new structure
+  // Normalize skills data
   const normalizedSkills = normalizeSkillsData(skills);
+  
+  // Get status translations from site data
+  const statusTranslations = siteData?.tabs?.["projects-status"] || {};
 
   projectsData.forEach((project) => {
     const projectCard = document.createElement("div");
     projectCard.id = project.name.replace(/\s+/g, "-");
     projectCard.classList.add("project-card");
 
+    // Get translated status label
+    const statusKey = project.status || "";
+    const statusLabel = statusTranslations[statusKey] || statusKey;
+    console.log(statusKey," : ",statusLabel)
     // Fill template placeholders
     projectCard.innerHTML = projectCardTmpl
-      .replace(/{{status}}/g, project.status || "")
+      .replace(/{{status}}/g, statusLabel)
       .replace(/{{projectName}}/g, project.name || "")
       .replace(/{{projectDesc}}/g, project.description || "");
 
-    // Apply status class
+    // Apply status class directly from the status key
     const statusSpan = projectCard.querySelector(".project-status");
-    if (statusSpan) {
-      const statusClass = STATUS_CLASSES[project.status] || "no-status";
-      statusSpan.classList.add(statusClass);
+    if (statusSpan && statusKey) {
+      statusSpan.classList.add(`status-${statusKey}`);
     }
 
     // Add skills if present
@@ -103,15 +100,16 @@ function populateProjects(projectsData, projectCardTmpl, errors, skills) {
 // Fetch and render projects
 export const fetchProjects = async () => {
   try {
-    const [projectsResponse, projectCardTmpl, errors, skills] = await Promise.all([
+    const [projectsResponse, projectCardTmpl, errors, skills, siteData] = await Promise.all([
       fetch("src/asset/data/projects.json"),
       loadTemplate("./src/template/tabs/projectCard.tmpl"),
       loadData("src/asset/data/error.json"),
       loadData("src/asset/data/skills.json"),
+      loadData("src/asset/data/site.json"), // Votre fichier avec les traductions
     ]);
 
     const projectsData = await projectsResponse.json();
-    populateProjects(projectsData, projectCardTmpl, errors, skills);
+    populateProjects(projectsData, projectCardTmpl, errors, skills, siteData);
   } catch (error) {
     console.error("Error while loading projects:", error);
   }

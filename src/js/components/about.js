@@ -37,7 +37,6 @@ export async function initAbout() {
       hobbiesBlock.appendChild(interestsContainer);
       about.appendChild(hobbiesBlock);
     }
-
   }
 
   // Append on App

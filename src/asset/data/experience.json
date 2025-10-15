@@ -17,8 +17,8 @@
       { "id": "documentation", "usedDetails": ["tech"] }
     ],
     "softSkills": [
-      { "id": "teamwork", "usedDetails": ["collab"] },
-      {"id": "adaptability", "usedDetails": ["autonomy"] }
+      { "id": "collaboration", "usedDetails": [] },
+      {"id": "autonomy", "usedDetails": [] }
     ]
   },
   {

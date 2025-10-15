@@ -19,9 +19,9 @@
     "softSkills": [
       { "id": "leadership", "usedDetails": ["inspiration", "decision"] },
       { "id": "communication", "usedDetails": [] },
-      { "id": "teamwork", "usedDetails": ["collab"] },
-      { "id": "adaptability", "usedDetails": [] },
-      { "id": "curiosity", "usedDetails": ["veille"] }
+      { "id": "collaboration", "usedDetails": [] },
+      { "id": "learning", "usedDetails": [] },
+      { "id": "veille", "usedDetails": [] }
     ]
   },
   {
@@ -60,10 +60,11 @@
       { "id": "responsive", "usedDetails": [] }
     ],
     "softSkills": [
-      { "id": "teamwork", "usedDetails": ["collab"] },
-      { "id": "communication", "usedDetails": ["tech"] },
-      { "id": "adaptability", "usedDetails": ["problem_solving", "autonomy"] },
-      { "id": "curiosity", "usedDetails": ["veille"] }
+      { "id": "collaboration", "usedDetails": [] },
+      { "id": "tech", "usedDetails": [] },
+      { "id": "problem_solving", "usedDetails": [] },
+      { "id": "autonomy", "usedDetails": [] },
+      { "id": "veille", "usedDetails": [] }
     ]
   },
   {
@@ -91,10 +92,10 @@
       { "id": "wordpress", "usedDetails": [] }
     ],
     "softSkills": [
-      { "id": "teamwork", "usedDetails": ["collab"] },
-      { "id": "communication", "usedDetails": [] },
-      { "id": "adaptability", "usedDetails": ["autonomy"] },
-      { "id": "curiosity", "usedDetails": ["veille"] }
+      { "id": "collaboration", "usedDetails": [] },
+      { "id": "oral", "usedDetails": [] },
+      { "id": "autonomy", "usedDetails": [] },
+      { "id": "veille", "usedDetails": [] }
     ]
   },
   {
@@ -117,10 +118,9 @@
       { "id": "gamedesign", "usedDetails": ["leveldesign", "gamemechanics"] }
     ],
     "softSkills": [
-      { "id": "adaptability", "usedDetails": ["creativity"] },
       { "id": "storytelling", "usedDetails": [] },
-      { "id": "teamwork", "usedDetails": ["artistic_collab"] },
-      { "id": "adaptability", "usedDetails": ["creative_pm"] }
+      { "id": "creative_pm", "usedDetails": [] },
+      { "id": "artistic_collab", "usedDetails": [] }
     ]
   },
   {
@@ -148,11 +148,11 @@
       { "id": "cybersecurity", "usedDetails": [] }
     ],
     "softSkills": [
-      { "id": "teamwork", "usedDetails": ["collab"] },
-      { "id": "communication", "usedDetails": [] },
-      { "id": "adaptability", "usedDetails": ["autonomy"] },
-      { "id": "curiosity", "usedDetails": ["veille"] },
-      { "id": "adaptability", "usedDetails": ["problem_solving"] }
+      { "id": "collaboration", "usedDetails": [] },
+      { "id": "oral", "usedDetails": [] },
+      { "id": "autonomy", "usedDetails": [] },
+      { "id": "veille", "usedDetails": [] },
+      { "id": "problem_solving", "usedDetails": [] }
     ]
   },
   {
@@ -180,11 +180,12 @@
       { "id": "multimedia", "usedDetails": [] }
     ],
     "softSkills": [
-      { "id": "teamwork", "usedDetails": [] },
-      { "id": "communication", "usedDetails": [] },
-      { "id": "adaptability", "usedDetails": ["autonomy"] },
-      { "id": "curiosity", "usedDetails": ["veille"] },
-      { "id": "adaptability", "usedDetails": ["problem_solving"] }
+      { "id": "collaboration", "usedDetails": [] },
+      { "id": "oral", "usedDetails": [] },
+      { "id": "written", "usedDetails": [] },
+      { "id": "autonomy", "usedDetails": [] },
+      { "id": "veille", "usedDetails": [] },
+      { "id": "problem_solving", "usedDetails": [] }
     ]
   }
 ]
