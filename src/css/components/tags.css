@@ -1,7 +1,10 @@
+/* src/css/components/tags.css */
+
 /* ============================================= */
 /* COMPETENCE BADGES STYLES                      */
 /* ============================================= */
-/* Main container for all badges */
+
+/* Main container */
 .competences-tags {
   display: flex;
   flex-wrap: wrap;
@@ -13,39 +16,45 @@
 
 /* Base style for all competence tags */
 .competence-tag {
-  display: inline-flex;        /* inline + flex = adaptable à la taille du contenu */
-  flex-wrap: wrap;             /* autorise le retour à la ligne des sous-tags */
-  align-items: center;         /* centre verticalement */
-  gap: 0.3rem;                 /* espace entre le nom principal et les sous-tags */
-  
-  max-width: 100%;             /* pas de débordement horizontal */
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+
+  max-width: 100%;
   padding: 0.4rem 0.8rem;
-  border: 1px solid;
+  border: 1px solid var(--border-color, #d0d7de);
   border-radius: 15px;
   font-size: 0.95rem;
   line-height: 1.2;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  cursor: default;
+
+  color: var(--text-primary, #1f2328);
+  background-color: var(--secondary-bg, #f0f6fc);
+  box-shadow: 0 1px 2px var(--shadow-light, rgba(0, 0, 0, 0.1));
   background-clip: padding-box;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
 }
-/* Hover effect for tags */
+
 .competence-tag:hover {
   transform: translateY(-2px);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 6px var(--shadow-medium, rgba(0, 0, 0, 0.15));
 }
-/* Style for subtags */
+
+/* Subtags */
 .competence-subtag {
   display: inline-block;
   padding: 0.3rem 0.6rem;
   border-radius: 12px;
   font-size: 0.8rem;
-  background-color: rgba(0, 0, 0, 0.05);
-  color: inherit;
-  border: 1px dashed rgba(0, 0, 0, 0.2);
-  word-break: break-word;      /* casse si le mot est trop long */
+  background-color: var(--accent-bg, rgba(0, 0, 0, 0.05));
+  color: var(--text-secondary, inherit);
+  border: 1px dashed var(--border-color, rgba(0, 0, 0, 0.2));
+  word-break: break-word;
 }
-/* Tag variants using CSS variables */
+
+/* Tag variants */
 .tag-general {
   border-color: var(--tag-general-border, #d0d7de);
   background-color: var(--tag-general-bg, #f0f6fc);
@@ -71,8 +80,8 @@
 
 .tooltip {
   position: absolute;
-  background-color: #24292f;
-  color: #ffffff;
+  background-color: var(--text-primary, #24292f);
+  color: var(--primary-bg, #ffffff);
   padding: 0.6rem 0.8rem;
   border-radius: 6px;
   font-size: 0.85rem;
@@ -82,7 +91,7 @@
   visibility: hidden;
   transition: opacity 0.2s ease, visibility 0.2s ease;
   z-index: 10000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 10px var(--shadow-strong, rgba(0, 0, 0, 0.25));
   pointer-events: none;
 }
 
@@ -95,24 +104,23 @@
   border: 6px solid transparent;
 }
 
-/* Arrow pointing up when tooltip is below */
+/* Arrow directions */
 .tooltip.below::after {
   top: -12px;
-  border-bottom-color: #24292f;
+  border-bottom-color: var(--text-primary, #24292f);
 }
 
-/* Arrow pointing down when tooltip is above */
 .tooltip.above::after {
   bottom: -12px;
-  border-top-color: #24292f;
+  border-top-color: var(--text-primary, #24292f);
 }
 
-/* Style for skill icons */
+/* Skill icons */
 .competence-icon {
-  width: 1.2rem;               /* Set a consistent size for icons */
+  width: 1.2rem;
   height: 1.2rem;
-  object-fit: contain;         /* Ensure the icon fits within the dimensions */
-  margin-right: 0.4rem;        /* Add spacing between the icon and text */
-  display: inline-block;       /* Align with the text */
-  vertical-align: middle;      /* Center align with the text */
+  object-fit: contain;
+  margin-right: 0.4rem;
+  display: inline-block;
+  vertical-align: middle;
 }

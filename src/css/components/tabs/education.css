@@ -1,8 +1,18 @@
-/* Section Parcours Scolaire */
+/* src/css/components/tabs/project.css */
+/* ============================================= */
+/* EDUCATION TIMELINE                            */
+/* ============================================= */
+
 #parcours-tab {
     background-color: var(--secondary-bg);
     position: relative;
+    padding: 3rem 1.5rem;
+    border-top: 1px solid var(--border-color);
 }
+
+/* ============================================= */
+/* TIMELINE STRUCTURE                            */
+/* ============================================= */
 
 .timeline {
     position: relative;
@@ -11,69 +21,107 @@
     padding: 0 1rem;
 }
 
+/* Vertical center line (always in the middle of #parcours-tab) */
 .timeline::after {
     content: "";
     position: absolute;
-    width: 2px;
-    background-color: var(--border-color);
     top: 0;
     bottom: 0;
-    left: 20px;
-    margin-left: -1px;
+    left: 50%;
+    width: 2px;
+    background-color: var(--border-color);
+    transform: translateX(-50%);
+    z-index: 1;
 }
+
+/* ============================================= */
+/* TIMELINE ITEM                                 */
+/* ============================================= */
 
 .timeline-item {
     position: relative;
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 3rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Dot perfectly centered relative to the entire timeline */
 .timeline-item::after {
     content: "";
     position: absolute;
-    width: 5vw;
-    max-width: 20px;
-    height: 5vw;
-    max-height: 20px;
-    left: -6px;
-    background-color: var(--secondary-bg);
-    border: 3px solid var(--accent-light);
     top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-bg);
+    border: 3px solid var(--accent-light);
     border-radius: 50%;
-    z-index: 1;
+    z-index: 2;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.timeline-content {
-    margin-left: 10vw;
-    padding: 2vw;
-    background-color: var(--primary-bg);
-    position: relative;
-    border-radius: 6px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.timeline-item:hover::after {
+    background-color: var(--accent-medium);
+    transform: translateX(-50%) scale(1.1);
 }
+
+/* ============================================= */
+/* TIMELINE CONTENT                              */
+/* ============================================= */
+
+.timeline-content {
+    position: relative;
+    background-color: var(--primary-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px var(--shadow-light, rgba(0, 0, 0, 0.1));
+    padding: 2vw;
+    transition: box-shadow 0.3s ease;
+    max-width: 500px;
+}
+
+/* Left or right side of the central line */
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-right: calc(50% + 30px);
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: calc(50% + 30px);
+}
+
+.timeline-content:hover {
+    box-shadow: 0 4px 12px var(--shadow-medium, rgba(0, 0, 0, 0.15));
+}
+
+/* ============================================= */
+/* TEXT STYLES                                   */
+/* ============================================= */
 
 .timeline-content h3 {
     color: var(--accent-light);
     margin-bottom: 0.8rem;
     font-weight: bold;
+    font-family: "Palatino", "Times New Roman", serif;
 }
 
 .timeline-content .date {
     color: var(--text-secondary);
     font-style: italic;
     margin-bottom: 1rem;
+    font-size: 0.9rem;
 }
 
 .timeline-content .school {
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 0.5rem;
     color: var(--text-primary);
+    font-size: 1rem;
 }
 
 .timeline-content .obtention {
-    color: var(--text-secondary);
+    color: var(--text-muted, var(--text-secondary));
     margin-bottom: 1rem;
     font-size: 0.95rem;
 }
@@ -82,45 +130,33 @@
     margin-bottom: 1rem;
     padding-bottom: 0.8rem;
     border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    line-height: 1.5;
+    font-size: 0.95rem;
 }
 
+/* ============================================= */
+/* RESPONSIVE                                    */
+/* ============================================= */
 
+@media (max-width: 768px) {
+    .timeline-content {
+        max-width: 100%;
+        margin: 0 0 2rem 0;
+    }
 
-/* Version Desktop */
-@media (min-width: 768px) {
-    .timeline {
-        max-width: 1200px;
-        padding: 0;
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        margin: 0 0 2rem 0;
     }
 
     .timeline::after {
         left: 50%;
-    }
-
-    .timeline-item {
-        width: 50%;
-    }
-
-    .timeline-item:nth-child(odd) {
-        left: 0;
-    }
-
-    .timeline-item:nth-child(even) {
-        left: 50%;
+        transform: translateX(-50%);
     }
 
     .timeline-item::after {
-        right: -10px;
-        left: auto;
-    }
-
-    .timeline-item:nth-child(even)::after {
-        left: -10px;
-        right: auto;
-    }
-
-    .timeline-content {
-        margin-left: 0;
-        margin: 0px 15px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

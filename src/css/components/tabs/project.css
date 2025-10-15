@@ -1,76 +1,116 @@
-/* Section Projets */
+/* src/css/components/tabs/project.css */
+
+/* ============================================= */
+/* PROJECTS SECTION                              */
+/* ============================================= */
+
 .projets-tab {
   background-color: var(--secondary-bg);
+  padding: 3rem 1.5rem;
+  border-top: 1px solid var(--border-color);
 }
 
+/* Grid layout for projects */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
+  align-items: stretch;
 }
 
+/* Project card container */
 .project-card {
   position: relative;
-  /* Important pour positionner les éléments à l'intérieur */
   background-color: var(--primary-bg);
-  border-radius: 6px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px var(--shadow-light, rgba(0, 0, 0, 0.1));
   border: 1px solid var(--border-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 16px var(--shadow-medium, rgba(0, 0, 0, 0.15));
 }
+
+/* ============================================= */
+/* PROJECT STATUS BADGES                         */
+/* ============================================= */
 
 .project-status {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
+  background-color: var(--accent-strong);
+  color: var(--primary-bg);
   padding: 5px 8px;
   border-radius: 5px;
-  font-size: 0.8em;
+  font-size: 0.8rem;
+  font-weight: bold;
   z-index: 10;
+  text-transform: uppercase;
+  box-shadow: 0 2px 6px var(--shadow-medium, rgba(0, 0, 0, 0.15));
 }
 
-.finished {
-  background-color: rgba(3, 117, 9, 0.6);
+/* Status variants */
+.status-inProgress {
+  background-color: var(--accent-light, #2e718b);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
-.in-progress {
-  background-color: rgba(3, 117, 117, 0.6);
+.status-finished {
+  background-color: var(--success-color, #2e8b57);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
-.paused {
-  background-color: rgba(117, 109, 3, 0.6);
+.status-live {
+  background-color: var(--primary-color, #8b2e8b);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
-.aborted {
-  background-color: rgba(117, 3, 3, 0.6);
+.status-prototype {
+  background-color: var(--warning-color, #f59e0b);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
-.project-links {
-  margin-top: 1rem;
-  text-align: right;
-  display: flex;
-  justify-content: space-around;
+.status-archived {
+  background-color: var(--secondary-color, #6b7280);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
-.project-links a {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: var(--accent-light);
-  color: var(--primary-bg);
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 0.9em;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+.status-paused {
+  background-color: var(--tag-hard-border, #8b7d2e);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
+
+/* ============================================= */
+/* PROJECT CONTENT                               */
+/* ============================================= */
 
 .project-image {
   height: 200px;
@@ -86,14 +126,23 @@
 .project-content h3 {
   color: var(--accent-light);
   margin-bottom: 0.5rem;
+  font-family: "Palatino", "Times New Roman", serif;
+  font-size: 1.4rem;
 }
+
+/* Skill title within card */
 .skills-title {
-    font-size: 1rem;    
-    color: var(--accent-strong);
-    text-align: center;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+  font-size: 1rem;
+  color: var(--accent-strong);
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 1.2;
 }
+
+/* ============================================= */
+/* PROJECT TAGS                                  */
+/* ============================================= */
+
 .project-tags {
   display: flex;
   flex-wrap: wrap;
@@ -105,9 +154,46 @@
 .project-tag {
   background-color: var(--tag-general-bg);
   color: var(--tag-general-text);
-  padding: 0.2rem 0.6rem;
-  border: solid 1px var(--tag-general-border);
-  border-radius: 3px;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--tag-general-border);
+  border-radius: 4px;
   font-size: 0.8rem;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px var(--shadow-light, rgba(0, 0, 0, 0.15));
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px var(--shadow-medium, rgba(0, 0, 0, 0.2));
+}
+
+/* ============================================= */
+/* PROJECT LINKS                                 */
+/* ============================================= */
+
+.project-links {
+  margin-top: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-links a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background-color: var(--accent-light);
+  color: var(--primary-bg);
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 6px var(--shadow-medium, rgba(0, 0, 0, 0.15));
+}
+
+.project-links a:hover {
+  background-color: var(--accent-strong);
+  transform: translateY(-2px);
 }
