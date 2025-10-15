@@ -151,12 +151,12 @@
     }
 
     .timeline::after {
-        left: 50%;
+        left: 0;
         transform: translateX(-50%);
     }
 
     .timeline-item::after {
-        left: 50%;
+        left: -16px;
         transform: translateX(-50%);
     }
 }
