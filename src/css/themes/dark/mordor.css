@@ -5,16 +5,16 @@
 /* MORDOR */
 :root[data-theme="mordor"] {
   --primary-bg: #0d0d0d;
-  --secondary-bg: #1a0a0a;
+  --secondary-bg: #140909;
   --accent-bg: #2d1010;
 
-  --text-primary: #f5c6c6;
-  --text-secondary: #e88b8b;
-  --text-muted: #a65c5c;
+  --text-primary: #aa6232;
+  --text-secondary: #9b928c;
+  --text-muted: #a67a5c;
 
-  --accent-light: #ff1a1a;
+  --accent-light: #a8753b;
   --accent-medium: #ff5500;
-  --accent-strong: #000000;
+  --accent-strong: #ac672e;
 
   --border-color: #4d1a1a;
   --shadow-light: rgba(255, 0, 0, 0.15);
@@ -26,15 +26,15 @@
 
   --tag-general-border: #ff1a1a;
   --tag-general-bg: rgba(255, 26, 26, 0.15);
-  --tag-general-text: #cc1414;
+  --tag-general-text: #a71a1a;
 
   --tag-hard-border: #ff5500;
   --tag-hard-bg: rgba(255, 85, 0, 0.15);
   --tag-hard-text: #cc4400;
 
-  --tag-soft-border: #4d1a1a;
-  --tag-soft-bg: rgba(77, 26, 26, 0.25);
-  --tag-soft-text: #a63d3d;
+  --tag-soft-border: #473f3f;
+  --tag-soft-bg: rgba(65, 60, 60, 0.25);
+  --tag-soft-text: #c4afafab;
 }
 
 .color-mordor {
