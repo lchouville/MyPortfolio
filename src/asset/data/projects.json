@@ -9,53 +9,27 @@
     "hardSkills": [
       {
         "id": "html",
-        "usedDetails": [
-          "semantic",
-          "accessibility",
-          "seo"
-        ]
+        "usedDetails": ["semantic", "accessibility", "seo"]
       },
       {
         "id": "css",
-        "usedDetails": [
-          "responsive",
-          "animations",
-          "grid_flexbox",
-          "variables"
-        ]
+        "usedDetails": ["responsive", "animations", "grid_flexbox", "variables"]
       },
       {
         "id": "js",
-        "usedDetails": [
-          "dom",
-          "es6",
-          "modules",
-          "fetch_api"
-        ]
+        "usedDetails": ["dom", "es6", "modules", "fetch_api"]
       },
       {
         "id": "json",
-        "usedDetails": [
-          "data_driven",
-          "structure",
-          "dynamic_content"
-        ]
+        "usedDetails": ["data_driven", "structure", "dynamic_content"]
       },
       {
         "id": "github",
-        "usedDetails": [
-          "versioning",
-          "branching",
-          "github_pages"
-        ]
+        "usedDetails": ["versioning", "branching", "github_pages"]
       },
       {
         "id": "design",
-        "usedDetails": [
-          "uiux",
-          "color_palette",
-          "typography"
-        ]
+        "usedDetails": ["uiux", "color_palette", "typography"]
       }
     ],
     "softSkills": []
@@ -70,34 +44,25 @@
     "hardSkills": [
       {
         "id": "html",
-        "usedDetails": [
-          "semantic"
-        ],
+        "usedDetails": ["semantic"],
         "level": "advanced",
         "context": "Structure des interfaces et intégration des éléments interactifs"
       },
       {
         "id": "css",
-        "usedDetails": [
-          "animations",
-          "flexbox"
-        ],
+        "usedDetails": ["animations", "flexbox"],
         "level": "advanced",
         "context": "Animations CSS pour les interactions et mise en page flexible"
       },
       {
         "id": "js",
-        "usedDetails": [
-          "dom"
-        ],
+        "usedDetails": ["dom"],
         "level": "advanced",
         "context": "Manipulation du DOM pour la génération dynamique des avatars"
       },
       {
         "id": "svg",
-        "usedDetails": [
-          "vector_graphics"
-        ],
+        "usedDetails": ["vector_graphics"],
         "level": "intermediate",
         "context": "Utilisation d’éléments SVG pour dessiner et personnaliser les avatars"
       }
@@ -127,11 +92,19 @@
   {
     "name": "Smart Road",
     "status": "finished",
-    "description": "",
-    "repository": null,
+    "description": "Smart-Road est un projet de formation réalisé dans le cadre du cursus à Zone01 Normandie. Il s’agit d’un simulateur de trafic routier développé en Rust, qui permet de visualiser et tester différentes stratégies de gestion du trafic. ",
+    "repository": "https://github.com/lchouville/Smart-Road.git",
     "access": null,
     "image": null,
-    "hardSkills": [],
+    "hardSkills": [
+      {
+        "id": "rust",
+        "usedDetails": ["cargo"]
+      },{
+        "id":"sdl2",
+        "usedDetails": ["sdl2_rendering","sdl2_events","sdl2_image_ttf"]
+      }
+    ],
     "softSkills": []
   }
 ]

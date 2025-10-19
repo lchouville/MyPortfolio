@@ -93,7 +93,14 @@
           "id": "rust",
           "name": "Rust",
           "description": "Performance et sécurité.",
-          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg"
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg",
+          "details": [
+            {
+              "id": "cargo",
+              "name": "Cargo",
+              "description": "Gestionnaire de projet Rust (build, dépendances, exécution)."
+            }
+          ]
         },
         {
           "id": "go",
@@ -347,6 +354,35 @@
               "id": "compose",
               "name": "Compose",
               "description": "Gestion multi-conteneurs."
+            }
+          ]
+        },
+        {
+          "id": "linux",
+          "name": "Linux",
+          "description": "Environnement de développement, compilation et installation des dépendances (libsdl2...).",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"
+        },
+        {
+          "id": "sdl2",
+          "name": "SDL2",
+          "description": "Librairie multimédia pour rendu 2D et gestion d’événements, utilisée dans Smart-Road pour l’affichage et les entrées clavier.",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sdl/sdl-original.svg",
+          "details": [
+            {
+              "id": "sdl2_rendering",
+              "name": "Rendu 2D",
+              "description": "Affichage fluide des véhicules, routes et UI."
+            },
+            {
+              "id": "sdl2_events",
+              "name": "Gestion événements",
+              "description": "Lecture des touches (spawn véhicules, pause, accélérer...)."
+            },
+            {
+              "id": "sdl2_image_ttf",
+              "name": "SDL2_image / SDL2_ttf",
+              "description": "Chargement d’images et rendu de texte pour stats et info-bulles."
             }
           ]
         }
