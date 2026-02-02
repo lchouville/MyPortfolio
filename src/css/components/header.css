@@ -1,0 +1,173 @@
+/* src/css/components/header.css */
+
+/* ============================================= */
+/* HEADER & NAVIGATION                           */
+/* Compatible with theme system                  */
+/* ============================================= */
+
+header {
+  background-color: var(--secondary-bg);
+  background-image: var(--header-bg-image, url("../../asset/images/map-bg.png"));
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  box-shadow: 0 2px 10px var(--shadow-medium, rgba(0, 0, 0, 0.1));
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Overlay layer on top of the background image */
+header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--secondary-bg);
+  opacity: var(--header-overlay-opacity, 0.6);
+  z-index: 1;
+}
+
+/* Ensure header content is above the overlay */
+header > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Main title */
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--accent-light);
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px var(--shadow-strong, rgba(0, 0, 0, 0.6));
+  font-family: "Palatino", "Times New Roman", serif;
+}
+
+/* Subtitle / description */
+header p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--text-secondary);
+  font-style: italic;
+  text-shadow: 1px 1px 3px var(--shadow-medium, rgba(0, 0, 0, 0.4));
+}
+
+/* ============================================= */
+/* NAVIGATION BAR                                */
+/* ============================================= */
+
+nav {
+  background-color: var(--secondary-bg);
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+  position: relative;
+  user-select: none;
+}
+
+nav a:hover {
+  color: var(--accent-light);
+  transform: translateY(-2px);
+}
+
+/* Animated underline effect */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-light);
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover::after {
+  width: 80%;
+}
+
+/* ============================================= */
+/* TABS SYSTEM                                   */
+/* ============================================= */
+
+.tab-container {
+  margin: 4rem 0;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.tab-button,
+.sub-tab-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+  position: relative;
+  font-family: "Palatino", "Times New Roman", serif;
+  user-select: none;
+}
+
+.tab-button::after,
+.sub-tab-btn::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: var(--accent-light);
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%);
+}
+
+/* Hover & Active States */
+.tab-button:hover,
+.sub-tab-btn:hover,
+.tab-button.active,
+.sub-tab-btn.active {
+  color: var(--accent-light);
+}
+
+.tab-button.active::after,
+.sub-tab-btn.active::after {
+  width: 80%;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .tabs {
+    justify-content: space-evenly;
+  }
+}

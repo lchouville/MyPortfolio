@@ -1,0 +1,93 @@
+@import url(themes/themes.css);
+@import url(components/header.css);
+@import url(components/about.css);
+@import url(components/tags.css);
+@import url(components/tabs/project.css);
+@import url(components/tabs/education.css);
+@import url(components/tabs/experiences.css);
+@import url(components/tabs/skills.css);
+@import url(components/contact.css);
+@import url(components/footer.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+
+  user-select: text;
+}
+
+body {
+  font-family: "Palatino", "Times New Roman", serif;
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.mainPanel {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+section.mainPanel{
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabs */
+
+.tab-content {
+  display: none;
+  padding: 2rem;
+  background-color: var(--secondary-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tab-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg,
+      var(--accent-lighgt),
+      var(--accent-medium));
+}
+
+.tab-content h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--accent-light);
+}

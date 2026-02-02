@@ -1,0 +1,24 @@
+<h2>{{contactTitle}}</h2>
+<p>
+    {{contactText}}
+</p>
+<form id="contact-form">
+    <div class="form-group">
+        <label for="name">{{contactName}}</label>
+        <input type="text" id="name" name="name" required />
+    </div>
+    <div class="form-group">
+        <label for="email">{{contactEmail}}</label>
+        <input type="email" id="email" name="email" required />
+    </div>
+    <div class="form-group">
+        <label for="message">{{contactMessage}}</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="button">{{contactSubmit}}</button>
+    <div id="form-message" class="hidden"></div>
+</form>
+<div class="social-links">
+    <a id="linkedin" href="{{linkedin}}" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a id="github" href="{{github}}" title="GitHub"><i class="fab fa-github"></i></a>
+</div>

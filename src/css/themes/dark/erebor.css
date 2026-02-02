@@ -1,0 +1,42 @@
+/* ================================
+   DARK THEMES - LORD OF THE RINGS
+   ================================ */
+
+/* EREBOR */
+:root[data-theme="erebor"] {
+  --primary-bg: #24140d;
+  --secondary-bg: #2e231d;
+  --accent-bg: #332e27;
+
+  --text-primary: #f5e6c5;
+  --text-secondary: #d4c4a1;
+  --text-muted: #bfae88;
+
+  --accent-light: #c49531;
+  --accent-medium: #b87333;
+  --accent-strong: #a5512a;
+
+  --border-color: #654321;
+  --shadow-light: rgba(255, 215, 0, 0.15);
+  --shadow-medium: rgba(255, 215, 0, 0.25);
+  --shadow-strong: rgba(0, 0, 0, 0.7);
+
+  --gradient-primary: linear-gradient(135deg, #24140d 0%, #3d2317 100%);
+  --gradient-accent: linear-gradient(135deg, #ffd700 0%, #b87333 100%);
+
+  --tag-general-border: #a58325;
+  --tag-general-bg: rgba(255, 215, 0, 0.15);
+  --tag-general-text: #d4af37;
+
+  --tag-hard-border: #791d1d;
+  --tag-hard-bg: rgba(228, 62, 20, 0.15);
+  --tag-hard-text: #e25f37;
+
+  --tag-soft-border: #93c0b2;
+  --tag-soft-bg: rgba(20, 214, 228, 0.15);
+  --tag-soft-text: #41b6be;
+}
+
+.color-erebor {
+  background: linear-gradient(135deg, #24140d, #ffd700);
+}

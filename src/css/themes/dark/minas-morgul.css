@@ -1,0 +1,42 @@
+/* ================================
+   DARK THEMES - LORD OF THE RINGS
+   ================================ */
+
+/* MINAS MORGUL */
+:root[data-theme="minas-morgul"] {
+  --primary-bg: #141422;
+  --secondary-bg: #101828;
+  --accent-bg: #1e2a44;
+
+  --text-primary: #e0ede6;
+  --text-secondary: #aeccc5;
+  --text-muted: #7a998b;
+
+  --accent-light: #48a737;
+  --accent-medium: #7dbe71;
+  --accent-strong: #4c369b;
+
+  --border-color: #2b3b55;
+  --shadow-light: rgba(61, 255, 130, 0.15);
+  --shadow-medium: rgba(61, 255, 130, 0.25);
+  --shadow-strong: rgba(0, 0, 0, 0.6);
+
+  --gradient-primary: linear-gradient(135deg, #141422 0%, #1e2a44 100%);
+  --gradient-accent: linear-gradient(135deg, #39ff14 0%, #9d4edd 100%);
+
+  --tag-general-border: #7dbe71;
+  --tag-general-bg: rgba(57, 255, 20, 0.15);
+  --tag-general-text: #2cda11;
+
+  --tag-hard-border: #9d4edd;
+  --tag-hard-bg: rgba(157, 78, 221, 0.15);
+  --tag-hard-text: #aa47f7;
+
+  --tag-soft-border: #2b3b55;
+  --tag-soft-bg: rgba(43, 59, 85, 0.2);
+  --tag-soft-text: #5c6c85;
+}
+
+.color-minas-morgul {
+  background: linear-gradient(135deg, #1a1a2e, #0f3460);
+}
