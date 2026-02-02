@@ -70,16 +70,6 @@
     "softSkills": []
   },
   {
-    "name": "P.M.S.",
-    "status": "paused",
-    "description": "",
-    "repository": null,
-    "access": null,
-    "image": null,
-    "hardSkills": [],
-    "softSkills": []
-  },
-  {
     "name": "Digisphere",
     "status": "archived",
     "description": "",
@@ -95,7 +85,7 @@
     "description": "Smart-Road est un projet de formation réalisé dans le cadre du cursus à Zone01 Normandie. Il s’agit d’un simulateur de trafic routier développé en Rust, qui permet de visualiser et tester différentes stratégies de gestion du trafic. ",
     "repository": "https://github.com/lchouville/Smart-Road.git",
     "access": null,
-    "image": null,
+    "image": "src/asset/images/projects/SmartRoad.gif",
     "hardSkills": [
       {
         "id": "rust",
