@@ -1,0 +1,42 @@
+/* ================================
+   LIGHT THEMES - LORD OF THE RINGS
+   ================================ */
+   
+/* MINAS TIRITH */
+:root[data-theme="minas-tirith"] {
+  --primary-bg: #ffffff;
+  --secondary-bg: #f4f4f4;
+  --accent-bg: #e6e6e6;
+
+  --text-primary: #1a1a1a;
+  --text-secondary: #3d3d3d;
+  --text-muted: #6b6b6b;
+
+  --accent-light: #a7a7a7;
+  --accent-medium: #84878f;
+  --accent-strong: #636363;
+
+  --border-color: #cfcfcf;
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
+  --shadow-strong: rgba(0, 0, 0, 0.2);
+
+  --gradient-primary: linear-gradient(135deg, #ffffff 0%, #f4f4f4 100%);
+  --gradient-accent: linear-gradient(135deg, #4a90e2 0%, #c0c0c0 100%);
+
+  --tag-general-border: #72788c;
+  --tag-general-bg: rgba(89, 106, 126, 0.15);
+  --tag-general-text: #4a4d55;
+
+  --tag-hard-border: #c0c0c0;
+  --tag-hard-bg: rgba(192, 192, 192, 0.15);
+  --tag-hard-text: #7a7a7a;
+
+  --tag-soft-border: #6b6b6b;
+  --tag-soft-bg: rgba(107, 107, 107, 0.15);
+  --tag-soft-text: #4d4d4d;
+}
+
+.color-minas-tirith {
+  background: linear-gradient(135deg, #fafafa, #c0c0c0);
+}

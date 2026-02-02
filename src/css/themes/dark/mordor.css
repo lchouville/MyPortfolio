@@ -1,0 +1,42 @@
+/* ================================
+   DARK THEMES - LORD OF THE RINGS
+   ================================ */
+
+/* MORDOR */
+:root[data-theme="mordor"] {
+  --primary-bg: #0d0d0d;
+  --secondary-bg: #140909;
+  --accent-bg: #2d1010;
+
+  --text-primary: #aa6232;
+  --text-secondary: #9b928c;
+  --text-muted: #a67a5c;
+
+  --accent-light: #a8753b;
+  --accent-medium: #ff5500;
+  --accent-strong: #ac672e;
+
+  --border-color: #4d1a1a;
+  --shadow-light: rgba(255, 0, 0, 0.15);
+  --shadow-medium: rgba(255, 0, 0, 0.25);
+  --shadow-strong: rgba(0, 0, 0, 0.85);
+
+  --gradient-primary: linear-gradient(135deg, #0d0d0d 0%, #1a0a0a 100%);
+  --gradient-accent: linear-gradient(135deg, #ff1a1a 0%, #ff5500 100%);
+
+  --tag-general-border: #ff1a1a;
+  --tag-general-bg: rgba(255, 26, 26, 0.15);
+  --tag-general-text: #a71a1a;
+
+  --tag-hard-border: #ff5500;
+  --tag-hard-bg: rgba(255, 85, 0, 0.15);
+  --tag-hard-text: #cc4400;
+
+  --tag-soft-border: #473f3f;
+  --tag-soft-bg: rgba(65, 60, 60, 0.25);
+  --tag-soft-text: #c4afafab;
+}
+
+.color-mordor {
+  background: linear-gradient(135deg, #0d0d0d, #ff1a1a);
+}

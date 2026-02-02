@@ -1,0 +1,126 @@
+/* src/css/components/tags.css */
+
+/* ============================================= */
+/* COMPETENCE BADGES STYLES                      */
+/* ============================================= */
+
+/* Main container */
+.competences-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  justify-content: center;
+  position: relative;
+}
+
+/* Base style for all competence tags */
+.competence-tag {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+
+  max-width: 100%;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border-color, #d0d7de);
+  border-radius: 15px;
+  font-size: 0.95rem;
+  line-height: 1.2;
+
+  color: var(--text-primary, #1f2328);
+  background-color: var(--secondary-bg, #f0f6fc);
+  box-shadow: 0 1px 2px var(--shadow-light, rgba(0, 0, 0, 0.1));
+  background-clip: padding-box;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+}
+
+.competence-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px var(--shadow-medium, rgba(0, 0, 0, 0.15));
+}
+
+/* Subtags */
+.competence-subtag {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  background-color: var(--accent-bg, rgba(0, 0, 0, 0.05));
+  color: var(--text-secondary, inherit);
+  border: 1px dashed var(--border-color, rgba(0, 0, 0, 0.2));
+  word-break: break-word;
+}
+
+/* Tag variants */
+.tag-general {
+  border-color: var(--tag-general-border, #d0d7de);
+  background-color: var(--tag-general-bg, #f0f6fc);
+  color: var(--tag-general-text, #1f2328);
+}
+
+.tag-hard-skill {
+  border-color: var(--tag-hard-border, #ff9e0d);
+  background-color: var(--tag-hard-bg, #fff5e6);
+  color: var(--tag-hard-text, #9a3412);
+}
+
+.tag-soft-skill {
+  font-weight: bold;
+  border-color: var(--tag-soft-border, #6e7781);
+  background-color: var(--tag-soft-bg, #e5e7eb);
+  color: var(--tag-soft-text, #24292f);
+}
+
+/* ============================================= */
+/* TOOLTIP STYLES                                */
+/* ============================================= */
+
+.tooltip {
+  position: absolute;
+  background-color: var(--text-primary, #24292f);
+  color: var(--primary-bg, #ffffff);
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: normal;
+  max-width: 280px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 10000;
+  box-shadow: 0 4px 10px var(--shadow-strong, rgba(0, 0, 0, 0.25));
+  pointer-events: none;
+}
+
+/* Tooltip arrow */
+.tooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+}
+
+/* Arrow directions */
+.tooltip.below::after {
+  top: -12px;
+  border-bottom-color: var(--text-primary, #24292f);
+}
+
+.tooltip.above::after {
+  bottom: -12px;
+  border-top-color: var(--text-primary, #24292f);
+}
+
+/* Skill icons */
+.competence-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  object-fit: contain;
+  margin-right: 0.4rem;
+  display: inline-block;
+  vertical-align: middle;
+}

@@ -1,0 +1,54 @@
+/* src/css/components/about.css */
+
+/* ============================================= */
+/* ABOUT ME SECTION                              */
+/* ============================================= */
+
+.about-me {
+  background-color: var(--secondary-bg);
+  color: var(--text-secondary);
+  padding: 3rem 1.5rem;
+  border-top: 1px solid var(--border-color);
+  box-shadow: 0 -2px 8px var(--shadow-light, rgba(0, 0, 0, 0.1));
+}
+
+/* Main title */
+.about-me h1 {
+  font-size: 2.3rem;
+  text-align: center;
+  color: var(--accent-medium);
+  text-shadow: 1px 1px 3px var(--shadow-medium, rgba(0, 0, 0, 0.2));
+  margin-bottom: 1.2rem;
+  font-family: "Palatino", "Times New Roman", serif;
+  letter-spacing: 1px;
+}
+
+/* Subtitle */
+.about-me h2 {
+  font-size: 1.6rem;
+  color: var(--accent-strong);
+  text-shadow: 1px 1px 3px var(--shadow-light, rgba(0, 0, 0, 0.15));
+  margin-bottom: 1rem;
+  font-family: "Palatino", "Times New Roman", serif;
+}
+
+/* Paragraph text */
+.about-me p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Optional image or decorative element */
+.about-me img {
+  display: block;
+  max-width: 180px;
+  margin: 2rem auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px var(--shadow-medium, rgba(0, 0, 0, 0.2));
+  border: 3px solid var(--border-color);
+}

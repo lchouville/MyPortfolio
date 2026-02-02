@@ -1,0 +1,105 @@
+/* src/css/components/tabs/project.css */
+
+/* ============================================= */
+/* PROFESSIONAL EXPERIENCE SECTION               */
+/* ============================================= */
+
+#professionnel-tab {
+  background-color: var(--secondary-bg);
+  padding: 3rem 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Each experience block */
+.experience-item {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px var(--shadow-light, rgba(0, 0, 0, 0.1));
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Header: title, company, and date layout */
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
+
+/* Date & duration container */
+.experience-date-duration {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* Date and duration text */
+.experience-date {
+  color: var(--text-secondary);
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.experience-duration {
+  color: var(--text-muted, var(--text-secondary));
+  font-size: 0.85rem;
+}
+
+/* Company and title */
+.experience-company {
+  color: var(--text-primary);
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.experience-title {
+  color: var(--accent-light);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-family: "Palatino", "Times New Roman", serif;
+}
+
+/* Description text */
+.experience-description {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+  max-width: 800px;
+}
+
+/* ============================================= */
+/* RESPONSIVE                                    */
+/* ============================================= */
+
+@media (max-width: 768px) {
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-date-duration {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .experience-item {
+    padding-bottom: 1.5rem;
+  }
+}
