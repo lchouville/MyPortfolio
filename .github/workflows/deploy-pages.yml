@@ -1,0 +1,76 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Daily at 02:00 UTC (refresh project data once per day)
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build site with aggregated projects
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
+        with:
+          ref: main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '20'
+
+      - name: Build staging directory
+        run: |
+          mkdir -p _site
+          # Copy static site files, excluding data/projects.json
+          cp -r index.html css/ js/ asset/ docs/ _site/
+          mkdir -p _site/data
+          # Copy images but NOT projects.json (will be generated)
+          cp -r data/images/ _site/data/images/ 2>/dev/null || true
+
+      - name: Aggregate projects from public repos
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node .github/scripts/aggregate-projects.mjs _site/data/projects.json
+
+      - name: Verify no source maps or src/ in build
+        run: |
+          if find _site -name '*.map' | grep -q .; then
+            echo "Error: found source map files in build"
+            exit 1
+          fi
+          if [ -d _site/src ]; then
+            echo "Error: src/ directory should not be in build"
+            exit 1
+          fi
+          echo "✓ Build verification passed"
+
+      - name: Upload artifact to GitHub Pages
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa
+        with:
+          path: _site
+
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
