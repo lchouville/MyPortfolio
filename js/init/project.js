@@ -1,3 +1,5 @@
+import { toSortedSkillSets } from "../function/skills.js";
+
 const projetsTab = document.getElementById("projets-tab");
 const projectsGrid = projetsTab.querySelector(".projects-grid");
 
@@ -103,31 +105,11 @@ const populateProjects = (projectsData) => {
   });
 };
 
-export const fetchProjects = async () => {
-  try {
-    const projectsResponse = await fetch("data/projects.json");
-    const projectsData = await projectsResponse.json();
-    populateProjects(projectsData);
-  } catch (error) {
-    console.error("Erreur lors du chargement du fichier projects.json:", error);
-  }
+export const fetchProjects = (projectsData) => {
+  if (!projectsData) return;
+  populateProjects(projectsData);
 };
 
 export function extractSkillsFromProjects(projects) {
-  const allSkills = {
-    hard_skills: new Set(),
-    soft_skills: new Set()
-  };
-
-  projects.forEach(project => {
-    if (project.competences) {
-      project.competences.hard_skills.forEach(skill => allSkills.hard_skills.add(skill));
-      project.competences.soft_skills.forEach(skill => allSkills.soft_skills.add(skill));
-    }
-  });
-
-  return {
-    hard_skills: Array.from(allSkills.hard_skills),
-    soft_skills: Array.from(allSkills.soft_skills)
-  };
+  return toSortedSkillSets(projects, (project) => project.competences);
 }
