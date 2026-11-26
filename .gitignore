@@ -1,0 +1,36 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Claude Code: local settings
+.claude/settings.local.json
+
+# Dependencies and build output
+node_modules/
+dist/
+build/
+coverage/
+
+# OS / editor
+.DS_Store
+*.log
+.idea/
+.vscode/
+
+# >>> myclaude-sync: shared agents/rules/skills, never commit (auto-generated) >>>
+.claude/agents/
+.claude/.agents-sync-rules-manifest
+.claude/.agents-sync-skills-manifest
+.claude/rules/agents.md
+.claude/rules/cicd.md
+.claude/rules/communication.md
+.claude/rules/design.md
+.claude/rules/docs.md
+.claude/rules/git.md
+.claude/rules/quality.md
+.claude/rules/workflow.md
+.claude/skills/brief-agent/
+.claude/skills/dispatch-taches/
+.claude/skills/lean-workflow/
+# <<< myclaude-sync <<<
