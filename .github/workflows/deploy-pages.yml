@@ -35,11 +35,9 @@ jobs:
       - name: Build staging directory
         run: |
           mkdir -p _site
-          # Copy static site files, excluding data/projects.json
-          cp -r index.html css/ js/ asset/ docs/ _site/
-          mkdir -p _site/data
-          # Copy images but NOT projects.json (will be generated)
-          cp -r data/images/ _site/data/images/ 2>/dev/null || true
+          cp -r index.html css/ js/ asset/ docs/ data/ _site/
+          # Drop the local dev fixture; the real data/projects.json is generated next
+          rm -f _site/data/projects.sample.json
 
       - name: Aggregate projects from public repos
         env:
