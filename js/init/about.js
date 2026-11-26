@@ -74,28 +74,17 @@ const populateAboutMe = (aboutMeData, mergedSkills) => {
 };
 
 /**
- * Fetch about-me data from JSON file and populate the page
+ * Populate the about-me section using already-fetched formation and projects data
+ * @param {Array} formationData - Parsed formation.json data
+ * @param {Array} projectsData - Parsed projects.json data
  */
-export const fetchAboutMe = async () => {
-  let educationSkills
-  try {
-    const educationResponse = await fetch("data/formation.json");
-    const educationData = await educationResponse.json();
-    educationSkills = extractSkillsFromFormations(educationData)
-  } catch (error) {
-    console.error(
-      "Erreur lors du chargement du fichier education.json:",
-      error
-    );
-  }
-  let projectSkills
-  try {
-    const projectsResponse = await fetch("data/projects.json");
-    const projectsData = await projectsResponse.json();
-    projectSkills = extractSkillsFromProjects(projectsData)
-  } catch (error) {
-    console.error("Erreur lors du chargement du fichier projects.json:", error);
-  }
+export const fetchAboutMe = async (formationData, projectsData) => {
+  const educationSkills = formationData
+    ? extractSkillsFromFormations(formationData)
+    : { hard_skills: [], soft_skills: [] };
+  const projectSkills = projectsData
+    ? extractSkillsFromProjects(projectsData)
+    : { hard_skills: [], soft_skills: [] };
   const mergedSkills = mergeSkills(educationSkills, projectSkills)
   try {
     const aboutMeResponse = await fetch("data/personalInfo.json");

@@ -1,3 +1,5 @@
+import { toSortedSkillSets } from "../function/skills.js";
+
 const parcoursTab = document.getElementById("parcours-tab");
 const timeline = parcoursTab.querySelector(".timeline");
 
@@ -101,17 +103,9 @@ const populateEducation = (educationData) => {
   });
 };
 
-export const fetchFormation = async () => {
-  try {
-    const educationResponse = await fetch("data/formation.json");
-    const educationData = await educationResponse.json();
-    populateEducation(educationData);
-  } catch (error) {
-    console.error(
-      "Erreur lors du chargement du fichier education.json:",
-      error
-    );
-  }
+export const fetchFormation = (educationData) => {
+  if (!educationData) return;
+  populateEducation(educationData);
 };
 
 
@@ -121,27 +115,5 @@ export const fetchFormation = async () => {
  * @returns {Object} - Objet avec deux tableaux : hard_skills et soft_skills.
  */
 export function extractSkillsFromFormations(formations) {
-  const allSkills = {
-    hard_skills: new Set(), // Utilisation d'un Set pour éviter les doublons
-    soft_skills: new Set()
-  };
-
-  formations.forEach(formation => {
-    if (formation.competences) {
-      // Ajouter les hard skills
-      formation.competences.hard_skills.forEach(skill => {
-        allSkills.hard_skills.add(skill);
-      });
-      // Ajouter les soft skills
-      formation.competences.soft_skills.forEach(skill => {
-        allSkills.soft_skills.add(skill);
-      });
-    }
-  });
-
-  // Convertir les Sets en tableaux triés alphabétiquement
-  return {
-    hard_skills: Array.from(allSkills.hard_skills).sort(),
-    soft_skills: Array.from(allSkills.soft_skills).sort()
-  };
+  return toSortedSkillSets(formations, (formation) => formation.competences);
 }

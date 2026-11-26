@@ -11,17 +11,9 @@ export const initTheme = () => {
         if (selectedOption) {
             selectedOption.classList.add("active");
         }
-    
+
         if (theme === "light") {
             document.body.removeAttribute("data-theme");
-        } else if (theme === "auto") {
-            const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-            document.body.setAttribute("data-theme", preferredTheme);
-            // Mettre à jour l'option "auto" si elle existe
-            const autoOption = Array.from(themeOptions).find(option => option.getAttribute("data-theme") === "auto");
-            if (autoOption) {
-                autoOption.textContent = `Auto (${preferredTheme})`;
-            }
         } else {
             document.body.setAttribute("data-theme", theme);
         }
@@ -31,26 +23,30 @@ export const initTheme = () => {
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
     const handleThemePreferenceChange = (event) => {
+        // Ne pas écraser un choix manuel de l'utilisateur
+        if (localStorage.getItem("theme")) {
+            return;
+        }
         const preferredTheme = event.matches ? "dark" : "light";
         applyTheme(preferredTheme);
-
-        // Mettre à jour l'option "auto" si elle existe
-        const autoOption = Array.from(themeOptions).find(option => option.getAttribute("data-theme") === "auto");
-        if (autoOption) {
-            autoOption.textContent = `Auto (${preferredTheme})`;
-        }
     };
 
     // Écouter les changements de préférence
     prefersDarkScheme.addEventListener("change", handleThemePreferenceChange);
 
-    // Appliquer le thème initial basé sur la préférence du navigateur
-    handleThemePreferenceChange(prefersDarkScheme);
+    // Appliquer le thème initial : choix enregistré, sinon préférence système
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+        applyTheme(storedTheme);
+    } else {
+        handleThemePreferenceChange(prefersDarkScheme);
+    }
 
     // Changer de thème via le menu
     themeOptions.forEach((option) => {
         option.addEventListener("click", () => {
             const selectedTheme = option.getAttribute("data-theme");
+            localStorage.setItem("theme", selectedTheme);
             applyTheme(selectedTheme);
             themeMenu.classList.remove("show");
         });

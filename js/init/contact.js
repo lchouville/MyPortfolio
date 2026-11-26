@@ -1,8 +1,8 @@
 export const initContact = () => {
   const contactForm = document.getElementById("contact-form");
   const formMessage = document.getElementById("form-message");
-  const serviceId = "service_jf3rq3w"; // Remplacez par votre ID de service EmailJS
-  const templateId = "template_jf9dff8"; // Remplacez par votre ID de modèle EmailJS
+  const serviceId = "service_jf3rq3w";
+  const templateId = "template_jf9dff8";
 
   contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
