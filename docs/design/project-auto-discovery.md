@@ -60,7 +60,7 @@ Why: `project.js` is simple, stable, French-only rendering code with no i18n, no
 | `access` | `links.demo` | direct; `null` if absent, same as today |
 | `image` | first entry of `images` (screenshot), rewritten to an absolute hotlink URL on the source repo's `gh-pages` | see section 2 |
 | `techno` | `stack` | **note**: today's `data/projects.json` has no project ever carrying `techno`, so the tag row in the card is currently always empty — this is a pre-existing gap, not something this design breaks. Auto-discovery will actually start populating it. |
-| `status` | — | **no clean upstream equivalent, see open question 1 below** |
+| `status` | `progress` (new field, see decision below) | `"completed"`→"Terminé", `"in-progress"`→"En cours", `"paused"`→"En pause", `"cancelled"`→"Annulé". Missing/empty `progress` → "En pause" (explicit default, decided by Luka: an unmaintained schema field defaults to the least-committal lifecycle state). |
 | `competences.hard_skills` | `stack` (reused) | reasonable default: a tech stack is a fair proxy for hard skills |
 | `competences.soft_skills` | — | **no upstream equivalent, see open question 2 below** |
 
@@ -96,11 +96,7 @@ This matches the existing rule in `cicd.md`: what reaches `gh-pages` is compiled
 
 ## 8. Open questions for Luka (not silently decided)
 
-1. **Project lifecycle status** (`"Terminé"` / `"En cours"` / `"En pause"` / `"Annulé"`, used today for the card's status badge) has no equivalent in the shared `portfolio.json` schema, which only carries `status: "prerelease"|"release"` — a version-maturity concept, not a project-lifecycle one (a `release` project can still be actively worked on; a `prerelease` one can be abandoned). Needs one of:
-   - (a) extend the shared schema in `docs.md` with an explicit lifecycle field, authored once per project repo — most correct, but a cross-repo schema change affecting every repo's CI;
-   - (b) accept a coarse automatic default (e.g. `prerelease` → "En cours", `release` → "Terminé"), knowing it will sometimes be wrong;
-   - (c) something else Luka prefers.
-   This directly affects what visitors see on each card, so it shouldn't be picked silently.
+1. ~~**Project lifecycle status**~~ — **Resolved.** Add a new optional field `progress` to the shared `portfolio.json` schema (`docs.md`), distinct from the existing version-maturity `status` field. Allowed values: `"completed"` | `"in-progress"` | `"paused"` | `"cancelled"`. Each project repo sets it itself (authored once, updated as the project's situation changes — same place/same CI step that already writes the rest of `portfolio.json`). **If the field is absent or empty, MyPortfolio treats the project as `"paused"`** (explicit default). This requires a small update to `docs.md`'s `portfolio.json` schema definition (shared rule, lives in the MyClaude repo — see follow-up below) and a one-line doc note in each project repo's own generation step that `progress` is optional and defaults to paused when unset.
 
 2. **Soft skills per project** (e.g. "Créativité", "Collaboration" — currently hand-curated per project, feeding the aggregated "Compétences" tab) have no automatic source; a tech stack list can't infer them. Same three-way choice as above: drop them for auto-discovered projects, extend the shared schema with an optional curated field, or keep a manual override somewhere. Needs Luka's call.
 
