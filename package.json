@@ -1,0 +1,15 @@
+{
+  "name": "myportfolio",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Personal portfolio of Luka Chouville",
+  "private": true,
+  "scripts": {
+    "lint": "eslint . && htmlhint index.html",
+    "build": "node .scripts/validate.mjs"
+  },
+  "devDependencies": {
+    "eslint": "^9.9.1",
+    "htmlhint": "^1.1.4"
+  }
+}
