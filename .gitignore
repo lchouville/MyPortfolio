@@ -12,6 +12,9 @@ dist/
 build/
 coverage/
 
+# Generated files
+data/projects.json
+
 # OS / editor
 .DS_Store
 *.log
