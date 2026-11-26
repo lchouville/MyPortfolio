@@ -11,7 +11,9 @@ export default [
         console: 'readonly',
         document: 'readonly',
         window: 'readonly',
-        fetch: 'readonly'
+        fetch: 'readonly',
+        localStorage: 'readonly',
+        emailjs: 'readonly'
       }
     },
     rules: {
