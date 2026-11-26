@@ -15,6 +15,7 @@
 - `js/function/*.js` : fonctions utilitaires partagées (ex. `skills.js`).
 - `css/component/*.css` : une feuille de style par composant/section, importées depuis `css/style.css`.
 - `data/*.json` : contenu éditorial (expérience, formation, projets, compétences, infos perso) séparé du code.
+- `data/projects.json` : généré automatiquement en CI (jamais édité à la main) par agrégation des `portfolio.json` publiés sur le `gh-pages` de chaque dépôt de Luka (découverte via l'API GitHub, pas de liste à maintenir ici) — voir `docs/design/project-auto-discovery.md` pour le détail du pipeline, le mapping des champs et les questions encore ouvertes.
 
 ## Conventions spécifiques
 - Pas de bundler : les imports JS sont des modules ES natifs (`type="module"`), chemins relatifs directs.
