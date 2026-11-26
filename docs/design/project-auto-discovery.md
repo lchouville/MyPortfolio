@@ -1,6 +1,6 @@
 # Project auto-discovery (replacing hand-edited `data/projects.json`)
 
-Status: design proposal, pending validation before implementation.
+Status: validated, ready for implementation.
 
 ## 1. Goal & scope
 
@@ -62,7 +62,7 @@ Why: `project.js` is simple, stable, French-only rendering code with no i18n, no
 | `techno` | `stack` | **note**: today's `data/projects.json` has no project ever carrying `techno`, so the tag row in the card is currently always empty — this is a pre-existing gap, not something this design breaks. Auto-discovery will actually start populating it. |
 | `status` | `progress` (new field, see decision below) | `"completed"`→"Terminé", `"in-progress"`→"En cours", `"paused"`→"En pause", `"cancelled"`→"Annulé". Missing/empty `progress` → "En pause" (explicit default, decided by Luka: an unmaintained schema field defaults to the least-committal lifecycle state). |
 | `competences.hard_skills` | `stack` (reused) | reasonable default: a tech stack is a fair proxy for hard skills |
-| `competences.soft_skills` | — | **no upstream equivalent, see open question 2 below** |
+| `competences.soft_skills` | `softSkills` (new optional field, see decision below) | missing/empty → `[]`, no value inferred |
 
 ## 4. Hidden/excluded projects
 
@@ -98,9 +98,9 @@ This matches the existing rule in `cicd.md`: what reaches `gh-pages` is compiled
 
 1. ~~**Project lifecycle status**~~ — **Resolved.** Add a new optional field `progress` to the shared `portfolio.json` schema (`docs.md`), distinct from the existing version-maturity `status` field. Allowed values: `"completed"` | `"in-progress"` | `"paused"` | `"cancelled"`. Each project repo sets it itself (authored once, updated as the project's situation changes — same place/same CI step that already writes the rest of `portfolio.json`). **If the field is absent or empty, MyPortfolio treats the project as `"paused"`** (explicit default). This requires a small update to `docs.md`'s `portfolio.json` schema definition (shared rule, lives in the MyClaude repo — see follow-up below) and a one-line doc note in each project repo's own generation step that `progress` is optional and defaults to paused when unset.
 
-2. **Soft skills per project** (e.g. "Créativité", "Collaboration" — currently hand-curated per project, feeding the aggregated "Compétences" tab) have no automatic source; a tech stack list can't infer them. Same three-way choice as above: drop them for auto-discovered projects, extend the shared schema with an optional curated field, or keep a manual override somewhere. Needs Luka's call.
+2. ~~**Soft skills per project**~~ — **Resolved.** Add a new optional field `softSkills` (array of strings) to the shared `portfolio.json` schema (`docs.md`). Each project repo fills it in or leaves it out; missing/empty → `[]`, no value inferred from `stack`. Zero maintenance in MyPortfolio, same pattern as `progress`/`hidden`.
 
-3. **Should MyPortfolio list itself?** If MyPortfolio also publishes its own `portfolio.json` to its own `gh-pages` (consistent with every other repo per `docs.md`), the aggregation step would, by default, also fetch and include it — a project listing itself. Harmless either way, but it's a one-line choice (self-include vs. explicitly skip own repo name) worth Luka confirming rather than me deciding silently.
+3. ~~**Should MyPortfolio list itself?**~~ — **Resolved.** No special-casing in the aggregation CI. If MyPortfolio should not list itself, its own `portfolio.json` simply sets `hidden: true` — the exact same mechanism used to exclude any other project, documented in `docs.md`. The aggregation code never needs to know its own repo name.
 
 ## Privacy & accessibility notes (by design, not because this project is legally required to)
 
